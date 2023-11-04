@@ -1,0 +1,149 @@
+/* Navbar link warna default */
+        .navbar-nav .nav-link {
+            color: white; /* Teks putih */
+        }
+        
+/* Navbar link berwarna hitam saat dihover atau aktif */
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: black; /* Teks hitam */
+        }
+        
+
+.dropdown-item:hover {
+    background-color: darkred; /* Warna latar belakang saat dihover */
+    color: black; /* Warna teks saat dihover */
+}
+
+body {
+    background-image: url('img/background.png'); 
+    background-repeat: repeat; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+.contain{
+    background-color: white;
+
+}
+.overlay-content {
+    color: rgb(0, 0, 0); /* Warna teks */
+    text-align: center; /* Pusatkan teks secara horizontal */
+    padding: 100px; /* Jarak antara teks dan tepi elemen */
+}
+main {
+    flex: 1;
+}
+
+.footers {
+    background-color: #DAA520;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+.kontak{
+    background-color:white;
+    height: 50vh;
+}
+
+
+
+/*footer*/
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#000000; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+
+.bullet-list::before {
+    content: "\2022"; /* Kode Unicode untuk bullet berlubang */
+    color: #ffffff; /* Warna bullet, sesuaikan dengan kebutuhan Anda */
+    margin-right: 7px; /* Jarak antara bullet dan teks */
+}
+
+.gradient-brand-color {
+    background-image: -webkit-linear-gradient(0deg,#B80000 0%, #B80000 100%);
+    color: #fff;
+}
+.contact-info__wrapper {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+
+@media (min-width: 1024px) {
+    .contact-info__wrapper {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+.contact-info__list span.position-absolute {
+    left: 0
+}
+.z-index-101 {
+    z-index: 101;
+}
+.list-style--none {
+    list-style: none;
+}
+.contact__wrapper {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+    .contact__wrapper {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .contact-form__wrapper {
+        padding: 5rem !important
+    }
+}
+.shadow-lg, .shadow-lg--on-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+.btn-primary{
+    background-color: #B80000;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  
