@@ -1,0 +1,57 @@
+body {
+    min-height: 100vh;
+    background-color: CFE1F8;
+  }
+  table thead {
+    background-color: blue;
+    color: white;
+}
+/* Reduce the button size in the "Aksi" column */
+.btn-primary {
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+}
+.btn-warning{
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+}
+.btn-danger{
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+}
+.btn-success{
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+}
+/* Menentukan lebar tabel */
+
+/* Styles for custom-box class */
+.custom-box {
+    border-radius: 10px; /* Add border radius */
+    color: white; /* White text color */
+}
+
+/* Remove More info text */
+.small-box-footer {
+    display: none;
+}
+
+/* Adjust vertical alignment */
+.inner {
+    text-align: center;
+    padding-top: 25px;
+}
+
+/* Adjust the position of the number and text */
+.inner h3 {
+    margin: 0;
+}
+
+.inner p {
+    margin: 0;
+    font-size: 18px; /* Adjust the font size of the text */
+}
+
+.icon {
+    text-align: center;
+}
