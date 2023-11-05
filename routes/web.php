@@ -70,3 +70,15 @@ Route::get('/tambahakunadmin', function () {
 Route::get('/editakunadmin', function () {
     return view('admin.AkunAdmin.updateakunadmin');
 });
+
+Route::get('/panduan', function () {
+    return view('admin.Panduan.indexpanduan');
+});
+
+Route::get('/tambahpanduan', function () {
+    return view('admin.Panduan.createpanduan');
+});
+
+Route::get('/editpanduan', function () {
+    return view('admin.Panduan.updatepanduan');
+});
