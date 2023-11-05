@@ -46,3 +46,15 @@ Route::get('/createberita', function () {
 Route::get('/editberita', function () {
     return view('berita.updateberita');
 });
+
+Route::get('/tim', function () {
+    return view('TIM.indextim');
+});
+
+Route::get('/tambahtim', function () {
+    return view('TIM.createtim');
+});
+
+Route::get('/edittim', function () {
+    return view('TIM.updatetim');
+});
