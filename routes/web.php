@@ -82,3 +82,15 @@ Route::get('/tambahpanduan', function () {
 Route::get('/editpanduan', function () {
     return view('admin.Panduan.updatepanduan');
 });
+
+Route::get('/dokumen', function () {
+    return view('admin.dokumen.indexdokumen');
+});
+
+Route::get('/tambahdokumen', function () {
+    return view('admin.dokumen.createdokumen');
+});
+
+Route::get('/editdokumen', function () {
+    return view('admin.dokumen.updatedokumen');
+});
