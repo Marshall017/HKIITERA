@@ -94,3 +94,11 @@ Route::get('/tambahdokumen', function () {
 Route::get('/editdokumen', function () {
     return view('admin.dokumen.updatedokumen');
 });
+
+Route::get('/pendaftaran', function () {
+    return view('admin.pendaftaran.indexpendaftaran');
+});
+
+Route::get('/statuspendaftaran', function () {
+    return view('admin.pendaftaran.statuspendaftaran');
+});
