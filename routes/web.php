@@ -30,3 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('user.kontak');
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('user.sejarah');
+
+Route::get('/rekap', function () {
+    return view('user.rekap');
+});
