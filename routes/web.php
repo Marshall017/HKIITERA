@@ -35,3 +35,14 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('/berita', function () {
+    return view('berita.indexberita');
+});
+
+Route::get('/createberita', function () {
+    return view('berita.createberita');
+});
+
+Route::get('/editberita', function () {
+    return view('berita.updateberita');
+});
