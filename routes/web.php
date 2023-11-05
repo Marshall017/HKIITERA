@@ -102,3 +102,6 @@ Route::get('/pendaftaran', function () {
 Route::get('/statuspendaftaran', function () {
     return view('admin.pendaftaran.statuspendaftaran');
 });
+Route::get('/pembayaran', function () {
+    return view('admin.pembayaran.indexpembayaran');
+});
