@@ -31,6 +31,5 @@ Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('user.sejarah');
 
-Route::get('/rekap', function () {
-    return view('user.rekap');
-});
+Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('user.rekap');
+

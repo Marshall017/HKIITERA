@@ -70,7 +70,7 @@
                             <a class="nav-link" href="#">Panduan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rekap Intelektual</a>
+                            <a class="nav-link" href="{{ route('user.rekap') }}">Rekap Intelektual</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Berita</a>
