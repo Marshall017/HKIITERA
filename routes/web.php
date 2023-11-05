@@ -36,25 +36,37 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/berita', function () {
-    return view('berita.indexberita');
+    return view('admin.berita.indexberita');
 });
 
 Route::get('/createberita', function () {
-    return view('berita.createberita');
+    return view('admin.berita.createberita');
 });
 
 Route::get('/editberita', function () {
-    return view('berita.updateberita');
+    return view('admin.berita.updateberita');
 });
 
 Route::get('/tim', function () {
-    return view('TIM.indextim');
+    return view('admin.TIM.indextim');
 });
 
 Route::get('/tambahtim', function () {
-    return view('TIM.createtim');
+    return view('admin.TIM.createtim');
 });
 
 Route::get('/edittim', function () {
-    return view('TIM.updatetim');
+    return view('admin.TIM.updatetim');
+});
+
+Route::get('/akunadmin', function () {
+    return view('admin.AkunAdmin.indexakunadmin');
+});
+
+Route::get('/tambahakunadmin', function () {
+    return view('admin.AkunAdmin.createakunadmin');
+});
+
+Route::get('/editakunadmin', function () {
+    return view('admin.AkunAdmin.updateakunadmin');
 });
