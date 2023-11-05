@@ -23,6 +23,6 @@ class SejarahController extends Controller
      */
     public function index()
     {
-        return view('sejarah');
+        return view('user.sejarah');
     }
 }

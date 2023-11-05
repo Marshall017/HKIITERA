@@ -23,10 +23,10 @@ use App\Http\Controllers\SejarahController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('user.home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('user.home');
 
-Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('kontak');
+Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('user.kontak');
 
-Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
+Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('user.sejarah');

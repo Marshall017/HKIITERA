@@ -32,8 +32,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #B80000;height: 68px;margin-bottom: 0;">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <a class="nav-link" href="{{ route('home') }}">
+                <a class="navbar-brand" href="{{ route('user.home') }}">
+                    <a class="nav-link" href="{{ route('user.home') }}">
                         <img src="img/logo.png" alt="logo" style="max-height: 70px; max-width: 200px;">
                     </a>
                 </a>
@@ -45,16 +45,17 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{{ route('user.home') }}" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="homeDropdown" style="background-color: #B80000">
-                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('home') }}">Beranda</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('user.home') }}">Beranda</a></li>
                                 <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="#">TIM PKKI</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('sejarah') }}">Sejarah Pendirian</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('home') }}">FAQ</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('user.sejarah') }}">Sejarah Pendirian</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('user.home') }}">FAQ</a></li>
                             </ul>
-                        </li>                        
+                        </li>
+                                                
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Layanan
@@ -62,6 +63,7 @@
                             <ul class="dropdown-menu" aria-labelledby="layananDropdown" style="background-color: #B80000">
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Alur Layanan</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Pendaftaran</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Status Pendaftaran</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -74,7 +76,10 @@
                             <a class="nav-link" href="#">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+                            <a class="nav-link" href="#">Unduh Dokumen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user.kontak') }}">Kontak</a>
                         </li>
                     </ul>
                     
