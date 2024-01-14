@@ -16,8 +16,8 @@
     <div class="container py-5" style="background-color:#B80000; border-radius: 25px;"> 
         <div class="container py-6">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Panduan</span>
-                <button class="btn btn" style="font-size: 15px; border-radius: 20px;background-color:#DAA520;color:black">Tambah Panduan</button>
+                <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Dokumen</span>
+                <a href="/tambahdokumen" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Dokumen</a>
             </div>
             
                     
@@ -30,8 +30,9 @@
                                             <br>
                                             <thead style="background-color:black">
                                                 <tr>
+                                                    <th>Nama</th>
+                                                    <th>Jenis</th>
                                                     <th>Kategori</th>
-                                                    <th>Judul</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -39,15 +40,16 @@
                                                 <tr>
                                                   <td>Tiger Nixon</td>
                                                   <td>System Architect</td>
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                                    <a href="/editdokumen" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                                       <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Garrett Winters</td>
                                                   <td>Accountant</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -56,7 +58,7 @@
                                                 <tr>
                                                   <td>Ashton Cox</td>
                                                   <td>Junior Technical Author</td>
-                                                
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -65,7 +67,7 @@
                                                 <tr>
                                                   <td>Cedric Kelly</td>
                                                   <td>Senior Javascript Developer</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -74,7 +76,7 @@
                                                 <tr>
                                                   <td>Airi Satou</td>
                                                   <td>Accountant</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -83,7 +85,7 @@
                                                 <tr>
                                                   <td>Brielle Williamson</td>
                                                   <td>Integration Specialist</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -92,7 +94,7 @@
                                                 <tr>
                                                   <td>Herrod Chandler</td>
                                                   <td>Sales Assistant</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -101,7 +103,7 @@
                                                 <tr>
                                                   <td>Rhona Davidson</td>
                                                   <td>Integration Specialist</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -110,7 +112,7 @@
                                                 <tr>
                                                   <td>Colleen Hurst</td>
                                                   <td>Javascript Developer</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -119,7 +121,7 @@
                                                 <tr>
                                                   <td>Sonya Frost</td>
                                                   <td>Software Engineer</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
@@ -128,7 +130,7 @@
                                                 <tr>
                                                   <td>Sonyi</td>
                                                   <td>Software Engineer</td>
-                                                  
+                                                  <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>

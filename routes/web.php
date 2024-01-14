@@ -31,77 +31,77 @@ Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+Route::get('/dashboardadmin', function () {
+    return view('admin.index');
 });
 
 Route::get('/berita', function () {
-    return view('admin.berita.indexberita');
+    return view('admin.berita.index');
 });
 
-Route::get('/createberita', function () {
-    return view('admin.berita.createberita');
+Route::get('/tambahberita', function () {
+    return view('admin.berita.create');
 });
 
 Route::get('/editberita', function () {
-    return view('admin.berita.updateberita');
+    return view('admin.berita.update');
 });
 
 Route::get('/tim', function () {
-    return view('admin.TIM.indextim');
+    return view('admin.tim.index');
 });
 
 Route::get('/tambahtim', function () {
-    return view('admin.TIM.createtim');
+    return view('admin.tim.create');
 });
 
 Route::get('/edittim', function () {
-    return view('admin.TIM.updatetim');
+    return view('admin.tim.update');
 });
 
 Route::get('/akunadmin', function () {
-    return view('admin.AkunAdmin.indexakunadmin');
+    return view('admin.akunadmin.index');
 });
 
 Route::get('/tambahakunadmin', function () {
-    return view('admin.AkunAdmin.createakunadmin');
+    return view('admin.akunadmin.create');
 });
 
 Route::get('/editakunadmin', function () {
-    return view('admin.AkunAdmin.updateakunadmin');
+    return view('admin.akunadmin.update');
 });
 
 Route::get('/panduan', function () {
-    return view('admin.Panduan.indexpanduan');
+    return view('admin.panduan.index');
 });
 
 Route::get('/tambahpanduan', function () {
-    return view('admin.Panduan.createpanduan');
+    return view('admin.panduan.create');
 });
 
 Route::get('/editpanduan', function () {
-    return view('admin.Panduan.updatepanduan');
+    return view('admin.panduan.update');
 });
 
 Route::get('/dokumen', function () {
-    return view('admin.dokumen.indexdokumen');
+    return view('admin.dokumen.index');
 });
 
 Route::get('/tambahdokumen', function () {
-    return view('admin.dokumen.createdokumen');
+    return view('admin.dokumen.create');
 });
 
 Route::get('/editdokumen', function () {
-    return view('admin.dokumen.updatedokumen');
+    return view('admin.dokumen.update');
 });
 
 Route::get('/pendaftaran', function () {
-    return view('admin.pendaftaran.indexpendaftaran');
+    return view('admin.pendaftaran.index');
 });
 
 Route::get('/statuspendaftaran', function () {
-    return view('admin.pendaftaran.statuspendaftaran');
+    return view('admin.pendaftaran.status');
 });
 Route::get('/pembayaran', function () {
-    return view('admin.pembayaran.indexpembayaran');
+    return view('admin.pembayaran.index');
 });

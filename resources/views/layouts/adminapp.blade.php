@@ -28,14 +28,14 @@
             <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width:80%;margin-left:20px;margin-top:20px">
             <div class="menu-box">
                 <ul class="menu">
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
-                    <li><a href="#"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
-                    <li><a href="#"><i class="fas fa-book"></i> Panduan</a></li>
-                    <li><a href="#"><i class="fas fa-newspaper"></i> Berita</a></li>
-                    <li><a href="#"><i class="fas fa-file"></i> Dokumen</a></li>
-                    <li><a href="#"><i class="fas fa-users"></i> TIM</a></li>
-                    <li><a href="#"><i class="fas fa-user-cog"></i> Akun Admin</a></li>
+                    <li><a href="/dashboardadmin"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="/pendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
+                    <li><a href="/pembayaran"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
+                    <li><a href="/panduan"><i class="fas fa-book"></i> Panduan</a></li>
+                    <li><a href="/berita"><i class="fas fa-newspaper"></i> Berita</a></li>
+                    <li><a href="/dokumen"><i class="fas fa-file"></i> Dokumen</a></li>
+                    <li><a href="/tim"><i class="fas fa-users"></i> TIM</a></li>
+                    <li><a href="/akunadmin"><i class="fas fa-user-cog"></i> Akun Admin</a></li>
                 </ul>
             </div>
         </div>

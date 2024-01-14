@@ -16,8 +16,9 @@
     <div class="container py-5" style="background-color:#B80000; border-radius: 25px;"> 
         <div class="container py-6">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">TIM</span>
-                <button class="btn btn" style="font-size: 15px; border-radius: 20px;background-color:#DAA520;color:black">Tambah Anggota TIM</button>
+                <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Berita</span>
+                <a href="/tambahberita" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Berita</a>
+
             </div>
             
                     
@@ -30,9 +31,9 @@
                                             <br>
                                             <thead style="background-color:black">
                                                 <tr>
-                                                    <th>Nama</th>
-                                                    <th>Jabatan</th>
-                                                    <th>Prodi</th>
+                                                    <th>Judul</th>
+                                                    <th>Author</th>
+                                                    <th>Tanggal Terbit</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -42,9 +43,9 @@
                                                   <td>System Architect</td>
                                                   <td>21/02/2014</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                                    <a href="/editberita" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Garrett Winters</td>
@@ -53,7 +54,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Ashton Cox</td>
@@ -62,7 +63,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Cedric Kelly</td>
@@ -71,7 +72,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Airi Satou</td>
@@ -80,7 +81,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Brielle Williamson</td>
@@ -89,7 +90,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Herrod Chandler</td>
@@ -98,7 +99,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Rhona Davidson</td>
@@ -107,7 +108,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Colleen Hurst</td>
@@ -116,7 +117,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Sonya Frost</td>
@@ -125,7 +126,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                                 <tr>
                                                   <td>Sonyi</td>
@@ -134,7 +135,7 @@
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                       <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
                                                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
+                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
                                                 </tr>
                                               </tbody>
                                         </table>
