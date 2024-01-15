@@ -60,8 +60,10 @@
                                 Layanan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="layananDropdown" style="background-color: #B80000">
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/layanan">Layanan</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Alur Layanan</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Pendaftaran</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/pendaftaran">Pendaftaran</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/statuspendaftaran">Status Pendaftaran</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -72,6 +74,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/document">Dokumen</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>

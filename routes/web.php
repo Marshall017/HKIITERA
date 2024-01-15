@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\LayananController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\PendaftaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +26,7 @@ use App\Http\Controllers\SejarahController;
 //});
 
 Auth::routes();
-
+// User
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -31,6 +35,22 @@ Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
 
+Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
+
+Route::get('/document', [App\Http\Controllers\DocumentController::class, 'index'])->name('document');
+
+Route::get('/pendaftaran', [App\Http\Controllers\PendaftaranController::class, 'index'])->name('pendaftaran');
+
+Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
+
+
+
+
+
+
+
+
+// Admin 
 Route::get('/dashboardadmin', function () {
     return view('admin.index');
 });
@@ -95,13 +115,13 @@ Route::get('/editdokumen', function () {
     return view('admin.dokumen.update');
 });
 
-Route::get('/pendaftaran', function () {
+Route::get('/adminpendaftaran', function () {
     return view('admin.pendaftaran.index');
 });
 
-Route::get('/statuspendaftaran', function () {
+Route::get('/adminstatuspendaftaran', function () {
     return view('admin.pendaftaran.status');
 });
-Route::get('/pembayaran', function () {
+Route::get('/adminpembayaran', function () {
     return view('admin.pembayaran.index');
 });
