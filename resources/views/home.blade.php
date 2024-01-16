@@ -175,9 +175,6 @@
             </a>  
     </div>
     </section>
-    <!-- Include Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     </div>
     <div class="your-div" style="background-image: url('https://www.itera.ac.id/wp-content/uploads/2021/06/Gedung-Laboratorium-Teknik-2-1536x864.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto; padding-top: 20px;">
         <section id="why-us">
