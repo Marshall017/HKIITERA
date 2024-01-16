@@ -1,0 +1,200 @@
+.tim-PKKI {
+    position: relative;
+    width: 1338px;
+    height: 686px;
+  }
+  
+  .tim-PKKI .overlap-group {
+    position: relative;
+    width: 1293px;
+    height: 334px;
+    top: 0;
+    left: 25px;
+  }
+  
+  .tim-PKKI .tantri-liris {
+    position: absolute;
+    width: 312px;
+    height: 279px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .tim-PKKI .rectangle {
+    position: absolute;
+    width: 1282px;
+    height: 307px;
+    top: 27px;
+    left: 11px;
+    background-color: #000000;
+    border-radius: 20px;
+  }
+  
+  .tim-PKKI .text-wrapper {
+    position: absolute;
+    width: 497px;
+    top: 162px;
+    left: 479px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #daa520;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .tim-PKKI .div {
+    top: 204px;
+    left: 544px;
+    position: absolute;
+    width: 440px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #fbfbfb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .tim-PKKI .text-wrapper-2 {
+    position: absolute;
+    width: 562px;
+    top: 116px;
+    left: 422px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tim-PKKI .line {
+    top: 204px;
+    left: 454px;
+    position: absolute;
+    width: 496px;
+    height: 1px;
+    object-fit: cover;
+  }
+  
+  .tim-PKKI .image {
+    top: 279px;
+    left: 74px;
+    position: absolute;
+    width: 165px;
+    height: 40px;
+  }
+  
+  .tim-PKKI .overlap {
+    position: absolute;
+    width: 1284px;
+    height: 307px;
+    top: 352px;
+    left: 32px;
+    background-color: #000000;
+    border-radius: 20px;
+  }
+  
+  .tim-PKKI .p {
+    position: absolute;
+    width: 497px;
+    top: 130px;
+    left: 438px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #daa520;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .tim-PKKI .overlap-2 {
+    position: absolute;
+    width: 524px;
+    height: 22px;
+    top: 172px;
+    left: 430px;
+  }
+  
+  .tim-PKKI .text-wrapper-3 {
+    top: 0;
+    left: 84px;
+    position: absolute;
+    width: 440px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #fbfbfb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .tim-PKKI .img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 496px;
+    height: 1px;
+    object-fit: cover;
+  }
+  
+  .tim-PKKI .text-wrapper-4 {
+    position: absolute;
+    width: 615px;
+    top: 84px;
+    left: 381px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tim-PKKI .image-2 {
+    top: 248px;
+    left: 1042px;
+    position: absolute;
+    width: 165px;
+    height: 40px;
+  }
+  
+  .tim-PKKI .fotol {
+    position: absolute;
+    width: 165px;
+    height: 221px;;
+    top: 27px;
+    right: 1042px;
+    object-fit: cover;
+
+  }
+  .tim-PKKI .fotor {
+    position: absolute;
+    width: 165px;
+    height: 221px;
+    top: 27px;
+    left: 1042px;
+    object-fit: cover;
+  }
+
+  .sosmedl {
+    position: absolute;
+    top: 250px; /* Sesuaikan dengan jarak yang diinginkan dari atas */
+    left: 80px; /* Sesuaikan dengan jarak yang diinginkan dari kiri */
+    display: flex;
+    gap: 5px; /* Sesuaikan dengan jarak antar ikon */
+  }
+
+  .sosmedr {
+    position: absolute;
+    top: 250px; /* Sesuaikan dengan jarak yang diinginkan dari atas */
+    right: 70px; /* Sesuaikan dengan jarak yang diinginkan dari kiri */
+    display: flex;
+    gap: 5px; /* Sesuaikan dengan jarak antar ikon */
+  }
