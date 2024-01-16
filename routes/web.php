@@ -43,7 +43,7 @@ Route::get('/pendaftaran', [App\Http\Controllers\PendaftaranController::class, '
 
 Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
-
+Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
 
 
 
