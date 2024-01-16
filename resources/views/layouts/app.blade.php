@@ -70,10 +70,10 @@
                             <a class="nav-link" href="#">Panduan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rekap Intelektual</a>
+                            <a class="nav-link" href="/rekap">Rekap Intelektual</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Berita</a>
+                            <a class="nav-link" href="/berita">Berita</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/document">Dokumen</a>

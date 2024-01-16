@@ -1,0 +1,652 @@
+
+    .rekap-intelektual {
+  position: relative;
+  width: 1502px;
+  height: 1806px;
+  margin-right:150px;
+}
+
+.rekap-intelektual .overlap {
+  position: absolute;
+  width: 1280px;
+  height: 118px;
+  top: 27px;
+  left: 31px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-right:150px;
+}
+
+.rekap-intelektual .text-wrapper {
+  position: absolute;
+  top: 42px;
+  left: 45px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: -0.68px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .overlap-group {
+  position: absolute;
+  width: 1280px;
+  height: 342px;
+  top: 156px;
+  left: 31px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .div {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 53px;
+  left: 38px;
+  background-color: #404c76;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .text-wrapper-2 {
+  top: 28px;
+  left: 200px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: -0.53px;
+  position: absolute;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-3 {
+  position: absolute;
+  top: 28px;
+  left: 11px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: -0.38px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .overlap-2 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 180px;
+  left: 38px;
+  background-color: #404c76;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .text-wrapper-4 {
+  top: 28px;
+  left: 200px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: -0.53px;
+  position: absolute;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-5 {
+  position: absolute;
+  top: 28px;
+  left: 22px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: -0.38px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .overlap-3 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 53px;
+  left: 310px;
+  background-color: #21ad78;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .text-wrapper-6 {
+  position: absolute;
+  top: 28px;
+  left: 200px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: -0.53px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-7 {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: -0.38px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .overlap-4 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 180px;
+  left: 310px;
+  background-color: #21ad78;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .overlap-5 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 53px;
+  left: 580px;
+  background-color: #25cfe8;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .text-wrapper-8 {
+  top: 28px;
+  left: 200px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: -0.53px;
+  position: absolute;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-9 {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: -0.38px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .overlap-6 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 180px;
+  left: 580px;
+  background-color: #25cfe8;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .overlap-7 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 53px;
+  left: 850px;
+  background-color: #1cd5e5;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .overlap-8 {
+  position: absolute;
+  width: 250px;
+  height: 89px;
+  top: 180px;
+  left: 850px;
+  background-color: #1cd5e5;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .overlap-group-2 {
+  position: absolute;
+  width: 1280px;
+  height: 50%;
+  top: 510px;
+  left: 34px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.rekap-intelektual .overlap-9 {
+  position: absolute;
+  width: 1334px;
+  height: 859px;
+  top: 285px;
+  left: 49px;
+  background-color: #ffffff;
+}
+
+.rekap-intelektual .rectangle {
+  top: 2px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-2 {
+  top: 75px;
+  background-color: #f0e7e7;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-3 {
+  top: 148px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-4 {
+  top: 221px;
+  background-color: #f0e7e7;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-5 {
+  top: 294px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-6 {
+  top: 367px;
+  background-color: #f0e7e7;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-7 {
+  top: 440px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-8 {
+  top: 513px;
+  background-color: #f0e7e7;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-9 {
+  top: 586px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-10 {
+  top: 732px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #d9d9d9;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .rectangle-11 {
+  top: 659px;
+  background-color: #f0e7e7;
+  position: absolute;
+  width: 1329px;
+  height: 73px;
+  left: 3px;
+}
+
+.rekap-intelektual .text-wrapper-10 {
+  position: absolute;
+  top: 22px;
+  left: 13px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-11 {
+  position: absolute;
+  top: 22px;
+  left: 138px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-12 {
+  position: absolute;
+  top: 20px;
+  left: 381px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-13 {
+  left: 574px;
+  position: absolute;
+  top: 22px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-14 {
+  left: 822px;
+  position: absolute;
+  top: 22px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-15 {
+  position: absolute;
+  top: 27px;
+  left: 1099px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-16 {
+  position: absolute;
+  top: 20px;
+  left: 1248px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .line {
+  width: 3px;
+  height: 799px;
+  top: 5px;
+  left: 45px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .img {
+  width: 2px;
+  height: 800px;
+  top: 2px;
+  left: 292px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .line-2 {
+  width: 3px;
+  height: 796px;
+  top: 2px;
+  left: 763px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .line-3 {
+  width: 3px;
+  height: 796px;
+  top: 6px;
+  left: 1020px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .line-4 {
+  width: 3px;
+  height: 796px;
+  top: 2px;
+  left: 543px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .line-5 {
+  width: 3px;
+  height: 803px;
+  top: 2px;
+  left: 1234px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.rekap-intelektual .text-wrapper-17 {
+  top: 95px;
+  left: 18px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  position: absolute;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-18 {
+  position: absolute;
+  top: 95px;
+  left: 57px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .aplikasi-sistem {
+  position: absolute;
+  top: 79px;
+  left: 310px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+}
+
+.rekap-intelektual .text-wrapper-19 {
+  position: absolute;
+  top: 95px;
+  left: 564px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-20 {
+  position: absolute;
+  top: 93px;
+  left: 800px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-21 {
+  position: absolute;
+  top: 95px;
+  left: 1030px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-22 {
+  top: 93px;
+  left: 1253px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.46px;
+  position: absolute;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .text-wrapper-23 {
+  position: absolute;
+  top: 54px;
+  left: 49px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #788097;
+  font-size: 28px;
+  letter-spacing: -0.53px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.rekap-intelektual .paten-sederhana-v-wrapper {
+  position: absolute;
+  width: 306px;
+  height: 43px;
+  top: 49px;
+  left: 276px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #d9d9d9;
+}
+
+.rekap-intelektual .paten-sederhana-v {
+  position: absolute;
+  width: 279px;
+  top: 4px;
+  left: 14px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #788097;
+  font-size: 20px;
+  letter-spacing: -0.38px;
+  line-height: 32px;
+}
+
+.rekap-intelektual .image {
+  position: absolute;
+  width: 315px;
+  height: 62px;
+  top: 210px;
+  left: 49px;
+}
+
+.rekap-intelektual .image-2 {
+  position: absolute;
+  width: 472px;
+  height: 85px;
+  top: 198px;
+  left: 911px;
+}
+
+.rekap-intelektual .image-3 {
+  position: absolute;
+  width: 481px;
+  height: 84px;
+  top: 1170px;
+  left: 902px;
+}
+

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RekapController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\DocumentController;
@@ -45,7 +47,7 @@ Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'in
 
 Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
 
-
+Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('rekap');
 
 
 
@@ -55,7 +57,7 @@ Route::get('/dashboardadmin', function () {
     return view('admin.index');
 });
 
-Route::get('/berita', function () {
+Route::get('/adminberita', function () {
     return view('admin.berita.index');
 });
 
@@ -67,7 +69,7 @@ Route::get('/editberita', function () {
     return view('admin.berita.update');
 });
 
-Route::get('/tim', function () {
+Route::get('/admintim', function () {
     return view('admin.tim.index');
 });
 
@@ -91,7 +93,7 @@ Route::get('/editakunadmin', function () {
     return view('admin.akunadmin.update');
 });
 
-Route::get('/panduan', function () {
+Route::get('/adminpanduan', function () {
     return view('admin.panduan.index');
 });
 

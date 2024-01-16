@@ -29,12 +29,12 @@
             <div class="menu-box">
                 <ul class="menu">
                     <li><a href="/dashboardadmin"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="/pendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
-                    <li><a href="/pembayaran"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
-                    <li><a href="/panduan"><i class="fas fa-book"></i> Panduan</a></li>
-                    <li><a href="/berita"><i class="fas fa-newspaper"></i> Berita</a></li>
+                    <li><a href="/adminpendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
+                    <li><a href="/adminpembayaran"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
+                    <li><a href="/adminpanduan"><i class="fas fa-book"></i> Panduan</a></li>
+                    <li><a href="/adminberita"><i class="fas fa-newspaper"></i> Berita</a></li>
                     <li><a href="/dokumen"><i class="fas fa-file"></i> Dokumen</a></li>
-                    <li><a href="/tim"><i class="fas fa-users"></i> TIM</a></li>
+                    <li><a href="/admintim"><i class="fas fa-users"></i> TIM</a></li>
                     <li><a href="/akunadmin"><i class="fas fa-user-cog"></i> Akun Admin</a></li>
                 </ul>
             </div>
