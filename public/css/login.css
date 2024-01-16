@@ -1,0 +1,356 @@
+/* Navbar link warna default */
+.navbar-nav .nav-link {
+    color: white; /* Teks putih */
+}
+
+/* Navbar link berwarna hitam saat dihover atau aktif */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: black; /* Teks hitam */
+}
+
+
+.dropdown-item:hover {
+background-color: darkred; /* Warna latar belakang saat dihover */
+color: black; /* Warna teks saat dihover */
+}
+
+body {
+background-image: url('img/backgroundlogin.jpg'); 
+background-repeat: repeat; 
+display: flex;
+flex-direction: column;
+min-height: 100vh; 
+}
+.contain{
+background-color: white;
+
+}
+.overlay-content {
+color: rgb(0, 0, 0); /* Warna teks */
+text-align: center; /* Pusatkan teks secara horizontal */
+padding: 100px; /* Jarak antara teks dan tepi elemen */
+}
+main {
+flex: 1;
+}
+
+.footers {
+background-color: #DAA520;
+color: black;
+text-align: center;
+padding: 10px;
+}
+.kontak{
+background-color:white;
+height: 50vh;
+}
+
+
+
+/*footer*/
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#000000; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+list-style-type:none;
+padding:0px;
+display:table;
+margin-top: 10px;
+margin-right: auto;
+margin-bottom: 10px;
+margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+
+.bullet-list::before {
+content: "\2022"; /* Kode Unicode untuk bullet berlubang */
+color: #ffffff; /* Warna bullet, sesuaikan dengan kebutuhan Anda */
+margin-right: 7px; /* Jarak antara bullet dan teks */
+}
+
+.gradient-brand-color {
+background-image: -webkit-linear-gradient(0deg,#B80000 0%, #B80000 100%);
+color: #fff;
+}
+.contact-info__wrapper {
+overflow: hidden;
+border-radius: .625rem .625rem 0 0
+}
+
+@media (min-width: 1024px) {
+.contact-info__wrapper {
+border-radius: 0 .625rem .625rem 0;
+padding: 5rem !important
+}
+}
+.contact-info__list span.position-absolute {
+left: 0
+}
+.z-index-101 {
+z-index: 101;
+}
+.list-style--none {
+list-style: none;
+}
+.contact__wrapper {
+background-color: #fff;
+border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+.contact__wrapper {
+border-radius: .625rem 0 .625rem .625rem
+}
+}
+@media (min-width: 1024px) {
+.contact-form__wrapper {
+padding: 5rem !important
+}
+}
+.shadow-lg, .shadow-lg--on-hover:hover {
+box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+.btn-primary{
+background-color: #B80000;
+}
+.carousel-item {
+height: 100vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.login {
+    width: 1127px;
+    height: 604px;
+   margin-left: 100px;
+  }
+  
+  .login .overlap-group {
+    position: relative;
+    width: 1057px;
+    height: 556px;
+    top: 24px;
+    left: 35px;
+    background-color: #000000e6;
+    border-radius: 20px;
+    
+  }
+  
+  .login .overlap {
+    position: absolute;
+    width: 333px;
+    height: 129px;
+    top: 111px;
+    left: 69px;
+  }
+  
+  .login .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Kadwa-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 64px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .login .line {
+    position: absolute;
+    width: 85px;
+    height: 10px;
+    top: 107px;
+    left: 12px;
+  }
+  
+  .login .pusat-kelola-karya {
+    position: absolute;
+    width: 249px;
+    height: 50px;
+    top: 260px;
+    left: 159px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #fbfbfb;
+    font-size: 16px;
+    letter-spacing: -0.46px;
+    line-height: 21px;
+  }
+  
+  .login .logo-ITERA-wrapper {
+    position: absolute;
+    width: 66px;
+    height: 71px;
+    top: 252px;
+    left: 81px;
+    background-color: #fbfbfb;
+    border-radius: 33px/35.5px;
+  }
+  
+  .login .logo-ITERA {
+    position: absolute;
+    width: 48px;
+    height: 53px;
+    top: 9px;
+    left: 9px;
+    object-fit: cover;
+  }
+  
+  .login .div {
+    position: absolute;
+    width: 406px;
+    height: 398px;
+    top: 79px;
+    left: 583px;
+    background-color: #38417bb2;
+    border-radius: 20px;
+  }
+  
+  .login .text-wrapper-2 {
+    position: absolute;
+    height: 21px;
+    top: 39px;
+    left: 131px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: -0.7px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+  
+  .login .div-wrapper {
+    position: absolute;
+    width: 303px;
+    height: 37px;
+    top: 112px;
+    left: 52px;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+  }
+  
+  .login .text-wrapper-3 {
+    position: absolute;
+    height: 21px;
+    top: 7px;
+    left: 26px;
+    font-family: "Inter-ExtraLight", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: -0.46px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+  
+  .login .overlap-2 {
+    position: absolute;
+    width: 303px;
+    height: 37px;
+    top: 170px;
+    left: 52px;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+  }
+  
+  .login .overlap-3 {
+    position: absolute;
+    width: 303px;
+    height: 37px;
+    top: 226px;
+    left: 52px;
+    background-color: #0500ff;
+    border-radius: 30px;
+  }
+  
+  .login .text-wrapper-4 {
+    position: absolute;
+    height: 21px;
+    top: 5px;
+    left: 131px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: -0.46px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+  
+  .login .text-wrapper-5 {
+    position: absolute;
+    height: 21px;
+    top: 281px;
+    left: 63px;
+    font-family: "Inter-ExtraLight", Helvetica;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: -0.46px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+  
+  /* Custom styles for the login form */
+.form-group {
+  margin-bottom: 1.5rem; /* Adjust the spacing between form groups as needed */
+  margin-top: 20px;
+}
+
+/* Style for the label */
+.col-form-label {
+  color: white; /* Set the label text color to white */
+}
+
+/* Style for the input field */
+.form-control {
+  color: white; /* Set the input text color to white */
+  background-color: transparent; /* Set the input background color to transparent */
+  border: 1px solid white; /* Set the input border color to white */
+}
+
+/* Style for the checkbox and its label */
+.form-check-input, .form-check-label {
+  color: white; /* Set the checkbox and label text color to white */
+}
+
+/* Style for the submit button */
+.btn-primary {
+  background-color: #007bff; /* Set the button background color to white */
+  color: #ffffff; /* Set the button text color to the desired color */
+}
+
+/* Optional: Add styles for the error message */
+.invalid-feedback {
+  color: white; /* Set the error message text color to white */
+}
