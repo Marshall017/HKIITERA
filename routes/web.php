@@ -8,6 +8,7 @@ use App\Http\Controllers\RekapController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\PembayaranController;
@@ -51,6 +52,8 @@ Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 
 Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('rekap');
 
 Route::get('/tim', [App\Http\Controllers\TimController::class, 'index'])->name('tim');
+
+Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
 
 // Admin 

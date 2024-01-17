@@ -80,7 +80,7 @@
                 @media (max-width: 991px) {
                   .div-2 {
                     max-width: 100%;
-                    margin-top: 40px;
+                    margin-top: 30px;
                   }
                 }
                 .div-3 {
@@ -292,7 +292,7 @@
                   color: #000;
                   text-align: center;
                   align-self: stretch;
-                  font: 600 15px Inter, sans-serif;
+                  font: 500 20px Inter, sans-serif;
                 }
                 @media (max-width: 991px) {
                   .div-19 {
@@ -303,7 +303,7 @@
                   background-color: #000;
                   align-self: stretch;
                   margin-top: 19px;
-                  height: 3px;
+                  height: 1px;
                 }
                 @media (max-width: 991px) {
                   .div-20 {
@@ -337,7 +337,7 @@
                   background-color: #000;
                   align-self: stretch;
                   margin-top: 15px;
-                  height: 3px;
+                  height: 1px;
                 }
                 @media (max-width: 991px) {
                   .div-23 {
@@ -372,7 +372,7 @@
                   background-color: #000;
                   align-self: stretch;
                   margin-top: 20px;
-                  height: 3px;
+                  height: 1px;
                 }
                 @media (max-width: 991px) {
                   .div-26 {
@@ -407,7 +407,7 @@
                   background-color: #000;
                   align-self: stretch;
                   margin-top: 20px;
-                  height: 3px;
+                  height: 1px;
                 }
                 @media (max-width: 991px) {
                   .div-29 {
