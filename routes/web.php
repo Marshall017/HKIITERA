@@ -57,6 +57,8 @@ Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])
 
 Route::get('/berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('berita');
 
+Route::get('/detailberita', [App\Http\Controllers\IsiberitaController::class, 'index'])->name('isiberita');
+
 // Admin 
 Route::get('/dashboardadmin', function () {
     return view('admin.index');
