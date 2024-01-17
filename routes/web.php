@@ -55,6 +55,7 @@ Route::get('/tim', [App\Http\Controllers\TimController::class, 'index'])->name('
 
 Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
+Route::get('/berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('berita');
 
 // Admin 
 Route::get('/dashboardadmin', function () {
