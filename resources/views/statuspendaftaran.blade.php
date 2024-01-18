@@ -2,8 +2,6 @@
 
 @section('content')
 <link rel="stylesheet" href="css/status.css">
-<link rel="stylesheet" href="http://siakad.itera.ac.id/assets/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://siakad.itera.ac.id/assets/css/style.css">
 
 <h1 style="text-align: center">Status Pendaftaran</h1>
 

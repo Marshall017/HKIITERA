@@ -1,0 +1,37 @@
+.sidebar-menu ul li {
+    outline: 1px solid #E0E0E0;
+    padding-left: 4px; }
+    .sidebar-menu ul li.active {
+      border-left: 5px solid #FFCD02;
+      padding-left: 0px; }
+    .sidebar-menu ul li:hover {
+      background: #F5F5F5; }
+    .sidebar-menu ul li a {
+      display: block !important;
+      padding: 1.55rem !important;
+      font-family: 'Geometria-Bold', sans-serif !important; }
+ 
+
+.sub-container {
+  padding-top: 0px; }
+  .sub-container.gutter {
+    padding: 2rem 0 0 2rem; }
+
+    h1.heading-block, h2.heading-block, h3.heading-block, h4.heading-block, h5.heading-block {
+        color: #313E5E;
+        padding-bottom: 1rem;
+        border-bottom: 2.5px solid #FFCD02;
+        margin-bottom: 2rem; }
+
+
+        #list-slug {
+            list-style-type: none; /* Menghilangkan titik hitam */
+            padding: 0;
+            margin: 0;
+        }
+        
+        #list-slug li a {
+            text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+            color: #000; /* Warna teks normal */
+        }
+ 

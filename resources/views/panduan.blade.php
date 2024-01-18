@@ -5,8 +5,7 @@
         <br>
         <h1 style="text-align: center">Panduan</h1><br>
         <script type="text/javascript" src="https://dgip.go.id/frontend/assets/js/fancybox/jquery-1.10.1.min.js"></script>
-        <link rel="stylesheet" href="https://dgip.go.id/frontend/assets/css/style-starter.css">
-        <link rel="stylesheet" href="https://dgip.go.id/frontend/assets/css/style.css">
+        <link rel="stylesheet" href="css/panduan.css">
         
 </head>
         <body>

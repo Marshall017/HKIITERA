@@ -4,9 +4,9 @@
 
         <h1 style="text-align: center">Form Pendaftaran</h1><br>
 
-            <div class="contain"style="margin-left:150px;margin-right:150px;">  
-            <h6>Formulir ini merupakan media pengajuan permohonan pendaftaran paten dan paten sederhana bagi civitas akademika Institut Teknologi Sumatera. 
-                Silahkan lengkapi seluruh bagian pada formulir ini. Adapun dokumen dan ketentuan lainnya sehubungan permohonan pendaftaran dapat dilihat pada menu DOokumen</h6>   
+            <div class="contain"style="margin-left:150px;margin-right:150px;border-radius: 10px;"> <br> 
+            <h6 style="margin-left: 20px">Formulir ini merupakan media pengajuan permohonan pendaftaran paten dan paten sederhana bagi civitas akademika Institut Teknologi Sumatera. 
+                Silahkan lengkapi seluruh bagian pada formulir ini. Adapun dokumen dan ketentuan lainnya sehubungan permohonan pendaftaran dapat dilihat pada menu Dokumen</h6> <br>  
             </div>
 <br>
             <div class="contain"style="margin-left:150px;margin-right:150px;border-radius: 15px;">
