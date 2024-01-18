@@ -3,14 +3,17 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TimController;
+use App\Http\Controllers\AlurController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RekapController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\IsiberitaController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\PendaftaranController;
 
@@ -58,6 +61,8 @@ Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])
 Route::get('/berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('berita');
 
 Route::get('/detailberita', [App\Http\Controllers\IsiberitaController::class, 'index'])->name('isiberita');
+
+Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
 
 // Admin 
 Route::get('/dashboardadmin', function () {
