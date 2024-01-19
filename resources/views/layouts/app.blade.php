@@ -49,10 +49,10 @@
                                 Home
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="homeDropdown" style="background-color: #B80000">
-                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('home') }}">Beranda</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/home">Beranda</a></li>
                                 <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/tim">TIM PKKI</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('sejarah') }}">Sejarah Pendirian</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('home') }}">FAQ</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/sejarah">Sejarah Pendirian</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/home">FAQ</a></li>
                             </ul>
                         </li>                        
                         <li class="nav-item dropdown">
@@ -61,7 +61,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="layananDropdown" style="background-color: #B80000">
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/layanan">Layanan</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Alur Layanan</a></li>
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/alur">Alur Layanan</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/pendaftaran">Pendaftaran</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/statuspendaftaran">Status Pendaftaran</a></li>
                             </ul>
@@ -79,7 +79,7 @@
                             <a class="nav-link" href="/document">Dokumen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+                            <a class="nav-link" href="/kontak">Kontak</a>
                         </li>
                     </ul>
                     
