@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Str;
+
 
 class SocialiteController extends Controller
 {
@@ -16,44 +16,39 @@ class SocialiteController extends Controller
 
     public function callback()
     {
-        try {
-            // Google user object dari google
-            $userFromGoogle = Socialite::driver('google')->user();
+        // Google user object dari google
+        $userFromGoogle = Socialite::driver('google')->user();
 
-            // Ambil user dari database berdasarkan google user id
-            $userFromDatabase = User::where('google_id', $userFromGoogle->getId())->first();
+        // Ambil user dari database berdasarkan google user id
+        $userFromDatabase = User::where('google_id', $userFromGoogle->getId())->first();
 
-            // Jika tidak ada user, maka buat user baru
-            if (!$userFromDatabase) {
-                $newUser = User::create([
-                    'google_id' => $userFromGoogle->getId(),
-                    'name' => $userFromGoogle->getName(),
-                    'email' => $userFromGoogle->getEmail(),
-                    'password' => bcrypt(Str::random(16)),
+        // Jika tidak ada user, maka buat user baru
+        if (!$userFromDatabase) {
+            $newUser = new User([
+                'google_id' => $userFromGoogle->getId(),
+                'name' => $userFromGoogle->getName(),
+                'email' => $userFromGoogle->getEmail(),
+            ]);
 
-                ]);
+            $newUser->save();
 
-                // Login user yang baru dibuat
-                auth()->login($newUser);
-                session()->regenerate();
-
-                return redirect('/home');
-            }
-
-            // Jika ada user, langsung login saja
-            auth()->login($userFromDatabase);
+            // Login user yang baru dibuat
+            auth('web')->login($newUser);
             session()->regenerate();
 
-            return redirect('/home');
-        } catch (\Exception $e) {
-            // Tangani exception jika terjadi kesalahan
-            return redirect('/login')->with('error', 'Terjadi kesalahan saat mengautentikasi menggunakan Google.');
+            return redirect('/');
         }
+
+        // Jika ada user langsung login saja
+        auth('web')->login($userFromDatabase);
+        session()->regenerate();
+
+        return redirect('/');
     }
 
     public function logout(Request $request)
     {
-        auth()->logout();
+        auth('web')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
