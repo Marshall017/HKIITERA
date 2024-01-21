@@ -16,6 +16,7 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\IsiberitaController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,23 @@ use App\Http\Controllers\PendaftaranController;
 //});
 
 Auth::routes();
+
+// Untuk redirect ke Google
+Route::get('login/google/redirect', [SocialiteController::class, 'redirect'])
+    ->middleware(['guest'])
+    ->name('redirect');
+
+// Untuk callback dari Google
+Route::get('login/google/callback', [SocialiteController::class, 'callback'])
+    ->middleware(['guest'])
+    ->name('callback');
+
+
+    Route::get('/home', function () {
+        return view('home');
+    })->middleware(['auth'])
+      ->name('home');
+
 // User
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -64,19 +64,34 @@
                     </div>
                 </div>
 
-                <div class="row mb-0" style="text-align: left">
+                <div class="row mb-0" >
                     <div class="col-md-8 offset-md-4">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Login') }}
                         </button>
 <br>
                         @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                            <a class="btn btn-link"  href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
                             </a>
                         @endif
                     </div>
                 </div>
+                <div class="card-bodys" style="text-align: center;margin-left:30px;">
+                    @auth
+                    <h4>Name: {{ auth()->user()->name }}</h4>
+                    <h4>Email: {{ auth()->user()->email }}</h4>
+                    <hr />
+                    <form action="{{ route('logout') }}" method="post">
+                      @csrf
+                      <button class="btn btn-dark" type="submit">Logout</button>
+                    </form>
+                    @else
+                    <a href="{{ route('redirect') }}" class="btn btn-danger"
+                      >Login With Google</a
+                    >
+                    @endauth
+                  </div>
             </form>
           </div>
         </div>
