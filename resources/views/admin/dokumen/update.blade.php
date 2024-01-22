@@ -28,36 +28,38 @@
 
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9"><br>
-                    <form>   
+                    <form method="POST" action="{{ route('dokumen.update', $dokumen->id) }}" enctype="multipart/form-data">   
+                        @csrf
+                        @method('PUT')
                         <div class="form-group row">
                             <label for="namaSurat" class="col-md-4 col-form-label">Nama</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="nama" placeholder="Nama" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="{{ $dokumen->nama }}" value="{{ $dokumen->nama }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="kategoriSurat" class="col-md-4 col-form-label">Jenis</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="jenis" placeholder="Jenis" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="jenis" name="jenis" placeholder="{{ $dokumen->jenis }}" value="{{ $dokumen->jenis }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="perihal" class="col-md-4 col-form-label">Kategori</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="kategori" placeholder="kategori" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="kategori" name="kategori" placeholder="{{ $dokumen->kategori }}" value="{{ $dokumen->kategori }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
   
                         <div class="form-group row">
                             <label for="uploadSurat" class="col-md-4 col-form-label">Upload Dokumen</label>
                             <div class="col-md-8">
-                                <input type="file" class="form-control" id="uploaddokumen" name="uploaddokumen" style="background-color:#EBF1FA">
+                                <input type="file" class="form-control" id="uploaddokumen" name="file" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-4"></div>
                             <div class="col-md-8">
-                                <button type="submit" class="btn btn-primary" style="background-color: #338BFD;color:white">Submit</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: #338BFD;color:white">Submit</button>
                             </div>
                         </div>
                     </form>

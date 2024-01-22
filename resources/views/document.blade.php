@@ -28,37 +28,31 @@
                                                 <br>
                                                 <table id="example" style="width: 100%" class="table table-striped table-bordered">
                                                     <br><br>
-                                                    <thead style="background-color:black">
+                                                    <thead>
                                                         <tr>
+                                                            <th>ID</th>
                                                             <th>Nama</th>
                                                             <th>Jenis</th>
                                                             <th>Kategori</th>
+                                                            <th>File</th>
                                                             <th>Aksi</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                          <td>Tiger Nixon</td>
-                                                          <td>System Architect</td>
-                                                          <td>21/02/2014</td>
-                                                          <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                              <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Garrett Winters</td>
-                                                          <td>Accountant</td>
-                                                          <td>21/02/2014</td>
-                                                          <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                              <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Ashton Cox</td>
-                                                          <td>Junior Technical Author</td>
-                                                          <td>21/02/2014</td>
-                                                          <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                              <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                     
-                                                      </tbody>
+                                                        @foreach($dokumen as $dokumen)
+                                                            <tr>
+                                                                <td>{{ $dokumen->id }}</td>
+                                                                <td>{{ $dokumen->nama }}</td>
+                                                                <td>{{ $dokumen->jenis }}</td>
+                                                                <td>{{ $dokumen->kategori }}</td>
+                                                                <td>{{ $dokumen->file }}</td>
+                                                               
+                                                              <td>
+                                                                  <a href="{{ route('userdokumen.download', $dokumen->id) }}" ><button class="btn btn-success"><i class="fas fa-download"></i></button></a>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
                                                 </table>
                                             </div>
                             </div>

@@ -9,14 +9,16 @@ use App\Http\Controllers\RekapController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\IsiberitaController;
+use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\PendaftaranController;
-use App\Http\Controllers\SocialiteController;
+use App\Http\Controllers\UserDokumenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,17 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
     })->middleware(['auth'])
       ->name('home');
 
+
+
+
+Route::resource('dokumen', DokumenController::class);
+
+Route::resource('dokumen', DokumenController::class);
+Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');
+
+Route::resource('userdokumen', UserDokumenController::class);
+Route::get('dokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
+
 // User
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -62,7 +75,7 @@ Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])
 
 Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
 
-Route::get('/document', [App\Http\Controllers\DocumentController::class, 'index'])->name('document');
+
 
 Route::get('/pendaftaran', [App\Http\Controllers\PendaftaranController::class, 'index'])->name('pendaftaran');
 
@@ -135,17 +148,7 @@ Route::get('/editpanduan', function () {
     return view('admin.panduan.update');
 });
 
-Route::get('/dokumen', function () {
-    return view('admin.dokumen.index');
-});
 
-Route::get('/tambahdokumen', function () {
-    return view('admin.dokumen.create');
-});
-
-Route::get('/editdokumen', function () {
-    return view('admin.dokumen.update');
-});
 
 Route::get('/adminpendaftaran', function () {
     return view('admin.pendaftaran.index');

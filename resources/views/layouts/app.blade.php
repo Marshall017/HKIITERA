@@ -76,7 +76,7 @@
                             <a class="nav-link" href="/berita">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/document">Dokumen</a>
+                            <a class="nav-link" href="/userdokumen">Dokumen</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/kontak">Kontak</a>

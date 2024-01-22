@@ -27,117 +27,38 @@
                                     <div class="table-responsive">
                                         <br>
                                         <table id="example" style="width: 100%" class="table table-striped table-bordered">
-                                            <br>
-                                            <thead style="background-color:black">
-                                                <tr>
-                                                    <th>Nama</th>
-                                                    <th>Jenis</th>
-                                                    <th>Kategori</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                  <td>Tiger Nixon</td>
-                                                  <td>System Architect</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                    <a href="/editdokumen" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Garrett Winters</td>
-                                                  <td>Accountant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Ashton Cox</td>
-                                                  <td>Junior Technical Author</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Cedric Kelly</td>
-                                                  <td>Senior Javascript Developer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Airi Satou</td>
-                                                  <td>Accountant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Brielle Williamson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Herrod Chandler</td>
-                                                  <td>Sales Assistant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Rhona Davidson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Colleen Hurst</td>
-                                                  <td>Javascript Developer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonya Frost</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonyi</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                              </tbody>
-                                        </table>
+                                          <thead>
+                                              <tr>
+                                                  <th>ID</th>
+                                                  <th>Nama</th>
+                                                  <th>Jenis</th>
+                                                  <th>Kategori</th>
+                                                  <th>File</th>
+                                                  <th>Aksi</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              @foreach($dokumen as $dokumen)
+                                                  <tr>
+                                                      <td>{{ $dokumen->id }}</td>
+                                                      <td>{{ $dokumen->nama }}</td>
+                                                      <td>{{ $dokumen->jenis }}</td>
+                                                      <td>{{ $dokumen->kategori }}</td>
+                                                      <td>{{ $dokumen->file }}</td>
+                                                     
+                                                    <td>
+                                                       <a href="{{ route('dokumen.edit',$dokumen->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
+                                                       <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')"><i class="fas fa-trash"></i></button>
+                                                        </form>
+                                                        <a href="{{ route('dokumen.download', $dokumen->id) }}" ><button class="btn btn-success"><i class="fas fa-download"></i></button></a>
+                                                      </td>
+                                                  </tr>
+                                              @endforeach
+                                          </tbody>
+                                      </table>
                                     </div>
                     </div>
                   </div>

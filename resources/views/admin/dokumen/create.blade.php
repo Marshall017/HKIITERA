@@ -28,30 +28,31 @@
 
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9"><br>
-                    <form>   
+                    <form method="POST" action="{{ route('dokumen.store') }}" enctype="multipart/form-data">   
+                        @csrf
                         <div class="form-group row">
                             <label for="namaSurat" class="col-md-4 col-form-label">Nama</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="nama" placeholder="Nama" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="kategoriSurat" class="col-md-4 col-form-label">Jenis</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="jenis" placeholder="Jenis" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="jenis" name="jenis" placeholder="Jenis" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="perihal" class="col-md-4 col-form-label">Kategori</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="kategori" placeholder="kategori" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori" style="background-color:#EBF1FA">
                             </div>
                         </div>
   
                         <div class="form-group row">
                             <label for="uploadSurat" class="col-md-4 col-form-label">Upload Dokumen</label>
                             <div class="col-md-8">
-                                <input type="file" class="form-control" id="uploaddokumen" name="uploaddokumen" style="background-color:#EBF1FA">
+                                <input type="file" class="form-control" id="uploaddokumen" name="file" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
