@@ -32,36 +32,43 @@
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9">
                     <div class="tab-pane fade active show" id="account-general">
+
+                 <form method="POST" action="{{ route('tim.store') }}" enctype="multipart/form-data">   
+                        @csrf
                         <div class="card-body media align-items-center">
                             <img src="img/profil.png" style="width:20%" class="rounded-circle">
                             <div class="media-body ml-4">
-                                <label class="btn btn-outline-primary">
-                                    Upload Gambar
-                                </label>
+                                <div class="form-group">
+                                    <label for="uploaddokumen" class="btn btn-outline-primary">
+                                        Upload Gambar
+                                        <input type="file" class="d-none" id="uploaddokumen" name="file_foto">
+                                    </label>
+                                </div>
                             </div>
                         </div>
+                        
                         <hr class="border-light m-0">
         
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-label">Nama Anggota</label>
-                                <input type="text" class="form-control mb-1" placeholder="Nama Anggota" style="background-color: #CCD9EC">
+                                <input type="text" class="form-control mb-1" name="nama" placeholder="Nama Anggota" style="background-color: #CCD9EC">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Jabatan</label>
-                                <input type="text" class="form-control" placeholder="Jabatan" style="background-color: #CCD9EC">
+                                <input type="text" class="form-control" name="jabatan" placeholder="Jabatan" style="background-color: #CCD9EC">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Program Studi</label>
-                                <input type="text" class="form-control mb-1" placeholder="Program Studi" style="background-color: #CCD9EC">
+                                <input type="text" class="form-control mb-1" name="prodi" placeholder="Program Studi" style="background-color: #CCD9EC">
                             </div>
                             <div class="text-center mt-3" >
-                                <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                                <button type="button" class="btn btn-default" style="background-color: blue;color:white">Save</button>
+                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
                             </div>
-                                </form>
-                            </div>
-                            
+                
+                        </div>
+                    </form>      
                         </div>
                     </div>
 

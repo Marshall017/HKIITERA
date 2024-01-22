@@ -13,6 +13,7 @@ use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\UserTimController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\IsiberitaController;
 use App\Http\Controllers\SocialiteController;
@@ -20,20 +21,6 @@ use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
 Auth::routes();
 
@@ -57,12 +44,19 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
 
 Route::resource('dokumen', DokumenController::class);
-
-Route::resource('dokumen', DokumenController::class);
 Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');
-
 Route::resource('userdokumen', UserDokumenController::class);
-Route::get('dokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
+Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
+
+Route::resource('tim', TimController::class);
+Route::resource('usertim', UserTimController::class);
+
+
+
+
+
+
+
 
 // User
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -85,7 +79,7 @@ Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 
 
 Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('rekap');
 
-Route::get('/tim', [App\Http\Controllers\TimController::class, 'index'])->name('tim');
+
 
 Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
@@ -112,17 +106,6 @@ Route::get('/editberita', function () {
     return view('admin.berita.update');
 });
 
-Route::get('/admintim', function () {
-    return view('admin.tim.index');
-});
-
-Route::get('/tambahtim', function () {
-    return view('admin.tim.create');
-});
-
-Route::get('/edittim', function () {
-    return view('admin.tim.update');
-});
 
 Route::get('/akunadmin', function () {
     return view('admin.akunadmin.index');

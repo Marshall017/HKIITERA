@@ -17,7 +17,7 @@
         <div class="container py-6">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Dokumen</span>
-                <a href="/tambahdokumen" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Dokumen</a>
+                <a href="/dokumen/create" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Dokumen</a>
             </div>
             
                     

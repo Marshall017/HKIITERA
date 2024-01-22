@@ -17,7 +17,7 @@
         <div class="container py-6">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">TIM</span>
-                <a href="/tambahtim" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Anggota TIM</a>
+                <a href="/tim/create" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Anggota TIM</a>
               </div>
             
                     
@@ -28,115 +28,35 @@
                                         <br>
                                         <table id="example" style="width: 100%" class="table table-striped table-bordered">
                                             <br>
-                                            <thead style="background-color:black">
-                                                <tr>
-                                                    <th>Nama</th>
-                                                    <th>Jabatan</th>
-                                                    <th>Prodi</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                  <td>Tiger Nixon</td>
-                                                  <td>System Architect</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                    <a href="/edittim" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Garrett Winters</td>
-                                                  <td>Accountant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Ashton Cox</td>
-                                                  <td>Junior Technical Author</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Cedric Kelly</td>
-                                                  <td>Senior Javascript Developer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Airi Satou</td>
-                                                  <td>Accountant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Brielle Williamson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Herrod Chandler</td>
-                                                  <td>Sales Assistant</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Rhona Davidson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Colleen Hurst</td>
-                                                  <td>Javascript Developer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonya Frost</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonyi</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>21/02/2014</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                              </tbody>
+                                            <thead>
+                                              <tr>
+                                                  <th>ID</th>
+                                                  <th>Nama</th>
+                                                  <th>Jabatan</th>
+                                                  <th>Prodi</th>
+                                                  <th>Foto</th>
+                                                  <th>aksi</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              @foreach($tim as $tim)
+                                                  <tr>
+                                                      <td>{{ $tim->id }}</td>
+                                                      <td>{{ $tim->nama }}</td>
+                                                      <td>{{ $tim->jabatan }}</td>
+                                                      <td>{{ $tim->prodi }}</td>
+                                                      <td>{{ $tim->file_foto }}</td>
+                                                      <td>
+                                                        <a href="{{ route('tim.edit',$tim->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
+                                                        <form action="{{ route('tim.destroy', $tim->id) }}" method="post">
+                                                         @csrf
+                                                         @method('DELETE')
+                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                         </form>
+                                                       </td>
+                                                  </tr>
+                                              @endforeach
+                                          </tbody>
                                         </table>
                                     </div>
                     </div>

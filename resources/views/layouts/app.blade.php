@@ -50,7 +50,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="homeDropdown" style="background-color: #B80000">
                                 <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/home">Beranda</a></li>
-                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/tim">TIM PKKI</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/usertim">TIM PKKI</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/sejarah">Sejarah Pendirian</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/home">FAQ</a></li>
                             </ul>
