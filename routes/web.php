@@ -54,7 +54,7 @@ Route::resource('berita', BeritaController::class);
 Route::resource('beritas', UserBeritaController::class);
 Route::resource('isiberita', UserBeritaController::class);
 
-
+Route::resource('pendaftaran', PendaftaranController::class);
 
 // User
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
@@ -67,17 +67,11 @@ Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])
 
 Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
 
-
-
-Route::get('/pendaftaran', [App\Http\Controllers\PendaftaranController::class, 'index'])->name('pendaftaran');
-
 Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
 Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
 
 Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('rekap');
-
-
 
 Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
@@ -89,8 +83,6 @@ Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name
 Route::get('/dashboardadmin', function () {
     return view('admin.index');
 });
-
-
 
 Route::get('/akunadmin', function () {
     return view('admin.akunadmin.index');
@@ -116,15 +108,6 @@ Route::get('/editpanduan', function () {
     return view('admin.panduan.update');
 });
 
-
-
-Route::get('/adminpendaftaran', function () {
-    return view('admin.pendaftaran.index');
-});
-
-Route::get('/adminstatuspendaftaran', function () {
-    return view('admin.pendaftaran.status');
-});
 Route::get('/adminpembayaran', function () {
     return view('admin.pembayaran.index');
 });

@@ -37,29 +37,31 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="{{ route('pendaftaran.update', $pendaftaran->id) }}" enctype="multipart/form-data">   
+                            @csrf
+                            @method('PUT')
                             <div class="form-group row">
                                 <label for="namaArsip" class="col-md-4 col-form-label">Nama</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="nama" placeholder="Nama " style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="nama" placeholder="{{ $pendaftaran->nama }}" value="{{ $pendaftaran->nama }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="kodeArsip" class="col-md-4 col-form-label">Judul</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="judul" placeholder="Judul" style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="judul" placeholder="{{ $pendaftaran->judul }}" value="{{ $pendaftaran->judul }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="kodeArsip" class="col-md-4 col-form-label">Jenis</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="jenis" placeholder="Jenis" style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="jenis" placeholder="{{ $pendaftaran->jenis_permohonan }}" value="{{ $pendaftaran->jenis_permohonan }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lokasiArsip" class="col-md-4 col-form-label">Status</label>
                                 <div class="col-md-8">
-                                    <select class="form-control" id="lokasiArsip" name="lokasiArsip" style="background-color: #E0E0E0;">
+                                    <select class="form-control" id="lokasiArsip" name="status" style="background-color: #E0E0E0;">
                                         <option value="Lemari">Pendaftaran</option>
                                         <option value="Rak">Pembayaran</option>
                                         <option value="Rak">Proses Oleh DJKI</option>

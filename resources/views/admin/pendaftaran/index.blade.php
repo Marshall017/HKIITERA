@@ -29,6 +29,7 @@
                                             <br>
                                             <thead style="background-color:black">
                                                 <tr>
+                                                    <th>id</th>
                                                     <th>Nama Pendaftar</th>
                                                     <th>Judul</th>
                                                     <th>Jenis</th>
@@ -37,116 +38,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                              @foreach($pendaftaran as $pendaftaran)
                                                 <tr>
-                                                  <td>Tiger Nixon</td>
-                                                  <td>System Architect</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
+                                                  <td>{{ $pendaftaran->id }}</td>
+                                                  <td>{{ $pendaftaran->nama }}</td>
+                                                  <td>{{ $pendaftaran->judul}}</td>
+                                                  <td>{{ $pendaftaran->jenis_permohonan }}</td>
+                                                  <td>{{ $pendaftaran->status }}</td>
                                                   <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
+                                                    <a href="{{ route('pendaftaran.edit',$pendaftaran->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
+                                                    <form action="{{ route('pendaftaran.destroy', $pendaftaran->id) }}" method="post">
+                                                     @csrf
+                                                     @method('DELETE')
+                                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                     </form>
+                                                  </td>
                                                 </tr>
-                                                <tr>
-                                                  <td>Garrett Winters</td>
-                                                  <td>Accountant</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Ashton Cox</td>
-                                                  <td>Junior Technical Author</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Cedric Kelly</td>
-                                                  <td>Senior Javascript Developer</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Airi Satou</td>
-                                                  <td>Accountant</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Brielle Williamson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Herrod Chandler</td>
-                                                  <td>Sales Assistant</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Rhona Davidson</td>
-                                                  <td>Integration Specialist</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Colleen Hurst</td>
-                                                  <td>Javascript Developer</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonya Frost</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Sonyi</td>
-                                                  <td>Software Engineer</td>
-                                                  <td>Paten</td>
-                                                  <td>Pembayaran</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      <button class="btn btn-success"><i class="fas fa-download"></i></button></td>
-                                                </tr>
+                                             @endforeach
                                               </tbody>
                                         </table>
                                     </div>
