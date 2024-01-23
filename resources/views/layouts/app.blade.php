@@ -73,7 +73,7 @@
                             <a class="nav-link" href="/rekap">Rekap Intelektual</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/berita">Berita</a>
+                            <a class="nav-link" href="/beritas">Berita</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/userdokumen">Dokumen</a>

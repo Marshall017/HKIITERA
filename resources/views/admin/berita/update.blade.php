@@ -25,35 +25,37 @@
 
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9"><br>
-                    <form>   
+                    <form method="POST" action="{{ route('berita.update', $berita->id) }}" enctype="multipart/form-data">   
+                        @csrf
+                        @method('PUT')
                         <div class="form-group row">
                             <label for="namaSurat" class="col-md-4 col-form-label">Judul</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="judul" placeholder="Judul" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="judul" name="judul" placeholder="{{ $berita->judul }}" value="{{ $berita->judul }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="kategoriSurat" class="col-md-4 col-form-label">Sub Judul</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="subjudul" placeholder="Sub Judul" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="subjudul" name="sub_judul" placeholder="{{ $berita->sub_judul }}" value="{{ $berita->sub_judul }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="perihal" class="col-md-4 col-form-label">Author</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="perihal" placeholder="Author" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="perihal" name="author" placeholder="{{ $berita->author }}" value="{{ $berita->author }}" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="tanggal" class="col-md-4 col-form-label">Tanggal Unggah</label>
                             <div class="col-md-8">
-                                <input type="date" class="form-control" id="tanggal" name="tanggal" style="background-color: #E0E0E0;">
+                                <input type="date" class="form-control" id="tanggal" name="tanggal_unggah" placeholder="{{ $berita->tanggal_unggah }}" value="{{ $berita->tanggal_unggah }}"style="background-color: #E0E0E0;">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="isi" class="col-md-4 col-form-label">Isi Berita</label>
                             <div class="col-md-8">
-                                <textarea id="isi" name="isi" style="background-color: #EBF1FA; width: 100%; height: 200px;"></textarea>
+                                <textarea id="isi" name="isi_berita" placeholder="{{ $berita->isi_berita }}" value="{{ $berita->isi_berita }}" style="background-color: #EBF1FA; width: 100%; height: 200px;"></textarea>
                             </div>
                         </div>
                         
@@ -61,7 +63,7 @@
                         <div class="form-group row">
                             <label for="uploadSurat" class="col-md-4 col-form-label">Upload Gambar</label>
                             <div class="col-md-8">
-                                <input type="file" class="form-control" id="uploadSurat" name="uploadSurat" style="background-color:#EBF1FA">
+                                <input type="file" class="form-control" id="uploadSurat" name="upload_gambar" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">

@@ -65,8 +65,8 @@
                                 <input type="text" class="form-control mb-1" name="prodi" placeholder="{{ $tim->prodi }}" value="{{ $tim->prodi }}" style="background-color: #CCD9EC">
                             </div>
                             <div class="text-center mt-3" >
-                                <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                                <button type="button" class="btn btn-default" style="background-color: blue;color:white">Save</button>
+                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
                             </div>
                 
                         </div>

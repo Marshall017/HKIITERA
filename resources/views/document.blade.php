@@ -28,7 +28,7 @@
                                                 <br>
                                                 <table id="example" style="width: 100%" class="table table-striped table-bordered">
                                                     <br><br>
-                                                    <thead>
+                                                    <thead style="background-color:black">
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Nama</th>

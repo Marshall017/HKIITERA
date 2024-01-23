@@ -15,11 +15,12 @@ use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserTimController;
 use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\IsiberitaController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\UserBeritaController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
+use App\Http\Controllers\DashboardUserController;
 
 
 Auth::routes();
@@ -41,8 +42,6 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
       ->name('home');
 
 
-
-
 Route::resource('dokumen', DokumenController::class);
 Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');
 Route::resource('userdokumen', UserDokumenController::class);
@@ -51,17 +50,16 @@ Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'dow
 Route::resource('tim', TimController::class);
 Route::resource('usertim', UserTimController::class);
 
-
-
-
-
+Route::resource('berita', BeritaController::class);
+Route::resource('beritas', UserBeritaController::class);
+Route::resource('isiberita', UserBeritaController::class);
 
 
 
 // User
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
 Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('kontak');
 
@@ -83,9 +81,7 @@ Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->na
 
 Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
-Route::get('/berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('berita');
 
-Route::get('/detailberita', [App\Http\Controllers\IsiberitaController::class, 'index'])->name('isiberita');
 
 Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
 
@@ -94,17 +90,6 @@ Route::get('/dashboardadmin', function () {
     return view('admin.index');
 });
 
-Route::get('/adminberita', function () {
-    return view('admin.berita.index');
-});
-
-Route::get('/tambahberita', function () {
-    return view('admin.berita.create');
-});
-
-Route::get('/editberita', function () {
-    return view('admin.berita.update');
-});
 
 
 Route::get('/akunadmin', function () {

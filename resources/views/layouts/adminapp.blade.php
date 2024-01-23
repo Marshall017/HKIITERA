@@ -32,7 +32,7 @@
                     <li><a href="/adminpendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
                     <li><a href="/adminpembayaran"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
                     <li><a href="/adminpanduan"><i class="fas fa-book"></i> Panduan</a></li>
-                    <li><a href="/adminberita"><i class="fas fa-newspaper"></i> Berita</a></li>
+                    <li><a href="/berita"><i class="fas fa-newspaper"></i> Berita</a></li>
                     <li><a href="/dokumen"><i class="fas fa-file"></i> Dokumen</a></li>
                     <li><a href="/tim"><i class="fas fa-users"></i> TIM</a></li>
                     <li><a href="/akunadmin"><i class="fas fa-user-cog"></i> Akun Admin</a></li>

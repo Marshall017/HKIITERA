@@ -1,0 +1,65 @@
+
+    .with-border {
+    border: 1px solid #ccc; /* Warna dan ketebalan border sesuaikan dengan kebutuhan Anda */
+    padding: 15px; /* Jarak antara border dan konten berita */
+    margin-bottom: 20px; /* Jarak antara berita-betita */
+}
+
+.blog-entry-readmore {
+    margin-top: 10px; /* Jarak antara teks berita dan tombol "Continue Reading" */
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 30px; /* Ubah ukuran font sesuai kebutuhan */
+    margin-top: 20px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+.pagination li {
+    margin: 0 5px; /* Sesuaikan margin antar elemen sesuai kebutuhan */
+    list-style: none;
+}
+
+.pagination .active span {
+    background-color: #007bff; /* Sesuaikan warna background aktif sesuai kebutuhan */
+    color: #fff; /* Sesuaikan warna teks aktif sesuai kebutuhan */
+}
+
+.pagination .disabled span {
+    color: #777; /* Sesuaikan warna teks non-aktif sesuai kebutuhan */
+    background-color: #ddd; /* Sesuaikan warna background non-aktif sesuai kebutuhan */
+    cursor: not-allowed;
+}
+
+#calendar_wrap {
+    margin-top: 20px;
+}
+
+#wp-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#wp-calendar th,
+#wp-calendar td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#wp-calendar .other-month {
+    color: #999;
+}
+
+#wp-calendar .today {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.day-link {
+    text-decoration: none;
+    color: #333;
+}
