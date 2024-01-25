@@ -149,7 +149,8 @@
                         <div class="form-group row">
                             <div class="col-md-4"></div>
                             <div class="col-md-8">
-                                <button type="submit" class="btn btn-primary" style="background-color: #DAA520;color:white">Submit</button>
+                                <a href="/pembayaran"> <button type="submit" class="btn btn-primary" style="background-color: #DAA520;color:white">Submit</button> </a>
+                                
                             </div>
                         </div>
                     </form>

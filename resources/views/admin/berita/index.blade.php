@@ -49,14 +49,16 @@
                                                   <td>{{ $berita->author }}</td>
                                                   <td>{{ $berita->tanggal_unggah }}</td>
                                                   <td>{{ $berita->upload_gambar }}</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                    <a href="{{ route('berita.edit',$berita->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
-                                                    <form action="{{ route('berita.destroy', $berita->id) }}" method="post">
-                                                     @csrf
-                                                     @method('DELETE')
-                                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
-                                                     </form>
-                                                  </td>
+                                                  <td>
+                                                    <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                                    <a href="{{ route('berita.edit', $berita->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                    <form action="{{ route('berita.destroy', $berita->id) }}" method="post" style="display: inline;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                    </form>
+                                                </td>
+                                                
                                                 </tr>
                                               @endforeach
                                               </tbody>

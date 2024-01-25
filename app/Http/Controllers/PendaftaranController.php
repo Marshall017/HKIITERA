@@ -18,7 +18,7 @@ class PendaftaranController extends Controller
     public function create()
     {
 
-        return view('pendaftaran');
+        return view('admin.pendaftaran.create');
     }
 
     /**

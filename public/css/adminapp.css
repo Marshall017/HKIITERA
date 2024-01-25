@@ -71,3 +71,36 @@
     height: 100px;
     width: 70px;
 }
+
+/* CSS untuk sidebar dan kotak menu seperti yang telah dijelaskan sebelumnya */
+
+/* Atur tampilan konten utama */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Atur warna teks pada navbar */
+.navbar {
+    color: #333;
+}
+
+/* Media query untuk tata letak responsif */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: #B80000;
+    }
+
+    .menu-box {
+        width: 100%;
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

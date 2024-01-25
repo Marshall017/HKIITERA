@@ -27,7 +27,7 @@
                                     <div class="table-responsive">
                                         <br>
                                         <table id="example" style="width: 100%" class="table table-striped table-bordered">
-                                          <thead>
+                                            <thead style="background-color:black">
                                               <tr>
                                                   <th>ID</th>
                                                   <th>Nama</th>
@@ -46,15 +46,18 @@
                                                       <td>{{ $dokumen->kategori }}</td>
                                                       <td>{{ $dokumen->file }}</td>
                                                      
-                                                    <td>
-                                                       <a href="{{ route('dokumen.edit',$dokumen->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
-                                                       <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')"><i class="fas fa-trash"></i></button>
+                                                      <td style="display: flex; justify-content: space-between;">
+                                                        <a href="{{ route('dokumen.edit',$dokumen->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                    
+                                                        <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                                         </form>
-                                                        <a href="{{ route('dokumen.download', $dokumen->id) }}" ><button class="btn btn-success"><i class="fas fa-download"></i></button></a>
-                                                      </td>
+                                                    
+                                                        <a href="{{ route('dokumen.download', $dokumen->id) }}" class="btn btn-success"><i class="fas fa-download"></i></a>
+                                                    </td>
+                                                    
                                                   </tr>
                                               @endforeach
                                           </tbody>

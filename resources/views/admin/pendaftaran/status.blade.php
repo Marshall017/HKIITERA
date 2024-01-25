@@ -18,7 +18,7 @@
             <div class="card-header" style="background-color: #B80000; color: white;">
                 <div class="d-flex justify-content-between align-items-center">
                     <div style="display: flex; align-items: center;">
-                        <a href="#" style="text-decoration: none; margin-right: 10px;color:white">
+                        <a href="/pendaftaran" style="text-decoration: none; margin-right: 10px;color:white">
                             <i class="fa-sharp fa-solid fa-arrow-left" style="font-size: 30px;"></i>
                         </a>
                         <span class="font-weight-bold" style="font-size: 30px;">Status Pendaftaran</span>

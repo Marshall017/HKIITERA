@@ -1,0 +1,43 @@
+/* Tambahkan CSS ini di bagian <style> atau dalam file eksternal CSS Anda */
+
+/* Tata letak untuk perangkat seluler */
+@media (max-width: 767px) {
+    .carousel-caption {
+        text-align: center;
+        top: auto;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .pt-5,
+    .pb-5 {
+        padding: 2rem 0;
+    }
+
+    .your-div {
+        padding-top: 10px;
+    }
+
+    .section-header h3 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .your-div img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .your-div .col-lg-3 {
+        margin-bottom: 1rem;
+    }
+}

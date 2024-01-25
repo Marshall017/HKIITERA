@@ -40,7 +40,26 @@
 
 
 						<div class="entry-content clr" itemprop="text">	
-								<p>{{ $berita->isi_berita }}</p>
+							<style>
+								.news-content {
+									text-align: justify;
+									margin: 0 auto;
+									max-width: 800px; /* Adjust the max-width as needed */
+								}
+							
+								.news-content p {
+									margin-bottom: 15px; /* Adjust the margin between paragraphs as needed */
+								}
+							
+								.indent {
+									text-indent: 30px; /* Adjust the indentation size as needed */
+								}
+							</style>
+							
+							<div class="news-content">
+								{!! nl2br(e($berita->isi_berita)) !!}
+							</div>
+							
 								
 
 								<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
@@ -95,6 +114,21 @@
 							</div><!-- .oceanwp-row -->
 						</section><!-- .related-posts -->
 						<style>
+							.meta.ospm-stylish.clr {
+									display: flex;
+									justify-content: center;
+									padding: 10px 0; /* Add padding as needed for spacing */
+									list-style: none;
+								}
+
+								.meta.ospm-stylish.clr li {
+									margin-right: 20px; /* Adjust the spacing between items as needed */
+								}
+
+								.meta.ospm-stylish.clr li:last-child {
+									margin-right: 0; /* Remove margin for the last item to avoid extra space */
+								}
+
 							#related-posts {
 								margin-top: 20px; /* Atur margin sesuai kebutuhan */
 							}

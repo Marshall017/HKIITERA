@@ -28,7 +28,7 @@
                                         <br>
                                         <table id="example" style="width: 100%" class="table table-striped table-bordered">
                                             <br>
-                                            <thead>
+                                            <thead style="background-color:black">
                                               <tr>
                                                   <th>ID</th>
                                                   <th>Nama</th>
@@ -47,13 +47,27 @@
                                                       <td>{{ $tim->prodi }}</td>
                                                       <td>{{ $tim->file_foto }}</td>
                                                       <td>
-                                                        <a href="{{ route('tim.edit',$tim->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
-                                                        <form action="{{ route('tim.destroy', $tim->id) }}" method="post">
-                                                         @csrf
-                                                         @method('DELETE')
-                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
-                                                         </form>
-                                                       </td>
+                                                        <div class="button-group">
+                                                            <a href="{{ route('tim.edit', $tim->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                            <form action="{{ route('tim.destroy', $tim->id) }}" method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                            </form>
+                                                        </div>
+                                                    </td>
+<style>
+  .button-group {
+    display: flex;
+    gap: 5px; /* Jarak antara tombol-tombol */
+}
+
+.button-group a,
+.button-group button {
+    flex: 1; /* Membuat tombol-tombol membagi ruang secara merata */
+}
+
+  </style>                                                    
                                                   </tr>
                                               @endforeach
                                           </tbody>

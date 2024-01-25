@@ -12,9 +12,7 @@
     
     <div class="container py-5" style="background-color:#B80000; border-radius: 25px;">
         <div style="display: flex;align-items: center;">
-            <button class="btn " style="font-size: 20px; border-radius: 20px;color:white">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <a href="/dokumen"> <button  class="btn"><i class="fas fa-arrow-left" style="font-size: 20px; border-radius: 20px;color:white"></i></button> </a> 
             <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Tambah Dokumen</span>
         </div>
 

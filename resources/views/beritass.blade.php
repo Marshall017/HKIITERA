@@ -4,14 +4,13 @@
 <head>
     <br>
         <h1 style="text-align: center">Berita</h1>
-        <link rel="stylesheet" id="oceanwp-style-css" href="https://hki.itera.ac.id/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.4.6" media="all">
         <link rel="stylesheet" id="oe-widgets-style-css" href="https://hki.itera.ac.id/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=6.4.2" media="all">
         <link rel="stylesheet" href="css/beritas.css">
     </head>
 
 <body >
 
-<div id="content-wrap" class="container clr" style="background-color: aliceblue">
+<div id="content-wrap" class="container clr" style="background-color: aliceblue;height:3250px">
             <div id="primary" class="content-area clr">
                 <div id="content" class="site-content clr">
                 <div id="blog-entries" class="entries clr">
@@ -21,18 +20,18 @@
                             @foreach ($beritass as $berita)   
                             <div class="blog-entry-inner clr with-border">   
                                 <div class="thumbnail">
-                                    <a href="https://hki.itera.ac.id/pendaftar-paten-itera-2023/" class="thumbnail-link no-lightbox">
-                                        <img width="2430" height="2430" src="{{ asset('assets/berita/'.$berita->upload_gambar) }}" sizes="(max-width: 2430px) 100vw, 2430px">			
+                                    <a href="{{ route('isiberita.show',$berita->id) }}" class="thumbnail-link no-lightbox">
+                                        <img width="750px" height="750px" src="{{ asset('assets/berita/'.$berita->upload_gambar) }}" >			
                                         <span class="overlay"></span>		
                                     </a>
                                 </div><!-- .thumbnail -->
                     
-                                <header class="blog-entry-header clr">
-                                    <h2 class="blog-entry-title entry-title">
-                                        <a href="#" rel="bookmark">{{ $berita->judul }}</a>
-                                    </h2><!-- .blog-entry-title -->
+                                <header class="blog-entry-header clr" style="color: black">
+                                    <h3 class="blog-entry-title entry-title" >
+                                        <a href="{{ route('isiberita.show',$berita->id) }}" rel="bookmark" style="color: black" >{{ $berita->judul }}</a>
+                                    </h3><!-- .blog-entry-title -->
                                 </header><!-- .blog-entry-header -->
-                    
+                    <br>
                                 <ul class="meta obem-stylish clr" aria-label="Post details:">
                                     <li class="meta-author" itemprop="name">
                                         <span class="screen-reader-text">Post author:</span>
@@ -118,7 +117,7 @@
 
                     <div id="right-sidebar-inner" class="clr">
                     <div id="block-2" class="sidebar-box widget_block widget_search clr">
-                        <form role="search" method="get" action="{{ route('beritas.show',$berita->id) }}" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+                        <form role="search" method="get" action="#" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
                             <label class="wp-block-search__label" for="wp-block-search__input-1">Search</label>
                             <div class="wp-block-search__inside-wrapper " style="width: 75%">
                             <input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="" value="" type="search" name="s" required="">
@@ -127,12 +126,13 @@
                     </div>
                     <div id="block-3" class="sidebar-box widget_block clr"></div>
 
-                    <div id="ocean_recent_posts-1" class="sidebar-box widget-oceanwp-recent-posts recent-posts-widget clr"><h3 class="widget-title">Recent Posts</h3>
+                    <div id="ocean_recent_posts-1" class="sidebar-box widget-oceanwp-recent-posts recent-posts-widget clr">
+                        <h4 class="widget-title">Recent Posts</h4>
                             <ul class="oceanwp-recent-posts clr">
                                 @foreach ($latestBerita as $list)
                                 <li class="clr">
                                     <a href="{{ route('isiberita.show',$list->id) }}" title="PENDAFTAR PATEN ITERA 2023" class="recent-posts-thumbnail">
-                                            <img width="150" height="150" src="{{ asset('assets/berita/'.$list->upload_gambar) }} "
+                                            <img width="200" height="100" src="{{ asset('assets/berita/'.$list->upload_gambar) }} "
                                             sizes="(max-width: 150px) 100vw, 150px">
                                             <span class="overlay"></span>
                                     </a>

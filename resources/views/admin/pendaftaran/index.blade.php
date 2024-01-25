@@ -45,14 +45,17 @@
                                                   <td>{{ $pendaftaran->judul}}</td>
                                                   <td>{{ $pendaftaran->jenis_permohonan }}</td>
                                                   <td>{{ $pendaftaran->status }}</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                    <a href="{{ route('pendaftaran.edit',$pendaftaran->id) }}"> <button  class="btn btn-warning"><i class="fas fa-edit"></i></button> </a> 
-                                                    <form action="{{ route('pendaftaran.destroy', $pendaftaran->id) }}" method="post">
-                                                     @csrf
-                                                     @method('DELETE')
-                                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
-                                                     </form>
-                                                  </td>
+                                                  <td>
+                                                    <div class="button-container" style="display: flex;gap: 5px;">
+                                                        <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                        <a href="{{ route('pendaftaran.edit',$pendaftaran->id) }}"><button class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
+                                                        <form action="{{ route('pendaftaran.destroy', $pendaftaran->id) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                        </form>
+                                                    </div>
+                                                </td>                                                
                                                 </tr>
                                              @endforeach
                                               </tbody>
