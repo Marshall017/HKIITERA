@@ -131,7 +131,7 @@
 
 <!-- Setelah konten footer -->
 <div id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31779.175929921414!2d105.33892500000002!3d-5.356238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3562557fcbb%3A0x70e74e62c557e9!2sGedung%20C%20Institut%20Teknologi%20Sumatera!5e0!3m2!1sid!2sus!4v1694361525711!5m2!1sid!2sus" width="1500" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31779.175929921414!2d105.33892500000002!3d-5.356238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3562557fcbb%3A0x70e74e62c557e9!2sGedung%20C%20Institut%20Teknologi%20Sumatera!5e0!3m2!1sid!2sus!4v1694361525711!5m2!1sid!2sus" width="1345" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 
