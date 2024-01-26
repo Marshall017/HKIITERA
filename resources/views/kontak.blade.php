@@ -29,19 +29,27 @@
                     </div>
             
                     <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
-                        <form action="#" class="contact-form form-validate" novalidate="novalidate">
+                        @if(session('success'))
+                        <div style="color: green;">{{ session('success') }}</div>
+                        @endif
+
+                        @if(session('error'))
+                            <div style="color: red;">{{ session('error') }}</div>
+                        @endif
+                    <form action="{{ route('send.email') }}" method="post">
+                        @csrf
                             <div class="row">
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
                                         <label class="required-field" for="firstName">Name</label>
-                                        <input type="text" class="form-control" id="Name" name="Name" placeholder="Your name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
                                     </div>
                                 </div>
             
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
                                         <label for="lastName">Subject</label>
-                                        <input type="text" class="form-control" id="Subject" name="Subject" placeholder="Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                                     </div>
                                 </div>
             

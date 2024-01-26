@@ -23,6 +23,7 @@ use App\Http\Controllers\UserDokumenController;
 use App\Http\Controllers\DashboardUserController;
 
 
+
 Auth::routes();
 
 // Untuk redirect ke Google
@@ -56,12 +57,15 @@ Route::resource('isiberita', UserBeritaController::class);
 
 Route::resource('pendaftaran', PendaftaranController::class);
 
+
+Route::get('/kontak', [KontakController::class, 'showForm']);
+Route::post('/send-email', [KontakController::class, 'sendEmail'])->name('send.email');
 // User
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
-Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('kontak');
+// Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('kontak');
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
 
