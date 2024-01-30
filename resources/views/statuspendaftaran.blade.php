@@ -23,18 +23,60 @@
       <div class="text-center bs-wizard-stepnum">2</div>
       <div class="progress"><div class="progress-bar"></div></div>
       <a href="#" class="bs-wizard-dot"></a>
-      <div class="bs-wizard-info text-center">Pembayaran</div>
+      <div class="bs-wizard-info text-center">Pemeriksaan Formalitas</div>
     </div>
 
     <div class="col-xs-3 bs-wizard-step disabled">
       <div class="text-center bs-wizard-stepnum">3</div>
       <div class="progress"><div class="progress-bar"></div></div>
       <a href="#" class="bs-wizard-dot"></a>
-      <div class="bs-wizard-info text-center">Proses Oleh DJKI</div>
+      <div class="bs-wizard-info text-center">Menunggu Tanggapan Formalitas</div>
     </div>
 
     <div class="col-xs-3 bs-wizard-step disabled">
       <div class="text-center bs-wizard-stepnum">4</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Masa Pengumuman</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">5</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Menunggu Pembayaran Subtantif</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">6</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Subtantif Tahap Awal</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">7</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Subtantif Tahap Lanjut</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">8</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Subtantif Tahap Akhir</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">9</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+      <a href="#" class="bs-wizard-dot"></a>
+      <div class="bs-wizard-info text-center">Menunggu Tanggapan Subtantif</div>
+    </div>
+
+    <div class="col-xs-3 bs-wizard-step disabled">
+      <div class="text-center bs-wizard-stepnum">10</div>
       <div class="progress"><div class="progress-bar"></div></div>
       <a href="#" class="bs-wizard-dot"></a>
       <div class="bs-wizard-info text-center"> Selesai</div>
@@ -77,14 +119,32 @@
         alertMessage = 'Status Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Pendaftaran Karya Intelektual';
         break;
       case 1:
-        alertMessage = 'Status Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Pembayaran';
+        alertMessage = 'Status Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Pemeriksaan Formalitas';
         break;
       case 2:
-        alertMessage = 'Status Pendaftaran kekayaan Intelektual anda saat ini sedang dalam proses oleh DJKI';
+        alertMessage = 'Status Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Menunggu Tanggapan Formalitas';
         break;
       case 3:
-        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda telah selesai';
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Masa Pengumuman';
         break;
+      case 4:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Menunggu Pembayaran Subtantif';
+        break;
+      case 5:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Subtantif Tahap Awal';
+        break;
+      case 6:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Subtantif Tahap Lanjut';
+        break;
+      case 7:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Subtantif Tahap Akhir';
+        break;
+      case 8:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda saat ini masih berada pada tahap Menunggu Tanggapan Subtantif';
+        break;
+      case 9:
+        alertMessage = 'Selamat! Pendaftaran kekayaan Intelektual anda telah selesai';
+        break;  
     }
 
     // Ganti isi alert dengan pesan yang sesuai

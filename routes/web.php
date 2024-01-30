@@ -10,6 +10,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\DokumenController;
+use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\UserBeritaController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\UserKatalogController;
 
 
 
@@ -47,6 +49,11 @@ Route::resource('dokumen', DokumenController::class);
 Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');
 Route::resource('userdokumen', UserDokumenController::class);
 Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
+
+Route::resource('katalog', KatalogController::class);
+Route::get('katalog/{katalog}/download', [KatalogController::class, 'download'])->name('katalog.download');
+Route::resource('userkatalog', UserKatalogController::class);
+Route::get('userkatalog/{katalog}/download', [UserKatalogController::class, 'download'])->name('userkatalog.download');
 
 Route::resource('tim', TimController::class);
 Route::resource('usertim', UserTimController::class);

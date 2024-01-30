@@ -29,6 +29,7 @@
                     <li><a href="/adminpembayaran"><i class="fas fa-credit-card"></i> Pembayaran</a></li>
                     <li><a href="/berita"><i class="fas fa-newspaper"></i> Berita</a></li>
                     <li><a href="/dokumen"><i class="fas fa-file"></i> Dokumen</a></li>
+                    <li><a href="/katalog"><i class="fas fa-file"></i> Katalog</a></li>
                     <li><a href="/tim"><i class="fas fa-users"></i> TIM</a></li>
                     <li><a href="/akunadmin"><i class="fas fa-user-cog"></i> Akun Admin</a></li>
                 </ul>

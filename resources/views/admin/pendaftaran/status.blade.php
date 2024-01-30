@@ -62,10 +62,16 @@
                                 <label for="lokasiArsip" class="col-md-4 col-form-label">Status</label>
                                 <div class="col-md-8">
                                     <select class="form-control" id="lokasiArsip" name="status" style="background-color: #E0E0E0;">
-                                        <option value="Lemari">Pendaftaran</option>
-                                        <option value="Rak">Pembayaran</option>
-                                        <option value="Rak">Proses Oleh DJKI</option>
-                                        <option value="Rak">Selesai</option>
+                                        <option value="1">Pendaftaran</option>
+                                        <option value="2">Pemeriksaan Formalitas</option>
+                                        <option value="3">Menunggu Tanggapan Formalitas</option>
+                                        <option value="4">Masa Pengumuman</option>
+                                        <option value="5">Menunggu Pembayaran Subtantif</option>
+                                        <option value="6">Subtantif Tahap Awal</option>
+                                        <option value="7">Subtantif Tahap Lanjut</option>
+                                        <option value="8">Subtantif Tahap Akhir</option>
+                                        <option value="9">Menunggu Tanggapan Subtantif</option>
+                                        <option value="10">Selesai</option>
                                     </select>
                                 </div>
                             </div>

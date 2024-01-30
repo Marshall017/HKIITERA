@@ -89,8 +89,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/beritas">Berita</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/userdokumen">Dokumen</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dokumen
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="layananDropdown" style="background-color: #B80000">
+                                <li class="nav-item"><a class="nav-link" href="/userdokumen">Template</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/userkatalog">Katalog</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/kontak">Kontak</a>
