@@ -21,7 +21,8 @@
                                 <span class="position-absolute"><i class="bi bi-alarm"></i></span> Senin - Jum'at: 8.00 - 16.00 WIB
                             </li>
                             <li class="mb-4 pl-4">
-                                <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> Gedung C Institut Teknologi Sumatera
+                                <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> Ruang C102 LP3M-Gedung C 
+                                <br>Institut Teknologi Sumatera
                                 <br> J8R7+JG8, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, 
                                 <br> Lampung 35365 Indonesia
                             </li>
