@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +13,8 @@
 <body>
     <div class="container bg-splatter-x">
         <div class="header-title my-5">
-            <div
-                class="bg-white rounded-1 border border-black d-inline-block text-center px-3 pt-2 mb-3">
-                <h3 class="fw-bold font-mono text-center" style="text-align: center">Scrape Media <span style="color:#FF2690;">Instagram </h3>
+            <div class="bg-white rounded-1 border border-black d-inline-block text-center px-3 pt-2 mb-3">
+                <h3 class="fw-bold font-mono text-center" style="text-align: center;margin:1">Media <span style="color:#FF2690;">Instagram </h3>
             </div>
         </div>
         <div class="row at-3">
@@ -31,14 +29,14 @@
                                         <img src="{{ $media['thumbnail_url'] }}" class="card-img-top">
                                     </div>
                                 @else
-                                    <div style=" width: 450px; height: 450px;">
+                                    <div style=" width: w50px; height: 450px;">
                                         <img src="{{ $media['media_url'] }}" class="card-img-top" style="width: 100%; height: 100%;">
                                     </div>
                                 @endif
                                 <div class="card-body">
-                                    <h3 class="card-title" style="margin: 0;margin-left: 10px;">{{ $media['username'] }}</h3>
-                                    <p class="card-text" style="text-align: left; margin: 1;margin-left: 10px;width: 400px;">
-                                        {{ Str::limit($media['caption'], 300) }}
+                                    <h3 class="card-title" style="margin: 0;margin-left: 5px;color:#000000">{{ $media['username'] }}</h3>
+                                    <p class="card-text" style="text-align: left; margin: 1;margin-left: 5px;width: 300px;color:#000000">
+                                        {{ Str::limit($media['caption'], 200) }}
                                     </p>
                                 </div>
                             </div>
@@ -52,10 +50,40 @@
             </div>
         </div>
     </div> 
+
+
+            <!-- Tombol yang memicu modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+            <!-- Elemen modal -->
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <!-- Konten modal di sini -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Judul Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Isi modal -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <!-- Tombol lainnya jika diperlukan -->
+                </div>
+                </div>
+            </div>
+            </div>
     
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
     <script>
         $(document).ready(function(){
             $(".media").slick({
@@ -71,7 +99,3 @@
 </body>
 
 </html>
-
-
-
-
