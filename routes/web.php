@@ -15,7 +15,6 @@ use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserTimController;
 use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\UserBeritaController;
@@ -66,7 +65,7 @@ Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])-
 
 Route::get('/home', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
-Route::get('/instagram', [App\Http\Controllers\InstagramController::class, 'index'])->name('instagram');
+Route::get('/instagram', [App\Http\Controllers\InstagramController::class, 'index'])->name('kontak');
 
 Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
 

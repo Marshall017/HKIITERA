@@ -77,21 +77,6 @@
                         @endif
                     </div>
                 </div>
-                <div class="card-bodys" style="text-align: center;margin-left:30px;">
-                    @auth
-                    <h4>Name: {{ auth()->user()->name }}</h4>
-                    <h4>Email: {{ auth()->user()->email }}</h4>
-                    <hr />
-                    <form action="{{ route('logout') }}" method="post">
-                      @csrf
-                      <button class="btn btn-dark" type="submit">Logout</button>
-                    </form>
-                    @else
-                    <a href="{{ route('redirect') }}" class="btn btn-danger"
-                      >Login With Google</a
-                    >
-                    @endauth
-                  </div>
             </form>
           </div>
         </div>
