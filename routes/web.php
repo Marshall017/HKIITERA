@@ -23,6 +23,7 @@ use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\UserKatalogController;
+use App\Http\Controllers\PaymentController;
 
 
 
@@ -44,6 +45,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
     })->middleware(['auth'])
       ->name('home');
 
+Route::post('/midtrans/callback', [PaymentController::class, 'handleCallback']);
+Route::get('/create-payment', [PaymentController::class, 'createPayment']);
 
 Route::resource('dokumen', DokumenController::class);
 Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');

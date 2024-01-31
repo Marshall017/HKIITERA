@@ -144,7 +144,7 @@ class PendaftaranController extends Controller
             'status'=> 'Pendaftaran',
         ]);
 
-        return redirect()->route('pendaftaran.index')->with('success', 'Dokumen berhasil disimpan.');
+        return redirect()->route('pembayaran')->with('success', 'Dokumen berhasil disimpan.');
     }
 
     /**
