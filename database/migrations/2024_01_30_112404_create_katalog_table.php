@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('penulis1');
             $table->string('penulis2');
             $table->string('penulis3');
+            $table->string('publish');
             $table->text('abstrak');
             $table->string('katakunci');
             $table->string('cover');

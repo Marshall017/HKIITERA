@@ -60,9 +60,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="perihal" class="col-md-4 col-form-label">Abstark</label>
+                            <label for="publish" class="col-md-4 col-form-label">Tanggal Publish</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="abstrak" name="abstrak" placeholder="{{ $katalog->abstrak }}" value="{{ $katalog->abstrak }}" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="publish" name="publish" placeholder="{{ $katalog->publish }}" value="{{ $katalog->publish }}" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="isi" class="col-md-4 col-form-label">Abstrak</label>
+                            <div class="col-md-8">
+                                <textarea id="isi" name="abstrak" placeholder="{{ $katalog->abstrak }}" value="{{ $katalog->abstrak }}" style="background-color: #EBF1FA; width: 100%; height: 200px;"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">

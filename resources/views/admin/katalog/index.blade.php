@@ -31,9 +31,6 @@
                                               <tr>
                                                   <th>ID</th>
                                                   <th>judul</th>
-                                                  <th>Penulis1</th>
-                                                  <th>Penulis2</th>
-                                                  <th>Penulis3</th>
                                                   <th>E-ISSN</th>
                                                   <th>File</th>
                                                   <th>Aksi</th>
@@ -44,9 +41,6 @@
                                                   <tr>
                                                       <td>{{ $katalog->id }}</td>
                                                       <td>{{ $katalog->judul }}</td>
-                                                      <td>{{ $katalog->penulis1 }}</td>
-                                                      <td>{{ $katalog->penulis2 }}</td>
-                                                      <td>{{ $katalog->penulis3 }}</td>
                                                       <td>{{ $katalog->eissn }}</td>
                                                       <td>{{ $katalog->file }}</td>
                                                      

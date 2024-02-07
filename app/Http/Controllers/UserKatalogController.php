@@ -18,6 +18,12 @@ class UserKatalogController extends Controller
         return view('catalog',compact('katalog'));
     }
 
+    public function show( $id)
+    {
+        $katalog=Katalog::where('id',$id)->first();
+        return view('isikatalog',compact('katalog'));
+    }
+
     public function download(Katalog $katalog)
 {
     $filePath = public_path('assets/katalog/' . $katalog->file);

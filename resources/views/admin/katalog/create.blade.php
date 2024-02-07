@@ -59,6 +59,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="publish" class="col-md-4 col-form-label">Tanggal Publish</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="publish" name="publish" placeholder="Publish" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="isi" class="col-md-4 col-form-label">Abstrak</label>
                             <div class="col-md-8">
                                 <textarea id="isi" name="abstrak" style="background-color: #EBF1FA; width: 100%; height: 200px;"></textarea>

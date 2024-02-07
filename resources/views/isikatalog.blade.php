@@ -40,81 +40,45 @@
 	
         <article class="obj_article_details">
         <h1 class="page_title">
-         PEMBUATAN BIOCHAR-SLOW-RELEASE-FERTILIZER  DARI LIMBAH PELEPAH KELAPA SAWIT
+            {{ $katalog->judul }}
         </h1>
         
         
         <div class="row">
         <div class="main_entry">
         
-                            <ul class="item authors">
-                                            <li>
-                            <span class="name">
-                                Arysca Wisnu Satria
-                            </span>
-                                                            <span class="affiliation">
-                                    Program Studi Teknik Kimia Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Dika Ariyanto Ariyanto
-                            </span>
-                                                            <span class="affiliation">
-                                    Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Hida Arliani Nur Anisa
-                            </span>
-                                                            <span class="affiliation">
-                                    Program Studi Biologi Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Khaerunissa Anbar Istiadi
-                            </span>
-                                                            <span class="affiliation">
-                                    Program Studi Biologi Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Dian Anggria Sari
-                            </span>
-                                                            <span class="affiliation">
-                                    Program Studi Biologi Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Abdul Muhyi
-                            </span>
-                                                            <span class="affiliation">
-                                    Program Studi Teknik Mesin Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                            <li>
-                            <span class="name">
-                                Alawiyah Alawiyah
-                            </span>
-                                                            <span class="affiliation">
-                                    UPT Konservasi Flora Sumatera Institut Teknologi Sumatera
-                                </span>
-                                                                                </li>
-                                    </ul>
+                            
             
                                                                                                                         
-                                        <div class="item abstract">
+                    <div class="item abstract">
                     <h3 class="label">Abstract</h3>
-                    <p>Industri kelapa sawit dapat menyebabkan dampak yang buruk bagi lingkungan terkait dengan limbah cair dari industri pengolahan maupun limbah padat dari perkebunan. Limbah padat dari perkebunan kelapa sawit, seperti pelepah sawit, sesungguhnya dapat dimanfaatkan ulang menjadi biochar yang digunakan sebagai bahan pelapis <em>slow-release-fertilizer.&nbsp; </em>Penelitian ini bertujuan untuk mempelajari pengaruh variasi komposisi, bahan pelapis, dan bahan perekat terhadap daya lepas nitrogen pada <em>biochar-slow-release-fertilizer, </em>serta mempelajari kinetika pelepasannya<em>. </em>Variasi yang digunakan adalah rasio biochar/bentonite 20%:80% – 80%:20%, jenis perekatnya asap cair dan minyak jarak, dan jumlah pupuk urea 30% massa total. Hasil penelitian menunjukan bahwa hasil optimum yang diperoleh untuk bahan perekat asap cair dan minyak jarak adalah berturut-turut pada rasio biochar/bentonite 50%:50% dan 60%:40%. Sedangkan hasil uji pelindian mendapatkan bahwa kedua formula tersebut mampu mempertahankan pelepasan nitrogen total hingga 28 hari, dibanding 13 hari untuk formulasi yang tidak dimodifikasi. Uji kinetika pelepasan menggunakan model Korsmeyer-Peppas menunjukkan bahwa mekanisme pelepasan kedua sampel tersebut mengikuti difusi Fickian.</p><br>
-        <p><strong>Kata kunci </strong>: Biochar Pelepah Sawit, Pupuk Pelepasan Lambat, Asap Cair, Minyak Jarak, Model Pelepasan</p>
+                    <p>{{ $katalog->abstrak }}</p><br>
+        <p><strong>Kata kunci </strong>: {{ $katalog->katakunci }}</p>
                 </div>
             
-            
-        
+                
+                <ul class="item authors">
+                    <h3 class="label">Author :</h3>
+                    <li>
+    <span class="name">
+        {{ $katalog->penulis1 }}
+    </span>
+                                    
+                                                        </li>
+                    <li>
+    <span class="name">
+        {{ $katalog->penulis2 }}
+    </span>
+                                    
+                                                        </li>
+                    <li>
+    <span class="name">
+        {{ $katalog->penulis3 }}
+    </span>
+                                    
+                                                        </li>
+                    
+            </ul>
                                                                                                                                                                                                                                                     
                         
         </div><!-- .main_entry -->
@@ -123,8 +87,8 @@
         
                                         <div class="item cover_image">
                     <div class="sub_item">
-                                                    <a href="https://journal.itera.ac.id/index.php/maximus/issue/view/63">
-                                <img src="https://journal.itera.ac.id/public/journals/13/cover_issue_63_en_US.png">
+                                                    
+                                <img src="{{ asset('assets/katalog/cover/'.$katalog->cover) }}">
                             </a>
                                             </div>
                 </div>
@@ -136,8 +100,8 @@
         
         
         
-        
-        <a class="obj_galley_link pdf" href="https://journal.itera.ac.id/index.php/maximus/article/view/1578/451">
+                                                        <p>Download pdf</p>
+        <a class="obj_galley_link pdf" href="{{ route('katalog.download', $katalog->id) }}" >
         
         
         PDF
@@ -150,7 +114,7 @@
                         Published
                     </div>
                     <div class="value">
-                        2023-09-19
+                        {{ $katalog->publish }}
                     </div>
                 </div>
             
@@ -183,7 +147,7 @@
                     <div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
                 <div class="pkp_block block_custom" id="customblock-Statistics">
         <div class="content">
-        <h1><strong>E-ISSN : </strong></h1>
+        <h2><strong>E-ISSN : {{ $katalog->eissn }}</strong></h2>
        
         
         <p><noscript><div class="statcounter"><a title="Web Analytics"

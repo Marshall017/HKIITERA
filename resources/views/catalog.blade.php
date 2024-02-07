@@ -44,10 +44,14 @@
                                                                   <td>{{ $katalog->eissn }}</td>
                                                                   <td>{{ $katalog->file }}</td>
                                                                  
-                                                                <td style="display: flex; justify-content: space-between;">
-                                                                 <a href="{{ route('katalog.download', $katalog->id) }}" class="btn btn-success"><i class="fas fa-download"></i></a>
+                                                                  <td style="display: flex; justify-content: space-between;">
+                                                                    <!-- Tombol "Download" -->
+                                                                    <a href="{{ route('katalog.download', $katalog->id) }}" class="btn btn-success"><i class="fas fa-download"></i></a>
+                                                                    
+                                                                    <!-- Tombol "Lihat" -->
+                                                                    <a href="{{ route('isikatalog.show', $katalog->id) }}" class="btn btn-primary"><i class="fas fa-eye"></i> Lihat</a>
                                                                 </td>
-                                                                
+                                                               
                                                               </tr>
                                                           @endforeach
                                                       </tbody>
