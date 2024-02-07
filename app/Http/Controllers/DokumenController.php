@@ -40,7 +40,7 @@ class DokumenController extends Controller
             'nama' => 'required',
             'jenis' => 'required',
             'kategori' => 'required',
-            'file' => 'required|file|mimes:pdf,doc,docx|max:10240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
+            'file' => 'required|file|mimes:pdf,doc,docx|max:102400', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
         ]);
 
         $file1 = $validatedData['file'];
