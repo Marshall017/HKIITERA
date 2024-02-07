@@ -88,6 +88,9 @@
                             <a class="nav-link" href="/berita">Berita</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/userkatalog">Katalog</a>                        
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/document">Dokumen</a>
                         </li>
                         <li class="nav-item">
