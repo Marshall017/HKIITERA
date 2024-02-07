@@ -26,34 +26,32 @@
                                 <div class="card-body p-2 bg-white rounded">
                                             <div class="table-responsive">
                                                 <br>
-                                                <table id="example" style="width: 100%" class="table table-striped table-bordered">
-                                                    <br><br>
-                                                    <thead style="background-color:black">
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>Nama</th>
-                                                            <th>Jenis</th>
-                                                            <th>Kategori</th>
-                                                            <th>File</th>
-                                                            <th>Aksi</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        @foreach($katalog as $katalog)
-                                                            <tr>
-                                                                <td>{{ $katalog->id }}</td>
-                                                                <td>{{ $katalog->nama }}</td>
-                                                                <td>{{ $katalog->jenis }}</td>
-                                                                <td>{{ $katalog->kategori }}</td>
-                                                                <td>{{ $katalog->file }}</td>
-                                                               
-                                                              <td>
-                                                                  <a href="{{ route('userkatalog.download', $katalog->id) }}" ><button class="btn btn-success"><i class="fas fa-download"></i></button></a>
+                                                    <table id="example" style="width: 100%" class="table table-striped table-bordered">
+                                                        <thead style="background-color:black">
+                                                          <tr>
+                                                              <th>ID</th>
+                                                              <th>judul</th>
+                                                              <th>E-ISSN</th>
+                                                              <th>File</th>
+                                                              <th>Aksi</th>
+                                                          </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                          @foreach($katalog as $katalog)
+                                                              <tr>
+                                                                  <td>{{ $katalog->id }}</td>
+                                                                  <td>{{ $katalog->judul }}</td>
+                                                                  <td>{{ $katalog->eissn }}</td>
+                                                                  <td>{{ $katalog->file }}</td>
+                                                                 
+                                                                <td style="display: flex; justify-content: space-between;">
+                                                                 <a href="{{ route('katalog.download', $katalog->id) }}" class="btn btn-success"><i class="fas fa-download"></i></a>
                                                                 </td>
-                                                            </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
+                                                                
+                                                              </tr>
+                                                          @endforeach
+                                                      </tbody>
+                                                  </table>
                                             </div>
                             </div>
                           </div>

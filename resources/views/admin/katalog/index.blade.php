@@ -30,9 +30,11 @@
                                             <thead style="background-color:black">
                                               <tr>
                                                   <th>ID</th>
-                                                  <th>Nama</th>
-                                                  <th>Jenis</th>
-                                                  <th>Kategori</th>
+                                                  <th>judul</th>
+                                                  <th>Penulis1</th>
+                                                  <th>Penulis2</th>
+                                                  <th>Penulis3</th>
+                                                  <th>E-ISSN</th>
                                                   <th>File</th>
                                                   <th>Aksi</th>
                                               </tr>
@@ -41,9 +43,11 @@
                                               @foreach($katalog as $katalog)
                                                   <tr>
                                                       <td>{{ $katalog->id }}</td>
-                                                      <td>{{ $katalog->nama }}</td>
-                                                      <td>{{ $katalog->jenis }}</td>
-                                                      <td>{{ $katalog->kategori }}</td>
+                                                      <td>{{ $katalog->judul }}</td>
+                                                      <td>{{ $katalog->penulis1 }}</td>
+                                                      <td>{{ $katalog->penulis2 }}</td>
+                                                      <td>{{ $katalog->penulis3 }}</td>
+                                                      <td>{{ $katalog->eissn }}</td>
                                                       <td>{{ $katalog->file }}</td>
                                                      
                                                       <td style="display: flex; justify-content: space-between;">

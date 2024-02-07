@@ -13,9 +13,14 @@ return new class extends Migration
     {
         Schema::create('katalog', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('jenis');
-            $table->string('kategori');
+            $table->string('judul'); 
+            $table->string('eissn');
+            $table->string('penulis1');
+            $table->string('penulis2');
+            $table->string('penulis3');
+            $table->text('abstrak');
+            $table->string('katakunci');
+            $table->string('cover');
             $table->string('file'); // Gunakan tipe kolom yang sesuai untuk menyimpan path file atau data file jika diperlukan
             $table->timestamps();
         });

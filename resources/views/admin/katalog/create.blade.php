@@ -29,24 +29,53 @@
                     <form method="POST" action="{{ route('katalog.store') }}" enctype="multipart/form-data">   
                         @csrf
                         <div class="form-group row">
-                            <label for="namaSurat" class="col-md-4 col-form-label">Nama</label>
+                            <label for="Judul" class="col-md-4 col-form-label">Judul</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="judul" name="judul" placeholder="judul" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="kategoriSurat" class="col-md-4 col-form-label">Jenis</label>
+                            <label for="eissn" class="col-md-4 col-form-label">E-ISSN</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="jenis" name="jenis" placeholder="Jenis" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="eissn" name="eissn" placeholder="eissn" style="background-color:#EBF1FA">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="perihal" class="col-md-4 col-form-label">Kategori</label>
+                            <label for="penulis1" class="col-md-4 col-form-label">Penulis 1</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori" style="background-color:#EBF1FA">
+                                <input type="text" class="form-control" id="penulis1" name="penulis1" placeholder="Penulis1" style="background-color:#EBF1FA">
                             </div>
                         </div>
-  
+                        <div class="form-group row">
+                            <label for="penulis2" class="col-md-4 col-form-label">Penulis 2</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="penulis2" name="penulis2" placeholder="Penulis2" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="penulis3" class="col-md-4 col-form-label">Penulis 3</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="penulis3" name="penulis3" placeholder="Penulis3" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="isi" class="col-md-4 col-form-label">Abstrak</label>
+                            <div class="col-md-8">
+                                <textarea id="isi" name="abstrak" style="background-color: #EBF1FA; width: 100%; height: 200px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="katakunci" class="col-md-4 col-form-label">Kata Kunci</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="katakunci" name="katakunci" placeholder="katakunci" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cover" class="col-md-4 col-form-label">cover</label>
+                            <div class="col-md-8">
+                                <input type="file" class="form-control" id="cover" name="cover" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="uploadSurat" class="col-md-4 col-form-label">Upload Katalog</label>
                             <div class="col-md-8">

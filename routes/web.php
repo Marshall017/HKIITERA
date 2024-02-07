@@ -58,6 +58,9 @@ Route::get('katalog/{katalog}/download', [KatalogController::class, 'download'])
 Route::resource('userkatalog', UserKatalogController::class);
 Route::get('userkatalog/{katalog}/download', [UserKatalogController::class, 'download'])->name('userkatalog.download');
 
+Route::get('/detailkatalog', function () {
+    return view('isikatalog');
+});
 Route::resource('tim', TimController::class);
 Route::resource('usertim', UserTimController::class);
 

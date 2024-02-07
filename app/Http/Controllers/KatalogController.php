@@ -37,25 +37,37 @@ class KatalogController extends Controller
     {
         // Validasi request
        $validatedData= $request->validate([
-            'nama' => 'required',
-            'jenis' => 'required',
-            'kategori' => 'required',
-            'file' => 'required|file|mimes:pdf,doc,docx|max:10240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
+            'judul' => 'required',
+            'eissn' => 'required',
+            'penulis1' => 'required',
+            'penulis2' => 'required',
+            'penulis3' => 'required',
+            'abstrak' => 'required',
+            'katakunci' => 'required',
+            'cover' => 'required|mimes:jpeg,png,jpg,gif|max:20480',
+            'file' => 'required|file|mimes:pdf,doc,docx|max:100000', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
         ]);
 
         $file1 = $validatedData['file'];
         $filename1 = $file1->getClientOriginalName();
         $location1 = 'assets/katalog/';
-
-  
         $file1->move(public_path($location1), $filename1);
 
+        $file2 = $validatedData['cover'];
+        $filename2 = $file2->getClientOriginalName();
+        $location2 = 'assets/katalog/cover/';
+        $file2->move(public_path($location2), $filename2);
 
         // Membuat record baru dalam tabel 
         Katalog::create([
-            'nama' => $request->input('nama'),
-            'jenis' => $request->input('jenis'),
-            'kategori' => $request->input('kategori'),
+            'judul' => $request->input('judul'),
+            'eissn' => $request->input('eissn'),
+            'penulis1' => $request->input('penulis1'),
+            'penulis2' => $request->input('penulis2'),
+            'penulis3' => $request->input('penulis3'),
+            'abstrak' => $request->input('abstrak'),
+            'katakunci' => $request->input('katakunci'),
+            'cover' => $filename2,
             'file' => $filename1,
         ]);
 
@@ -86,10 +98,15 @@ class KatalogController extends Controller
     {
         // Validasi request
         $validatedData = $request->validate([
-            'nama' => 'required',
-            'jenis' => 'required',
-            'kategori' => 'required',
-            'file' => 'nullable|file|mimes:pdf,doc,docx|max:10240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
+            'judul' => 'required',
+            'eissn' => 'required',
+            'penulis1' => 'required',
+            'penulis2' => 'required',
+            'penulis3' => 'required',
+            'abstrak' => 'required',
+            'katakunci' => 'required',
+            'cover' => 'required|mimes:jpeg,png,jpg,gif|max:20480',
+            'file' => 'nullable|file|mimes:pdf,doc,docx|max:100000', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
         ]);
 
         // Mengambil data  berdasarkan ID
@@ -98,14 +115,17 @@ class KatalogController extends Controller
         // Jika ada file yang diupload
         if ($request->hasFile('file')) {
             $file1 = $validatedData['file'];
+            $file2 = $validatedData['cover'];
             $filename1 = $file1->getClientOriginalName();
+            $filename2 = $file2->getClientOriginalName();
+            $location2 = 'assets/katalog/cover/';
             $location1 = 'assets/katalog/';
 
             $file1->move(public_path($location1), $filename1);
-
+            $file2->move(public_path($location2), $filename2);
             // Hapus file lama jika sudah ada
             if ($katalog->file) {
-                $oldFilePath = public_path($location1 . $katalog->file);
+                $oldFilePath = public_path($location1 .$location2. $katalog->file);
                 if (file_exists($oldFilePath)) {
                     unlink($oldFilePath);
                 }
@@ -113,17 +133,26 @@ class KatalogController extends Controller
 
             // Update data dengan file baru
             $katalog->update([
-                'nama' => $request->input('nama'),
-                'jenis' => $request->input('jenis'),
-                'kategori' => $request->input('kategori'),
+                'judul' => $request->input('judul'),
+                'eissn' => $request->input('eissn'),
+                'penulis1' => $request->input('penulis1'),
+                'penulis2' => $request->input('penulis2'),
+                'penulis3' => $request->input('penulis3'),
+                'abstrak' => $request->input('abstrak'),
+                'katakunci' => $request->input('katakunci'),
+                'cover' => $filename2,
                 'file' => $filename1,
             ]);
         } else {
             // Jika tidak ada file yang diupload, update data tanpa mengubah file
             $katalog->update([
-                'nama' => $request->input('nama'),
-                'jenis' => $request->input('jenis'),
-                'kategori' => $request->input('kategori'),
+                'judul' => $request->input('judul'),
+            'eissn' => $request->input('eissn'),
+            'penulis1' => $request->input('penulis1'),
+            'penulis2' => $request->input('penulis2'),
+            'penulis3' => $request->input('penulis3'),
+            'abstrak' => $request->input('abstrak'),
+            'katakunci' => $request->input('katakunci'),
             ]);
         }
 
