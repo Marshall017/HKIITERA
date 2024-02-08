@@ -38,12 +38,23 @@ Route::get('login/google/redirect', [SocialiteController::class, 'redirect'])
 Route::get('login/google/callback', [SocialiteController::class, 'callback'])
     ->middleware(['guest'])
     ->name('callback');
+    Route::get('/home', [HomeController::class, 'index'])->name('admin.index');
+
+    // Route::get('/home', function () {
+    //     return view('home');
+    // })->middleware(['auth'])
+    //   ->name('home');
+
+    Route::middleware(['auth', 'role:1'])->group(function () {
+        Route::resource('berita', BeritaController::class);
 
 
-    Route::get('/home', function () {
-        return view('home');
-    })->middleware(['auth'])
-      ->name('home');
+    });
+    Route::middleware(['auth', 'role:2'])->group(function () {
+        Route::resource('beritas', UserBeritaController::class);
+
+
+    });
 
 Route::post('/midtrans/callback', [PaymentController::class, 'handleCallback']);
 Route::get('/create-payment', [PaymentController::class, 'createPayment']);
@@ -64,7 +75,7 @@ Route::resource('isikatalog', UserKatalogController::class);
 Route::resource('tim', TimController::class);
 Route::resource('usertim', UserTimController::class);
 
-Route::resource('berita', BeritaController::class);
+
 Route::resource('beritas', UserBeritaController::class);
 Route::resource('isiberita', UserBeritaController::class);
 
@@ -76,7 +87,7 @@ Route::post('/send-email', [KontakController::class, 'sendEmail'])->name('send.e
 // User
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
+
 
 Route::get('/instagram', [App\Http\Controllers\InstagramController::class, 'index'])->name('kontak');
 

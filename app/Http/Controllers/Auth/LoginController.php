@@ -35,13 +35,13 @@ class LoginController extends Controller
      * @param  mixed  $user
      * @return mixed
      */
-    protected function authenticated(Request $request, $user)
-    {
-        // Customize the redirection logic here
-        if ($user->isAdmin()) {
-            return redirect()->route('admin.dashboard');
-        }
+    // protected function authenticated(Request $request, $user)
+    // {
+    //     // Customize the redirection logic here
+    //     if ($user->isAdmin()) {
+    //         return redirect()->route('admin.dashboard');
+    //     }
 
-        return redirect()->route('home');
-    }
+    //     return redirect()->route('home');
+    // }
 }
