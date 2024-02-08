@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>PKKI ITERA</title>
+    <title>Pusat Kelola Kekayaan Intelektual ITERA</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -22,18 +22,17 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #DAA520; height: 39px;">
             <div class="container">
-                <a class="navbar-brand" href="https://www.itera.ac.id/" target="_blank">
+                <a class="navbar-brand" href="https://lp3m.itera.ac.id/" target="_blank">
                     <span class="brand-left">ITERA.AC.ID | LP3M ITERA </span>
                 </a>
-        
                 <!-- Gunakan class "d-flex align-items-center" untuk menyatukan elemen secara horizontal -->
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="https://www.itera.ac.id/" target="_blank">
-                        <span class="brand-left">HKI@ITERA.AC.ID |</span>
+                    <a class="navbar-brand" href="https://pkkiitera.com/" target="_blank">
+                        <span class="brand-left">pkkiitera.com |</span>
                     </a>
         
                     <!-- Tambahkan ikon Instagram menggunakan Font Awesome -->
-                    <a href="/instagram" target="_blank" class="navbar-text ml-5">
+                    <a href="https://www.instagram.com/hkiitera/?hl=en" target="_blank" class="navbar-text ml-5">
                         <i class="fab fa-instagram" style="font-size: 25px; color: #000000;"></i>
                     </a>
                 </div>
