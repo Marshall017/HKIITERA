@@ -19,17 +19,17 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('img/bg1.jpg');">
+            <div class="carousel-item active" style="background-image: url('img/bg1.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
                     <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('img/bg3.jpg');">
+            <div class="carousel-item" style="background-image: url('img/bg3.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
                     <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('img/bg2.jpg');">
+            <div class="carousel-item" style="background-image: url('img/bg2.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
                     <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>

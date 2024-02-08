@@ -157,8 +157,11 @@
             <div class="row">
                 <div class="col-md-4 col-12">
                     <h5 class="headin5_amrc col_white_amrc pt2" ><img src="img/logo.png" alt="logo" style="max-height: 100px; max-width: 250px;"></h5>
-                    <p class="mb10">Pusat Kelola Karya Intelektual adalah unit kerja di bawah Lembaga Pengembangan Pembelajaran dan Penjaminan Mutu (LP3M) Institut Teknologi Sumatera (ITERA) yang berfungsi untuk mengelola dan mendayagunakan kekayaan intelektual seluruh sivitas akademika ITERA, sekaligus sebagai pusat informasi dan pelayanan Pengajuan HKI.
-                        <br><br>Pusat Kelola Karya Intelektual yang biasa disebut sebagai Unit PKKI didirikan pada Juli 2023</p>
+                    <p class="mb10">
+                        Pusat Kelola Karya Intelektual (PKKI) ITERA, sebelumnya dikenal sebagai Sentra Hak Kekayaan Intelektual (HKI), adalah sebuah lembaga yang berperan sentral dalam mengelola dan melindungi karya intelektual di lingkungan Institut Teknologi Sumatera (ITERA), Sumatera Indonesia. Mulai dari tahun 2019 hingga 2022, PKKI berada di bawah naungan Lembaga Penelitian dan Pengabdian Kepada Masyarakat (LPPM) ITERA sebelum kemudian dipindahkan ke Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran (LPMPP) pada Juni 2023.
+                        <br><br> PKKI ITERA bertujuan untuk mengidentifikasi, melindungi, dan mengembangkan potensi hak kekayaan intelektual (HKI) yang dimiliki oleh para akademisi dan staf ITERA. Tugas utamanya mencakup pengelolaan perlindungan HKI seperti hak cipta, merek, paten, dan lain-lain sesuai dengan peraturan yang berlaku. Selain itu, PKKI juga fokus pada potensi komersial dan pengembangan ilmu pengetahuan dan teknologi yang terkandung dalam karya-karya tersebut. PKKI ITERA juga bertanggung jawab untuk mendokumentasikan karya intelektual yang telah dilindungi dalam bentuk Katalog yang diterbitkan setiap tahunnya mulai tahun 2024. 
+                        <br><br>Katalog ini mencakup daftar lengkap karya-karya yang telah diberikan perlindungan hak kekayaan intelektual seperti hak cipta, merek, paten, dan lain-lain. Dokumentasi ini memberikan gambaran komprehensif tentang potensi intelektual yang dimiliki oleh komunitas akademik ITERA dan menjadi referensi penting untuk pengembangan ilmu pengetahuan dan teknologi di lembaga tersebut.
+                        </p>
                 </div>
     
                 <div class="col-md-4 col-12">

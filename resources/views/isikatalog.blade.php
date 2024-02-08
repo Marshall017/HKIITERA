@@ -57,28 +57,7 @@
                 </div>
             
                 
-                <ul class="item authors">
-                    <h3 class="label">Author :</h3>
-                    <li>
-    <span class="name">
-        {{ $katalog->penulis1 }}
-    </span>
-                                    
-                                                        </li>
-                    <li>
-    <span class="name">
-        {{ $katalog->penulis2 }}
-    </span>
-                                    
-                                                        </li>
-                    <li>
-    <span class="name">
-        {{ $katalog->penulis3 }}
-    </span>
-                                    
-                                                        </li>
-                    
-            </ul>
+               
                                                                                                                                                                                                                                                     
                         
         </div><!-- .main_entry -->
