@@ -31,25 +31,26 @@ class AkunAdminController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    // Validasi data langsung pada objek Request
-    $request->validate([
-        'name' => 'required',
-        'email' => 'required',
-        'password' => 'required',
-        'role' => 'required',
-    ]);
-
-    // Membuat record baru dalam tabel dokumen
-    AkunAdmin::create([
-        'name' => $request->input('name'),
-        'email' => $request->input('email'),
-        'password' => $request->input('password'),
-        'role' => $request->input('role'),
-    ]);
-
-    return redirect()->route('akunadmin.index')->with('success', 'Akun berhasil dibuat.');
-}
+    {
+        // Validasi data langsung pada objek Request
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+    
+        // Membuat record baru dalam tabel dokumen dengan password yang di-hash dan role otomatis 1
+        AkunAdmin::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password')), // Meng-hash password menggunakan bcrypt()
+            'role' => '1', // Atur role menjadi 1 secara otomatis
+        ]);
+    
+        return redirect()->route('akunadmin.index')->with('success', 'Akun berhasil dibuat.');
+    }
+    
+    
 
 
     /**
