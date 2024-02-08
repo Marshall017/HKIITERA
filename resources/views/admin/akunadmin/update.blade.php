@@ -32,40 +32,36 @@
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9">
                     <div class="tab-pane fade active show" id="account-general">
-                        <div class="card-body media align-items-center">
-                            <img src="img/profil.png" style="width:20%" class="rounded-circle">
-                            <div class="media-body ml-4">
-                                <label class="btn btn-outline-primary">
-                                    Upload Gambar
-                                </label>
-                            </div>
-                        </div>
-                        <hr class="border-light m-0">
-        
-                        
+                        <form method="POST" action="{{ route('akunadmin.update', $users->id) }}" enctype="multipart/form-data">   
+                            @csrf
+                            @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">Nama</label>
-                                    <input type="text" class="form-control mb-1" placeholder="Nama" style="background-color: #CCD9EC">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Nama Pengguna</label>
-                                    <input type="text" class="form-control mb-1" placeholder="Nama Pengguna" style="background-color: #CCD9EC">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Password</label>
-                                    <input type="text" class="form-control" placeholder="Password" style="background-color: #CCD9EC">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">No HP</label>
-                                    <input type="text" class="form-control mb-1" placeholder="No Hp" style="background-color: #CCD9EC">
+                                    <input type="text" class="form-control mb-1" name="name" placeholder="{{ $users->name }}" value="{{ $users->name }}" style="background-color: #CCD9EC">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control mb-1" placeholder="Email" style="background-color: #CCD9EC">
+                                    <input type="text" class="form-control mb-1" name="email" placeholder="{{ $users->email }}" value="{{ $users->email }}" style="background-color: #CCD9EC">
                                 </div>
-                            </div>
-                            
+                                <div class="form-group">
+                                    <label class="form-label">Password</label>
+                                    <input type="text" class="form-control" name="password" placeholder="{{ $users->password }}" value="{{ $users->password }}" style="background-color: #CCD9EC">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Role</label>
+                                    <select class="form-control" name="role" placeholder="{{ $users->role }}" value="{{ $users->role }}"style="background-color: #CCD9EC">
+                                        <option value="2">Role 1</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="text-center mt-3" >
+                                    <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
+                                </div>
+                                
+                                </div>
+                        </form>
                         
                     </div>
 

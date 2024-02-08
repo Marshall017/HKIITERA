@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\AkunAdmin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TimController;
@@ -13,19 +14,19 @@ use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PanduanController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserTimController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\AkunAdminController;
+use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\UserBeritaController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
-use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\UserKatalogController;
-use App\Http\Controllers\PaymentController;
-
-
+use App\Http\Controllers\DashboardUserController;
 
 Auth::routes();
 
@@ -64,17 +65,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
             return view('admin.pembayaran.index');
         });
 
-        Route::get('/akunadmin', function () {
-            return view('admin.akunadmin.index');
-        });
-        
-        Route::get('/tambahakunadmin', function () {
-            return view('admin.akunadmin.create');
-        });
-        
-        Route::get('/editakunadmin', function () {
-            return view('admin.akunadmin.update');
-        });
+        Route::resource('akunadmin', AkunAdminController::class);
     });
 
     //User

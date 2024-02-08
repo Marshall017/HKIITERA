@@ -17,7 +17,7 @@
         <div class="container py-6">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="font-weight" style="font-size: 30px; color: white; margin-left: 10px;">Akun Admin</span>
-                <a href="/tambahakunadmin" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Akun</a>
+                <a href="/akunadmin/create" class="btn btn" style="font-size: 15px; border-radius: 20px; background-color: #DAA520; color: black">Tambah Akun</a>
             </div>
             
                     
@@ -30,124 +30,33 @@
                                             <br>
                                             <thead style="background-color:black">
                                                 <tr>
-                                                  <th>Jabatan</th>
+                                                  <th>ID</th>
                                                   <th>Nama Pengguna</th>
-                                                  <th>Nama</th>
-                                                  <th>NO HP</th>
+                                                  <th>Email</th>
                                                   <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                    <a href="/editakunadmin" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                                
+                                                  @foreach($users as $users)
+                                                  <tr>
+                                                      <td>{{ $users->id }}</td>
+                                                      <td>{{ $users->name }}</td>
+                                                      <td>{{ $users->email }}</td>
+                                                  
+                                                    <td>
+                                                      {{-- <a href="{{ route('akunadmin.edit',$users->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                     --}}
+                                                        <form action="{{ route('akunadmin.destroy', $users->id) }}" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                                        </form>
+
+                                                    </td>
                                                       
                                                 </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
-                                                <tr>
-                                                  <td>Anggota</td>
-                                                  <td>Ali Idrus</td>
-                                                  <td>Ali</td>
-                                                  <td>085377</td>
-                                                  <td><button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                      <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                      
-                                                </tr>
+                                                @endforeach
                                               </tbody>
                                         </table>
                                     </div>

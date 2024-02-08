@@ -27,49 +27,41 @@
     <div class="container light-style flex-grow-1 container-p-y">
         <div class="card overflow-hidden"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
             <div class="card-header" style="background-color: #DAA520;color:white;text-align:center;border-radius:10px;">
-                <h4>Tambah TIM</h4>
+                <h4>Tambah Akun Admin</h4>
             </div>
             <div class="row no-gutters row-bordered row-border-light" style="justify-content: center">
                 <div class="col-md-9">
                     <div class="tab-pane fade active show" id="account-general">
-                        <div class="card-body media align-items-center">
-                            <img src="img/profil.png" style="width:20%" class="rounded-circle">
-                            <div class="media-body ml-4">
-                                <label class="btn btn-outline-primary">
-                                    Upload Gambar
-                                </label>
-                            </div>
-                        </div>
                         <hr class="border-light m-0">
-        
+                        <form method="POST" action="{{ route('akunadmin.store') }}" enctype="multipart/form-data">   
+                            @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-label">Nama</label>
-                                <input type="text" class="form-control mb-1" placeholder="Nama" style="background-color: #CCD9EC">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Nama Pengguna</label>
-                                <input type="text" class="form-control mb-1" placeholder="Nama Pengguna" style="background-color: #CCD9EC">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="text" class="form-control" placeholder="Password" style="background-color: #CCD9EC">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">No HP</label>
-                                <input type="text" class="form-control mb-1" placeholder="No Hp" style="background-color: #CCD9EC">
+                                <input type="text" class="form-control mb-1" name="name" placeholder="Nama" style="background-color: #CCD9EC">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Email</label>
-                                <input type="text" class="form-control mb-1" placeholder="Email" style="background-color: #CCD9EC">
+                                <input type="text" class="form-control mb-1" name="email" placeholder="Email" style="background-color: #CCD9EC">
                             </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="text" class="form-control" name="password" placeholder="Password" style="background-color: #CCD9EC">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Role</label>
+                                <select class="form-control" name="role" style="background-color: #CCD9EC">
+                                    <option value="2">Role 1</option>
+                                </select>
+                            </div>
+                            
                             <div class="text-center mt-3" >
                                 <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                                <button type="button" class="btn btn-default" style="background-color: blue;color:white">Save</button>
+                                <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
                             </div>
                             
                             </div>
-                            
+                        </form>
                         </div>
                     </div>
 
