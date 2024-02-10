@@ -30,35 +30,32 @@
                                             <br>
                                             <thead style="background-color:black">
                                                 <tr>
-                                                  <th>ID</th>
-                                                  <th>Nama Pengguna</th>
-                                                  <th>Email</th>
-                                                  <th>Aksi</th>
+                                                    <th>ID</th>
+                                                    <th>Nama Pengguna</th>
+                                                    <th>Email</th>
+                                                    <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
-                                                  @foreach($users as $users)
-                                                  <tr>
-                                                      <td>{{ $users->id }}</td>
-                                                      <td>{{ $users->name }}</td>
-                                                      <td>{{ $users->email }}</td>
-                                                  
-                                                    <td>
-                                                      {{-- <a href="{{ route('akunadmin.edit',$users->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                                     --}}
-                                                        <form action="{{ route('akunadmin.destroy', $users->id) }}" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                        </form>
-
-                                                    </td>
-                                                      
-                                                </tr>
+                                                @foreach($users as $user)
+                                                    @if($user->role == 1)
+                                                        <tr>
+                                                            <td>{{ $user->id }}</td>
+                                                            <td>{{ $user->name }}</td>
+                                                            <td>{{ $user->email }}</td>
+                                                            <td>
+                                                                <form action="{{ route('akunadmin.destroy', $user->id) }}" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus dokumen ini?')">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
                                                 @endforeach
-                                              </tbody>
+                                            </tbody>
                                         </table>
+                                        
                                     </div>
                     </div>
                   </div>
