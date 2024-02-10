@@ -201,7 +201,24 @@
             </ul>
         </div>
     </footer>
-    
+    <div id="whatsapp-button">
+        <a href="https://wa.me/6289617843241" target="_blank">
+            <img src="assets/wa.png" alt="WhatsApp Icon">
+        </a>
+    </div>
+<style>
+    #whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Atur jarak dari bawah halaman */
+    right: 20px; /* Atur jarak dari sisi kanan halaman */
+    z-index: 9999; /* Pastikan tombol ini muncul di atas konten lain */
+}
+
+#whatsapp-button img {
+    width: 60px; /* Atur ukuran gambar ikon WhatsApp */
+    height: auto;
+}
+</style>    
     <nav class="footers">
         © COPYRIGHT 2023 - PUSAT KELOLA KEKAYAAN INTELEKTUAL
     </nav>
