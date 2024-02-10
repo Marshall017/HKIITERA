@@ -60,6 +60,24 @@
                                 <label class="form-label">Program Studi</label>
                                 <input type="text" class="form-control mb-1" name="prodi" placeholder="Program Studi" style="background-color: #CCD9EC">
                             </div>
+                            <div class="form-group">
+                                <label class="form-label">Link Scopus</label>
+                                <input type="text" class="form-control mb-1" name="scopus" placeholder="Scopus" style="background-color: #CCD9EC">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Link Google Scholar</label>
+                                <input type="text" class="form-control mb-1" name="scholar" placeholder="Scholar" style="background-color: #CCD9EC">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Link Sinta</label>
+                                <input type="text" class="form-control mb-1" name="sinta" placeholder="Sinta" style="background-color: #CCD9EC">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Link LinkedIn</label>
+                                <input type="text" class="form-control mb-1" name="linkedin" placeholder="LinkedIn" style="background-color: #CCD9EC">
+                            </div>
+
+
                             <div class="text-center mt-3" >
                                 <button type="submit" class="btn btn-outline-secondary">Cancel</button>
                                 <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>

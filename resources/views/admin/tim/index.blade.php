@@ -34,7 +34,6 @@
                                                   <th>Nama</th>
                                                   <th>Jabatan</th>
                                                   <th>Prodi</th>
-                                                  <th>Foto</th>
                                                   <th>aksi</th>
                                               </tr>
                                           </thead>
@@ -45,7 +44,6 @@
                                                       <td>{{ $tim->nama }}</td>
                                                       <td>{{ $tim->jabatan }}</td>
                                                       <td>{{ $tim->prodi }}</td>
-                                                      <td>{{ $tim->file_foto }}</td>
                                                       <td>
                                                         <div class="button-group">
                                                             <a href="{{ route('tim.edit', $tim->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>

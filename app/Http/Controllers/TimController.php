@@ -39,6 +39,10 @@ class TimController extends Controller
             'nama' => 'required',
             'jabatan' => 'required',
             'prodi' => 'required',
+            'scopus' => 'required',
+            'scholar' => 'required',
+            'sinta' => 'required',
+            'linkedin' => 'required',
             'file_foto' => 'required|mimes:jpg,jpeg,png|max:30240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
         ]);
 
@@ -55,6 +59,10 @@ class TimController extends Controller
             'nama' => $request->input('nama'),
             'jabatan' => $request->input('jabatan'),
             'prodi' => $request->input('prodi'),
+            'scopus' => $request->input('scopus'),
+            'scholar' => $request->input('scholar'),
+            'sinta' => $request->input('sinta'),
+            'linkedin' => $request->input('linkedin'),
             'file_foto' => $filename1,
         ]);
 
@@ -81,54 +89,67 @@ class TimController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
-    {
-        
-        // Validasi request
-        $validatedData = $request->validate([
-            'nama' => 'required',
-            'jabatan' => 'required',
-            'prodi' => 'required',
-            'file_foto' => 'required|file_foto|mimes:jpg,jpeg,png|max:30240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
-        ]);
+public function update(Request $request, $id)
+{
+    // Validasi request
+    $validatedData = $request->validate([
+        'nama' => 'required',
+        'jabatan' => 'required',
+        'prodi' => 'required',
+        'scopus' => 'required',
+        'scholar' => 'required',
+        'sinta' => 'required',
+        'linkedin' => 'required',
+        'file_foto' => 'nullable|image|mimes:jpg,jpeg,png|max:30240', // Ubah menjadi nullable untuk memperbolehkan foto kosong
+    ]);
 
-        // Mengambil data dokumen berdasarkan ID
-        $tim = Tim::findOrFail($id);
+    // Mengambil data tim berdasarkan ID
+    $tim = Tim::findOrFail($id);
 
-        // Jika ada file yang diupload
-        if ($request->hasFile('file_foto')) {
-            $file1 = $validatedData['file_foto'];
-            $filename1 = $file1->getClientOriginalName();
-            $location1 = 'assets/tim/';
+    // Jika ada file yang diupload
+    if ($request->hasFile('file_foto')) {
+        $file = $validatedData['file_foto'];
+        $filename = $file->getClientOriginalName();
+        $location = 'assets/tim/';
 
-            $file1->move(public_path($location1), $filename1);
+        $file->move(public_path($location), $filename);
 
-            // Hapus file lama jika sudah ada
-            if ($tim->file_foto) {
-                $oldFilePath = public_path($location1 . $tim->file_foto);
-                if (file_exists($oldFilePath)) {
-                    unlink($oldFilePath);
-                }
+        // Hapus file lama jika sudah ada
+        if ($tim->file_foto) {
+            $oldFilePath = public_path($location . $tim->file_foto);
+            if (file_exists($oldFilePath)) {
+                unlink($oldFilePath);
             }
-
-            // Update data dokumen dengan file baru
-            $tim->update([
-                'nama' => $request->input('nama'),
-                'jabatan' => $request->input('jabatan'),
-                'prodi' => $request->input('prodi'),
-                'file_foto' => $filename1,
-            ]);
-        } else {
-            // Jika tidak ada file yang diupload, update data dokumen tanpa mengubah file
-            $tim->update([
-                'nama' => $request->input('nama'),
-                'jabatan' => $request->input('jabatan'),
-                'prodi' => $request->input('prodi'),
-            ]);
         }
 
-        return redirect()->route('tim.index')->with('success', 'Data berhasil diperbarui.');
+        // Update data tim dengan file baru dan kolom-kolom lainnya
+        $tim->update([
+            'nama' => $request->input('nama'),
+            'jabatan' => $request->input('jabatan'),
+            'prodi' => $request->input('prodi'),
+            'scopus' => $request->input('scopus'),
+            'scholar' => $request->input('scholar'),
+            'sinta' => $request->input('sinta'),
+            'linkedin' => $request->input('linkedin'),
+            'file_foto' => $filename,
+        ]);
+    } else {
+        // Jika tidak ada file yang diupload, update data tim tanpa mengubah file
+        $tim->update([
+            'nama' => $request->input('nama'),
+            'jabatan' => $request->input('jabatan'),
+            'prodi' => $request->input('prodi'),
+            'scopus' => $request->input('scopus'),
+            'scholar' => $request->input('scholar'),
+            'sinta' => $request->input('sinta'),
+            'linkedin' => $request->input('linkedin'),
+        ]);
     }
+
+    return redirect()->route('tim.index')->with('success', 'Data berhasil diperbarui.');
+}
+
+    
 
 
     /**

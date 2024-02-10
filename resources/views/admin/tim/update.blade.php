@@ -32,43 +32,76 @@
                 <div class="col-md-9">
                     <div class="tab-pane fade active show" id="account-general">
 
-                 <form method="POST" action="{{ route('tim.update', $tim->id) }}" enctype="multipart/form-data">   
-                        @csrf
-                        @method('PUT')
-                        <div class="card-body media align-items-center">
-                            <img src="img/profil.png" style="width:20%" class="rounded-circle">
-                            <div class="media-body ml-4">
-                                <div class="form-group">
-                                    <label for="uploaddokumen" class="btn btn-outline-primary">
-                                        Upload Gambar
-                                        <input type="file" class="d-none" id="uploaddokumen" name="file_foto">
-                                    </label>
+                        <form method="POST" action="{{ route('tim.update', $tim->id) }}" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                        
+                            <!-- Bagian upload gambar -->
+                            <div class="card-body media align-items-center">
+                                @if($tim->file_foto)
+                                    <img src="{{ asset('assets/tim/' . $tim->file_foto) }}" style="width:20%" class="rounded-circle">
+                                @else
+                                    <img src="{{ asset('img/profil.png') }}" style="width:20%" class="rounded-circle">
+                                @endif
+                                <div class="media-body ml-4">
+                                    <div class="form-group">
+                                        <label for="uploaddokumen" class="btn btn-outline-primary">
+                                            Upload Gambar
+                                            <input type="file" class="d-none" id="uploaddokumen" name="file_foto">
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            
+                            <hr class="border-light m-0">
                         
-                        <hr class="border-light m-0">
-        
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label class="form-label">Nama Anggota</label>
-                                <input type="text" class="form-control mb-1" name="nama" placeholder="{{ $tim->nama }}" value="{{ $tim->nama }}" style="background-color: #CCD9EC">
+                            <!-- Bagian input data -->
+                            <div class="card-body">
+                                <!-- Input nama -->
+                                <div class="form-group">
+                                    <label class="form-label">Nama Anggota</label>
+                                    <input type="text" class="form-control mb-1" name="nama" value="{{ $tim->nama }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input jabatan -->
+                                <div class="form-group">
+                                    <label class="form-label">Jabatan</label>
+                                    <input type="text" class="form-control" name="jabatan" value="{{ $tim->jabatan }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input prodi -->
+                                <div class="form-group">
+                                    <label class="form-label">Program Studi</label>
+                                    <input type="text" class="form-control mb-1" name="prodi" value="{{ $tim->prodi }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input link scopus -->
+                                <div class="form-group">
+                                    <label class="form-label">Link Scopus</label>
+                                    <input type="text" class="form-control mb-1" name="scopus" value="{{ $tim->scopus }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input link scholar -->
+                                <div class="form-group">
+                                    <label class="form-label">Link Google Scholar</label>
+                                    <input type="text" class="form-control mb-1" name="scholar" value="{{ $tim->scholar }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input link sinta -->
+                                <div class="form-group">
+                                    <label class="form-label">Link Sinta</label>
+                                    <input type="text" class="form-control mb-1" name="sinta" value="{{ $tim->sinta }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Input link linkedin -->
+                                <div class="form-group">
+                                    <label class="form-label">Link LinkedIn</label>
+                                    <input type="text" class="form-control mb-1" name="linkedin" value="{{ $tim->linkedin }}" style="background-color: #CCD9EC">
+                                </div>
+                                <!-- Tombol submit -->
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">Jabatan</label>
-                                <input type="text" class="form-control" name="jabatan" placeholder="{{ $tim->jabatan }}" value="{{ $tim->jabatan }}" style="background-color: #CCD9EC">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Program Studi</label>
-                                <input type="text" class="form-control mb-1" name="prodi" placeholder="{{ $tim->prodi }}" value="{{ $tim->prodi }}" style="background-color: #CCD9EC">
-                            </div>
-                            <div class="text-center mt-3" >
-                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
-                                <button type="submit" class="btn btn-default" style="background-color: blue;color:white">Save</button>
-                            </div>
-                
-                        </div>
-                    </form>      
+<br><br>
+                            <p><strong>Keterangan:</strong> <br> *Semua Form wajib diisi jika tidak ada bisa diisi dengan ./-</p>
+                            </form>
+                              
                         </div>
                     </div>
 

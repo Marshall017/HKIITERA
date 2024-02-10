@@ -11,7 +11,7 @@ class Tim extends Model
 
     protected $table = 'tim';
 
-    protected $fillable = ['nama', 'jabatan', 'prodi', 'file_foto'];
+    protected $fillable = ['nama', 'jabatan', 'prodi','scopus','scholar','sinta', 'linkedin','file_foto'];
 
     // Jika Anda tidak menggunakan kolom timestamps (created_at dan updated_at)
     public $timestamps = true;

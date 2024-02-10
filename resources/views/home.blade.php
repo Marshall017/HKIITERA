@@ -197,18 +197,18 @@
                                                         <p class="card-text" style="color: white;">{{ $tims->prodi }}</p>
                                                         <div style="margin-top: 10px;">
                                                             <!-- Tambahkan ikon media sosial di sini -->
-                                                            <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button">
-                                                                <i class="fab fa-facebook-f"></i>
-                                                            </a>
-                                                            <a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button">
-                                                                <i class="fab fa-twitter"></i>
-                                                            </a>
-                                                            <a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button">
-                                                                <i class="fab fa-instagram"></i>
-                                                            </a>
-                                                            <a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button">
-                                                                <i class="fab fa-linkedin-in"></i>
-                                                            </a>
+                                                            <a class="btn btn-primary" style="background-color: #3b5998;" href="{{ $tims->scopus }}" role="button"
+                                                                ><i class="fab fa-scribd"></i
+                                                                ></a>
+                                                                <a class="btn btn-primary" style="background-color: #55acee;" href="{{ $tims->scholar }}" role="button"
+                                                                ><i class="fab fa-leanpub"></i
+                                                                ></a>
+                                                                <a class="btn btn-primary" style="background-color: #ac2bac;" href="{{ $tims->sinta }}" role="button"
+                                                                ><i class="fab fa-researchgate"></i
+                                                                ></a>
+                                                                <a class="btn btn-primary" style="background-color: #0082ca;" href="{{ $tims->linkedin}}" role="button"
+                                                                ><i class="fab fa-linkedin-in"></i
+                                                                ></a>
                                                         </div>
                                                     </div>
                                                 </div>
