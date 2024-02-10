@@ -84,7 +84,7 @@
                             <a class="nav-link" href="/panduan">Panduan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/rekap">Rekap Intelektual</a>
+                            <a class="nav-link" href="/userrekap">Rekap Intelektual</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/beritas">Berita</a>

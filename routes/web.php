@@ -21,6 +21,7 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\AkunAdminController;
 use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\SocialiteController;
+use App\Http\Controllers\UserRekapController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\UserBeritaController;
 use App\Http\Controllers\PendaftaranController;
@@ -57,9 +58,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('pendaftaran', PendaftaranController::class);//create ke user belum
 
-        Route::get('/dashboardadmin', function () {
-            return view('admin.index');
-        });
+        Route::resource('rekap', RekapController::class);
 
         Route::get('/adminpembayaran', function () {
             return view('admin.pembayaran.index');
@@ -84,6 +83,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('isikatalog', UserKatalogController::class);
 
+        Route::resource('userrekap', UserRekapController::class);
+
         Route::resource('usertim', UserTimController::class);
 
         Route::get('/kontak', [KontakController::class, 'showForm']);
@@ -98,8 +99,6 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
         Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
         Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
-
-        Route::get('/rekap', [App\Http\Controllers\RekapController::class, 'index'])->name('rekap');
 
         Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
 
