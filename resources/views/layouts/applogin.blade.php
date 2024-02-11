@@ -78,7 +78,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Panduan</a>
+                            <a class="nav-link" href="userpanduan">Panduan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/rekap">Rekap Intelektual</a>

@@ -81,7 +81,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/panduan">Panduan</a>
+                            <a class="nav-link" href="/userpanduan">Panduan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/userrekap">Rekap Intelektual</a>

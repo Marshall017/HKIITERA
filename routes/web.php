@@ -27,6 +27,7 @@ use App\Http\Controllers\UserBeritaController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserDokumenController;
 use App\Http\Controllers\UserKatalogController;
+use App\Http\Controllers\UserPanduanController;
 use App\Http\Controllers\DashboardUserController;
 
 Auth::routes();
@@ -60,6 +61,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('rekap', RekapController::class);
 
+        Route::resource('panduan', PanduanController::class);
+
         Route::get('/adminpembayaran', function () {
             return view('admin.pembayaran.index');
         });
@@ -83,6 +86,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('isikatalog', UserKatalogController::class);
 
+        Route::resource('userpanduan', UserPanduanController::class);
+
         Route::resource('userrekap', UserRekapController::class);
 
         Route::resource('usertim', UserTimController::class);
@@ -100,7 +105,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
 
-        Route::get('/panduan', [App\Http\Controllers\PanduanController::class, 'index'])->name('panduan');
+        
 
         Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
     });

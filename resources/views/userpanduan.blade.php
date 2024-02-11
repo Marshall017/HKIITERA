@@ -28,6 +28,19 @@
                                                 <img src="" id="image-data" class="mt-3" style="display: none;">
                                                 <iframe id="video-data" width="100%" class="mt-3" height="450" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="display: none;"></iframe>
                                                 <div id="content-data" class="content"></div>
+                                                <div>
+                                                        @foreach ($panduans as $panduans)
+                                                        <p>{{ $panduans->textfile }}</p>
+                                                        <img class="gambar" src="{{ asset('assets/panduan/'.$panduans->gambar) }}" />
+                                                      @endforeach
+                                                </div>
+                                                <style>
+                                                        .gambar {
+                                                            max-width: 100%; /* Membuat gambar tidak melebihi lebar kontainer */
+                                                            height: auto; /* Memastikan gambar tetap proporsional */
+                                                        }
+                                                    </style>
+                                                    
                                         </div>
                                 </div>
                         </div>
