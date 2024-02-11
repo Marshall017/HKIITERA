@@ -45,7 +45,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <img src="img/logo.png" alt="logo" style="max-height: 70px; max-width: 200px;">
+                        <img src="{{ asset('assets/logo/logo.png') }}" alt="logo" style="max-height: 70px; max-width: 200px;">
                     </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

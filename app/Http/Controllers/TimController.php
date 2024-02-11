@@ -82,7 +82,7 @@ class TimController extends Controller
      */
     public function edit($id)
     {
-        $tim=TIm::where('id',$id)->first();
+        $tim=Tim::where('id',$id)->first();
         return view('admin.tim.update',compact('tim'));
     }
 

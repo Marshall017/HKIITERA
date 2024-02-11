@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TimController;
 use App\Http\Controllers\AlurController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LogoController;
 use App\Http\Controllers\RekapController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KontakController;
@@ -63,6 +64,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('panduan', PanduanController::class);
 
+        
+
         Route::get('/adminpembayaran', function () {
             return view('admin.pembayaran.index');
         });
@@ -111,15 +114,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
     });
 
 
-
-
-
-
-
-
-
-
-
+    Route::resource('logo', LogoController::class);
 
 // User
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');

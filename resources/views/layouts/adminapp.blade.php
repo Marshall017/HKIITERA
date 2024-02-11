@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <div class="sidebar">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width:80%;margin-left:20px;margin-top:20px">
+            <img src="{{ asset('assets/logo/'.$logo->logo) }}" alt="Logo" style="width:80%;margin-left:20px;margin-top:20px">
             <div class="menu-box">
                 <ul class="menu">
                     <li><a href="/rekap"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
@@ -38,6 +38,7 @@
                     <li><a href="/panduan"><i class="fas fa-book-open"></i> Panduan</a></li>
                     <li><a href="/tim"><i class="fas fa-users"></i> TIM</a></li>
                     <li><a href="/akunadmin"><i class="fas fa-user-cog"></i> Akun Admin</a></li>
+                    <li><a href="/logo"><i class="fa-thin fa-face-awesome"></i> Ubah Logo</a></li>
                 </ul>
             </div>
         </div>
