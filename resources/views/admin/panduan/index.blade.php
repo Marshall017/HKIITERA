@@ -43,7 +43,11 @@
                                                   <td>{{ $panduans->kategori }}</td>
                                                   <td>
                                                     <a href="{{ route('panduan.edit', $panduans->id) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                                    
+                                                    <form action="{{ route('panduan.destroy', $panduans->id) }}" method="post" style="display: inline;">
+                                                      @csrf
+                                                      @method('DELETE')
+                                                      <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                                                  </form>
                                                 </td>
                                                 
                                                 </tr>

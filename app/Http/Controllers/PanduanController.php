@@ -119,8 +119,21 @@ class PanduanController extends Controller
     }
 
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function destroy($id)
+    {
+        $panduans=Panduan::where('id',$id)->first();
+        // Menghapus file terkait dari folder assets/dokumen
+        $filePath = public_path('assets/panduan/' . $panduans->gambar);
+
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
+        
+
+        // Menghapus record dari database
+        $panduans->delete();
+
+        return redirect()->route('panduan.index')->with('success', 'Panduan berhasil dihapus.');
+    }
     
 }

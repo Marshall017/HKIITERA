@@ -111,7 +111,7 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Hak Cipta</strong></h5>
-                                <a href="#" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Paten</strong></h5>
-                                <a href="#" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
                             </div>
                         </div>
                     </div>
@@ -135,33 +135,13 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Merk</strong></h5>
-                                <a href="#" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
                             </div>
                         </div>
                     </div>
     
                 </div>
-    
-                <div class="row counters aos-init aos-animate text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div style="font-weight: bold; color: black; font-size: 5rem;margin-left:13rem;">
-                            <span data-toggle="counter-up">182</span>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div style="font-weight: bold; color: black; font-size: 5rem;margin-left:13rem;">
-                            <span data-toggle="counter-up">76</span>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div style="font-weight: bold; color: black; font-size: 5rem;margin-left:13rem;">
-                            <span data-toggle="counter-up">29</span>
-                        </div>
-                    </div>
-                </div>
-    
+
             </div>
         </section>
     </div>
