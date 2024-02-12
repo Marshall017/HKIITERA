@@ -108,7 +108,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
 
-        
+        Route::get('pendaftaran/create', [PendaftaranController::class, 'create']);
 
         Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
     });
