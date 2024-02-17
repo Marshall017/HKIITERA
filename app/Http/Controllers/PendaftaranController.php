@@ -6,6 +6,8 @@ use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Routing\Controller;
+use ZipArchive;
+use Illuminate\Support\Facades\Storage;
 
 class PendaftaranController extends Controller
 {
@@ -161,7 +163,7 @@ class PendaftaranController extends Controller
     public function edit($id)
     {
         $pendaftaran=Pendaftaran::where('id',$id)->first();
-        return view('admin.pendaftaran.status',compact('pendaftaran'));
+        return view('admin.pendaftaran.update',compact('pendaftaran'));
     }
 
     /**
@@ -169,43 +171,58 @@ class PendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Validasi request
-        $validatedData = $request->validate([
-            'email' => 'required|email',
-            'jenis_permohonan' => 'required',
+         // Validasi request
+         $validatedData = $request->validate([
             'nama' => 'required',
-            'no_hp' => 'required',
-            'prodi' => 'required',
-            'jurusan' => 'required',
+            'jenis_permohonan' => 'required',
             'judul' => 'required',
-            'deskripsi_paten_word' => 'required|mimes:pdf,doc,docx|max:10240', 
-            'deskripsi_paten_pdf' => 'required|mimes:pdf|max:10240',
-            'abstrak_word' => 'required|mimes:pdf,doc,docx|max:10240',
-            'abstrak_pdf' => 'required|mimes:pdf|max:10240',
-            'klaim_pdf' => 'required|mimes:pdf|max:10240',
-            'gambar_invensi_pdf' => 'required|mimes:pdf|max:10240',
-            'formulir_permohonan_paten_pdf' => 'required|mimes:pdf|max:10240',
-            'formulir_permohonan_substantif_paten_pdf' => 'required|mimes:pdf|max:10240',
-            'surat_pengalihan_hak_itera_pdf' => 'required|mimes:pdf|max:10240',
-            'surat_pengalihan_hak_itera_word' => 'required|mimes:doc,docx|max:10240',
-            'surat_pernyataan_kepemilikan_invensi_pdf' => 'required|mimes:pdf|max:10240',
-            'surat_pernyataan_kepemilikan_invensi_word' => 'required|mimes:doc,docx|max:10240',
-            'foto_ktp_hak_cipta_master_word' => 'required|mimes:doc,docx|max:10240',
+            'status' => 'required',
+            'deskripsi_paten_word' => 'nullable|mimes:pdf,doc,docx|max:10240', // Sesuaikan dengan tipe file yang diizinkan dan ukuran maksimal
         ]);
 
         // Mengambil data dokumen berdasarkan ID
         $pendaftaran = Pendaftaran::findOrFail($id);
 
+        // Jika ada file yang diupload
+        if ($request->hasFile( 'deskripsi_paten_word')) {
+            $file1 = $validatedData[ 'deskripsi_paten_word'];
+            $filename1 = $file1->getClientOriginalName();
+            $location1 = 'assets/pendaftaran/';
+
+            $file1->move(public_path($location1), $filename1);
+
+            // Hapus file lama jika sudah ada
+            if ($pendaftaran->file) {
+                $oldFilePath = public_path($location1 . $pendaftaran->file);
+                if (file_exists($oldFilePath)) {
+                    unlink($oldFilePath);
+                }
+            }
+
+            // Update data dokumen dengan file baru
             $pendaftaran->update([
                 'nama' => $request->input('nama'),
-                'judul' => $request->input('judul'),
                 'jenis_permohonan' => $request->input('jenis_permohonan'),
+                'judul' => $request->input('judul'),
+                'status' => $request->input('status'),
+                'deskripsi_paten_word' => $filename1,
+            ]);
+        } else {
+            // Jika tidak ada file yang diupload, update data dokumen tanpa mengubah file
+            $pendaftaran->update([
+                'nama' => $request->input('nama'),
+                'jenis_permohonan' => $request->input('jenis_permohonan'),
+                'judul' => $request->input('judul'),
                 'status' => $request->input('status'),
             ]);
-        
+        }
 
         return redirect()->route('pendaftaran.index')->with('success', 'Dokumen berhasil diperbarui.');
     }
+    
+
+
+    
 
 
     /**
@@ -229,9 +246,41 @@ class PendaftaranController extends Controller
     }
 
     public function download(Pendaftaran $pendaftaran)
-    {
-    $filePath = public_path('assets/pendaftaran/' . $pendaftaran->file);
+{
+    // Mendapatkan daftar file terkait dengan pendaftaran
+    $files = [
+        public_path('assets/pendaftaran/' . $pendaftaran->deskripsi_paten_word),
+        public_path('assets/pendaftaran/' . $pendaftaran->deskripsi_paten_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->abstrak_word),
+        public_path('assets/pendaftaran/' . $pendaftaran->abstrak_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->klaim_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->gambar_invensi_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->formulir_permohonan_paten_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->formulir_permohonan_substantif_paten_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->surat_pengalihan_hak_itera_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->surat_pengalihan_hak_itera_word),
+        public_path('assets/pendaftaran/' . $pendaftaran->surat_pernyataan_kepemilikan_invensi_pdf),
+        public_path('assets/pendaftaran/' . $pendaftaran->surat_pernyataan_kepemilikan_invensi_word),
+        public_path('assets/pendaftaran/' . $pendaftaran->foto_ktp_hak_cipta_master_word),
+    ];
 
-    return response()->download($filePath, $pendaftaran->file);
+    $zipFileName = 'pendaftaran_' . $pendaftaran->id . '.zip';
+
+    $zip = new ZipArchive;
+
+    if ($zip->open(public_path($zipFileName), ZipArchive::CREATE | ZipArchive::OVERWRITE) === true) {
+        foreach ($files as $file) {
+            // Menambahkan file ke dalam ZIP
+            $zip->addFile($file, basename($file));
+        }
+
+        $zip->close();
+
+        // Menghapus file ZIP setelah didownload
+        return response()->download(public_path($zipFileName))->deleteFileAfterSend(true);
+    } else {
+        // Jika gagal membuat ZIP, kembalikan ke halaman sebelumnya dengan pesan kesalahan
+        return redirect()->back()->with('error', 'Failed to create ZIP file.');
     }
+}
 }

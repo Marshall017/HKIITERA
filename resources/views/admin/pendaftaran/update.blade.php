@@ -43,40 +43,43 @@
                             <div class="form-group row">
                                 <label for="namaArsip" class="col-md-4 col-form-label">Nama</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="nama" placeholder="{{ $pendaftaran->nama }}" value="{{ $pendaftaran->nama }}" style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="{{ $pendaftaran->nama }}" value="{{ $pendaftaran->nama }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="kodeArsip" class="col-md-4 col-form-label">Judul</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="judul" placeholder="{{ $pendaftaran->judul }}" value="{{ $pendaftaran->judul }}" style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="judul" name="judul" placeholder="{{ $pendaftaran->judul }}" value="{{ $pendaftaran->judul }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="kodeArsip" class="col-md-4 col-form-label">Jenis</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="jenis" placeholder="{{ $pendaftaran->jenis_permohonan }}" value="{{ $pendaftaran->jenis_permohonan }}" style="background-color: #E0E0E0;">
+                                    <input type="text" class="form-control" id="jenis" name="jenis_permohonan" placeholder="{{ $pendaftaran->jenis_permohonan }}" value="{{ $pendaftaran->jenis_permohonan }}" style="background-color: #E0E0E0;">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lokasiArsip" class="col-md-4 col-form-label">Status</label>
                                 <div class="col-md-8">
                                     <select class="form-control" id="lokasiArsip" name="status" style="background-color: #E0E0E0;">
-                                        <option value="1">Pendaftaran</option>
-                                        <option value="2">Pemeriksaan Formalitas</option>
-                                        <option value="3">Menunggu Tanggapan Formalitas</option>
-                                        <option value="4">Masa Pengumuman</option>
-                                        <option value="5">Menunggu Pembayaran Subtantif</option>
-                                        <option value="6">Subtantif Tahap Awal</option>
-                                        <option value="7">Subtantif Tahap Lanjut</option>
-                                        <option value="8">Subtantif Tahap Akhir</option>
-                                        <option value="9">Menunggu Tanggapan Subtantif</option>
-                                        <option value="10">Selesai</option>
+                                        <option value="Pendaftaran" {{ $pendaftaran->status == 'Pendaftaran' ? 'selected' : '' }}>Pendaftaran</option>
+                                        <option value="Pemeriksaan Formalitas" {{ $pendaftaran->status == 'Pemeriksaan Formalitas' ? 'selected' : '' }}>Pemeriksaan Formalitas</option>
+                                        <option value="Menunggu Tanggapan Formalitas" {{ $pendaftaran->status == 'Menunggu Tanggapan Formalitas' ? 'selected' : '' }}>Menunggu Tanggapan Formalitas</option>
+                                        <option value="Masa Pengumuman" {{ $pendaftaran->status == 'Masa Pengumuman' ? 'selected' : '' }}>Masa Pengumuman</option>
+                                        <option value="Menunggu Pembayaran Subtantif" {{ $pendaftaran->status == 'Menunggu Pembayaran Subtantif' ? 'selected' : '' }}>Menunggu Pembayaran Subtantif</option>
+                                        <option value="Subtantif Tahap Awal" {{ $pendaftaran->status == 'Subtantif Tahap Awal' ? 'selected' : '' }}>Subtantif Tahap Awal</option>
+                                        <option value="Subtantif Tahap Lanjut" {{ $pendaftaran->status == 'Subtantif Tahap Lanjut' ? 'selected' : '' }}>Subtantif Tahap Lanjut</option>
+                                        <option value="Subtantif Tahap Akhir" {{ $pendaftaran->status == 'Subtantif Tahap Akhir' ? 'selected' : '' }}>Subtantif Tahap Akhir</option>
+                                        <option value="Menunggu Tanggapan Subtantif" {{ $pendaftaran->status == 'Menunggu Tanggapan Subtantif' ? 'selected' : '' }}>Menunggu Tanggapan Subtantif</option>
+                                        <option value="Selesai" {{ $pendaftaran->status == 'Selesai' ? 'selected' : '' }}>Selesai</option>
                                     </select>
+                                    
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary" style="background-color: #00adf1;">Submit</button>
                         </form>
+                        
+                        
                     </div>
                 </div>
             </div>

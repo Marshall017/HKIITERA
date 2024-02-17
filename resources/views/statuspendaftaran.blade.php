@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/status.css">
 
 <h1 style="text-align: center">Status Pendaftaran</h1>
-
+@foreach ($pendaftaran as $pendaftaran)
 <div class="div">
 	<div class="div-2">
 	  <div class="div-3"></div>
@@ -170,21 +170,20 @@
   <div class="div-20"></div>
   <span class="span-6">
     <div class="div-21">Nama Inventor</div>
-    <div class="div-25">Haykal S.pd</div>
+    <div class="div-25">{{ $pendaftaran->nama }}</div>
   </span>
   <div class="div-23"></div>
   <span class="span-7">
     <div class="div-24">Judul Invensi</div>
-    <div class="div-25">Jurnal</div>
+    <div class="div-25">{{ $pendaftaran->judul }}</div>
   </span>
   <div class="div-26"></div>
   <span class="span-8">
     <div class="div-27">Jenis Permohonan</div>
-    <div class="div-28">Paten</div>
+    <div class="div-28">{{ $pendaftaran->jenis }}</div>
   </span>
-  <div class="div-29"></div>
-  <div class="div-30">Unduh Dokumen</div>
 </span>
+@endforeach
 
 <br><br><br><br><br>
 @endsection

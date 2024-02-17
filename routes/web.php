@@ -30,6 +30,7 @@ use App\Http\Controllers\UserDokumenController;
 use App\Http\Controllers\UserKatalogController;
 use App\Http\Controllers\UserPanduanController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\UserPendaftaranController;
 
 Auth::routes();
 
@@ -59,6 +60,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
         Route::get('dokumen/{dokumen}/download', [DokumenController::class, 'download'])->name('dokumen.download');
 
         Route::resource('pendaftaran', PendaftaranController::class);//create ke user belum
+        Route::get('/pendaftaran/{pendaftaran}/download', [PendaftaranController::class, 'download'])->name('pendaftaran.download');
 
         Route::resource('rekap', RekapController::class);
 
@@ -93,6 +95,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('userrekap', UserRekapController::class);
 
+        Route::resource('statuspendaftaran', UserPendaftaranController::class);
+
         Route::resource('usertim', UserTimController::class);
 
         Route::get('/kontak', [KontakController::class, 'showForm']);
@@ -106,9 +110,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
-        Route::get('/statuspendaftaran', [App\Http\Controllers\StatusController::class, 'index'])->name('statuspendaftaran');
-
         Route::get('pendaftaran/create', [PendaftaranController::class, 'create']);
+        Route::resource('pendaftaran', PendaftaranController::class);
 
         Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
     });
@@ -119,8 +122,8 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 // User
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
-Route::get('/adminpanduan', function () {
-    return view('admin.panduan.index');
+Route::get('/caristatus', function () {
+    return view('caristatus');
 });
 
 Route::get('/tambahpanduan', function () {
