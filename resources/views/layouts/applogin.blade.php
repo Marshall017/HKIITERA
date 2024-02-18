@@ -213,11 +213,33 @@
     width: 60px; /* Atur ukuran gambar ikon WhatsApp */
     height: auto;
 }
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: #B80000;
+    position: fixed;
+    top: 105px;
+    width: 10%;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 99999;
+  }
+  .navbar-nav.show {
+    left: 0;
+  }
 </style>  
     <nav class="footers">
         © COPYRIGHT 2023 - PUSAT KELOLA KEKAYAAN INTELEKTUAL
     </nav>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navbarNav = document.querySelector(".navbar-nav");
 
+    navbarToggler.addEventListener("click", function() {
+        navbarNav.classList.toggle("show");
+    });
+});
+</script>
 
     
 </body>

@@ -354,3 +354,94 @@ background-size: cover;
 .invalid-feedback {
   color: white; /* Set the error message text color to white */
 }
+
+
+/* Tambahkan aturan media query untuk responsif */
+@media (max-width: 768px) {
+  .login .overlap-group {
+    position: relative;
+    width: 330px;
+    height: 500px;
+    top: 24px;
+    left: -80px;
+    background-color: #000000e6;
+    border-radius: 20px;
+    
+  }
+  .login .div {
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    top: 30px;
+    left: 13px;
+    background-color: #38417bb2;
+    border-radius: 20px;
+  }
+  .login .pusat-kelola-karya {
+    position: absolute;
+    width: 0px;
+    height: 00px;
+    top: 0px;
+    left: 0px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 00;
+    color: #fbfbfb;
+    font-size: 0px;
+  }
+  
+  .login .logo-ITERA-wrapper {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top:0px;
+    left: 0px;
+    background-color: #fbfbfb;
+  }
+  
+  .login .logo-ITERA {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+  }
+  .login .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Kadwa-Bold", Helvetica;
+    font-weight: 0;
+    color: #ffffff;
+    font-size: 0px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .login .text-wrapper-2 {
+    position: absolute;
+    height: 21px;
+    top: 39px;
+    left: 80px;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: -0.7px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+  .col-md-6 {
+    width: 280px;
+    margin-left: 20px;
+  }
+  .login .btn btn-primary {
+    background-color: #007bff; /* Set the button background color to white */
+    color: #ffffff; /* Set the button text color to the desired color */
+    text-align: center;
+  }
+  }
+  
+  
+  
+

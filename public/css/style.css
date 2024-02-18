@@ -146,4 +146,58 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
     background-size: cover;
   }
 
+  /* Tambahkan aturan media query untuk ukuran layar yang lebih kecil dari 768px */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link.active {
+      color: white; /* Atur kembali warna teks ke putih untuk tampilan mobile */
+    }
   
+    .dropdown-item:hover {
+      background-color: transparent; /* Hapus latar belakang saat dihover untuk tampilan mobile */
+      color: white; /* Atur warna teks kembali ke putih untuk tampilan mobile */
+    }
+  
+    body {
+      background-image: none; /* Hapus gambar latar belakang untuk tampilan mobile */
+    }
+  
+    .overlay-content {
+      padding: 50px; /* Kurangi jarak antara teks dan tepi elemen untuk tampilan mobile */
+    }
+  
+    .footers {
+      padding: 5px; /* Kurangi padding untuk tampilan mobile */
+    }
+  
+    .kontak {
+      height: auto; /* Atur ketinggian kontak menjadi otomatis untuk tampilan mobile */
+    }
+  
+    .contact-info__wrapper {
+      border-radius: 0; /* Atur border-radius kembali menjadi 0 untuk tampilan mobile */
+    }
+  
+    .contact__wrapper {
+      border-radius: 0; /* Atur border-radius kembali menjadi 0 untuk tampilan mobile */
+    }
+  
+    .carousel-item {
+      height: auto; /* Atur ketinggian carousel menjadi otomatis untuk tampilan mobile */
+      min-height: unset; /* Hapus batasan ketinggian minimum untuk tampilan mobile */
+    }
+  }
+  @media (max-width: 768px) {
+    .collapse.show {
+      display: block;
+    }
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 10px; /* Sesuaikan dengan kebutuhan Anda */
+    }
+    .navbar-nav .nav-item {
+      margin: 0 auto; /* Pusatkan item navbar */
+    }
+  }
+    

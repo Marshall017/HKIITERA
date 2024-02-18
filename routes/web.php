@@ -111,7 +111,7 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
         Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
         Route::get('pendaftaran/create', [PendaftaranController::class, 'create']);
-        Route::resource('pendaftaran', PendaftaranController::class);
+        
 
         Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
     });
