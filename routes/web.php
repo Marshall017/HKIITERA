@@ -66,8 +66,6 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
         Route::resource('panduan', PanduanController::class);
 
-        
-
         Route::get('/adminpembayaran', function () {
             return view('admin.pembayaran.index');
         });
@@ -77,61 +75,52 @@ Route::get('login/google/callback', [SocialiteController::class, 'callback'])
 
     //User
     Route::middleware(['auth', 'role:2'])->group(function () {
-        Route::resource('beritas', UserBeritaController::class);
-        Route::resource('isiberita', UserBeritaController::class);
-
+        
         Route::post('/midtrans/callback', [PaymentController::class, 'handleCallback']);
         Route::get('/create-payment', [PaymentController::class, 'createPayment']);
 
-        Route::resource('userdokumen', UserDokumenController::class);
-        Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
-
-        Route::resource('userkatalog', UserKatalogController::class);
-        Route::get('userkatalog/{katalog}/download', [UserKatalogController::class, 'download'])->name('userkatalog.download');
-
-        Route::resource('isikatalog', UserKatalogController::class);
-
-        Route::resource('userpanduan', UserPanduanController::class);
-
-        Route::resource('userrekap', UserRekapController::class);
-
         Route::resource('statuspendaftaran', UserPendaftaranController::class);
-
-        Route::resource('usertim', UserTimController::class);
-
-        Route::get('/kontak', [KontakController::class, 'showForm']);
-        Route::post('/send-email', [KontakController::class, 'sendEmail'])->name('send.email');
-        
-        Route::get('/instagram', [App\Http\Controllers\InstagramController::class, 'index'])->name('kontak');
-
-        Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
-
-        Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
 
         Route::get('/pembayaran', [App\Http\Controllers\PembayaranController::class, 'index'])->name('pembayaran');
 
         Route::get('pendaftaran/create', [PendaftaranController::class, 'create']);
-        
 
-        Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
     });
-
 
     Route::resource('logo', LogoController::class);
 
 // User
+Route::get('/alur', [App\Http\Controllers\AlurController::class, 'index'])->name('alur');
+
 Route::get('/', [App\Http\Controllers\DashboardUserController::class, 'index'])->name('home');
 
 Route::get('/caristatus', function () {
     return view('caristatus');
 });
 
-Route::get('/tambahpanduan', function () {
-    return view('admin.panduan.create');
-});
+Route::resource('beritas', UserBeritaController::class);
+Route::resource('isiberita', UserBeritaController::class);
 
-Route::get('/editpanduan', function () {
-    return view('admin.panduan.update');
-});
+Route::resource('usertim', UserTimController::class);
 
+Route::get('/kontak', [KontakController::class, 'showForm']);
+Route::post('/send-email', [KontakController::class, 'sendEmail'])->name('send.email');
+
+Route::get('/instagram', [App\Http\Controllers\InstagramController::class, 'index'])->name('kontak');
+
+Route::get('/sejarah', [App\Http\Controllers\SejarahController::class, 'index'])->name('sejarah');
+
+Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
+
+Route::resource('userdokumen', UserDokumenController::class);
+Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'download'])->name('userdokumen.download');
+
+Route::resource('userkatalog', UserKatalogController::class);
+Route::get('userkatalog/{katalog}/download', [UserKatalogController::class, 'download'])->name('userkatalog.download');
+
+Route::resource('isikatalog', UserKatalogController::class);
+
+Route::resource('userpanduan', UserPanduanController::class);
+
+Route::resource('userrekap', UserRekapController::class);
 
