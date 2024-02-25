@@ -32,6 +32,17 @@ class Pendaftaran extends Model
         'surat_pernyataan_kepemilikan_invensi_pdf',
         'surat_pernyataan_kepemilikan_invensi_word',
         'foto_ktp_hak_cipta_master_word',
+
+        "tipe_permohonan",
+        "tipe_merk",
+        "labelmerk",
+        "namamerk",
+        "deskripsilabelmerk",
+        "warna",
+        "kelas",
+        "penjelasankelas",
+        "uraian",
+
     ];
 
     // Jika Anda tidak menggunakan kolom timestamps (created_at dan updated_at)

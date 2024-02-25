@@ -168,6 +168,10 @@
                         </div>
                     </div> 
             </div>
+        </form>
+
+        <form method="POST" action="{{ route('pendaftaran.store') }}" enctype="multipart/form-data" id="pendaftaranForm">   
+            @csrf  
             <div id="form-merek" style="display: none;" >
                 <div class="form-group row">
                     <label for="tipePermohonan" class="col-md-4 col-form-label">Tipe Permohonan</label>
@@ -198,7 +202,7 @@
                         <br><small>(Format File : Hanya JPG, Max 5 MB, Dimensi Gambar Max. 1024 x 1024 Pixel)</small>
                     </label>
                     <div class="col-md-8">
-                        <input type="file" class="form-control" id="labelmerk" name="labelmerk" style="background-color:#EBF1FA" accept=".jpg, .png" required>
+                        <input type="file" class="form-control" id="labelmerk" name="labelmerk" style="background-color:#EBF1FA" accept=".jpg, .jpeg, .png" required>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -242,6 +246,7 @@
                     </div>
                 </div>
             </div>
+        </form>
             <div id="form-hak" style="display: none;">
                 <div class="form-group row">
                     <label for="namainventor" class="col-md-4 col-form-label">Nama Inventor</label>

@@ -52,6 +52,16 @@ class PendaftaranController extends Controller
         'surat_pernyataan_kepemilikan_invensi_pdf' => 'required|mimes:pdf|max:10240',
         'surat_pernyataan_kepemilikan_invensi_word' => 'required|mimes:doc,docx|max:10240',
         'foto_ktp_hak_cipta_master_word' => 'required|mimes:doc,docx|max:10240',
+
+        'tipe_permohonan'=> 'required',
+        'tipe_merk'=> 'required',
+        'labelmerk'=> 'required|mimes:jpg,jpeg,png|max:10240',
+        'namamerk'=> 'required',
+        'deskripsilabelmerk'=> 'required',
+        'warna'=> 'required',
+        'kelas'=> 'required',
+        'penjelasankelas'=> 'required',
+        'uraian'=> 'required',
         ]);
 
         
@@ -121,6 +131,11 @@ class PendaftaranController extends Controller
         $location13 = 'assets/pendaftaran/';
         $file13->move(public_path($location13), $filename13);
 
+        $file14 = $validatedData['labelmerk'];
+        $filename14 = $file14->getClientOriginalName();
+        $location14 = 'assets/pendaftaran/';
+        $file14->move(public_path($location14), $filename14);
+        
         // Membuat record baru dalam tabel dokumen
         Pendaftaran::create([
             'email' => $request->input('email'),
@@ -143,6 +158,17 @@ class PendaftaranController extends Controller
             'surat_pernyataan_kepemilikan_invensi_pdf'=> $filename11,
             'surat_pernyataan_kepemilikan_invensi_word'=> $filename12,
             'foto_ktp_hak_cipta_master_word'=> $filename13,
+
+            'tipe_permohonan'=> $request->input('tipe_permohonan'),
+            'tipe_merk'=> $request->input('tipe_merk'),
+            'labelmerk'=> $filename14,
+            'namamerk'=> $request->input('namamerk'),
+            'deskripsilabelmerk'=> $request->input('deskripsilabelmerk'),
+            'warna'=> $request->input('warna'),
+            'kelas'=> $request->input('kelas'),
+            'penjelasankelas'=> $request->input('penjelasankelas'),
+            'uraian'=> $request->input('uraian'),
+
             'status'=> 'Pendaftaran',
         ]);
 
@@ -262,6 +288,7 @@ class PendaftaranController extends Controller
         public_path('assets/pendaftaran/' . $pendaftaran->surat_pernyataan_kepemilikan_invensi_pdf),
         public_path('assets/pendaftaran/' . $pendaftaran->surat_pernyataan_kepemilikan_invensi_word),
         public_path('assets/pendaftaran/' . $pendaftaran->foto_ktp_hak_cipta_master_word),
+        public_path('assets/pendaftaran/' . $pendaftaran->labelmerk),
     ];
 
     $zipFileName = 'pendaftaran_' . $pendaftaran->id . '.zip';
