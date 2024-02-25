@@ -57,6 +57,8 @@
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
                                                     </form>
+
+                                                    <a href="{{ route('berita.download', $berita->id) }}" class="btn btn-success"><i class="fas fa-download"></i></a>
                                                 </td>
                                                 
                                                 </tr>

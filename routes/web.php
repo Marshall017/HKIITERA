@@ -117,7 +117,7 @@ Route::get('userdokumen/{dokumen}/download', [UserDokumenController::class, 'dow
 
 Route::resource('userkatalog', UserKatalogController::class);
 Route::get('userkatalog/{katalog}/download', [UserKatalogController::class, 'download'])->name('userkatalog.download');
-
+Route::get('katalog/{katalog}/download', [KatalogController::class, 'download'])->name('katalog.download');
 Route::resource('isikatalog', UserKatalogController::class);
 
 Route::resource('userpanduan', UserPanduanController::class);

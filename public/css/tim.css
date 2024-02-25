@@ -10,26 +10,27 @@
     width: 1293px;
     height: 334px;
     top: 0;
+    margin-bottom: -100px;
     left: 25px;
   }
   
   .tim-PKKI .rectangle {
     position: absolute;
     width: 1282px;
-    height: 307px;
-    top: 27px;
+    height: 207px;
+    top: 10px;
     left: 11px;
-    background-color: #000000;
+    background-color: #B80000;
     border-radius: 20px;
   }
   
   .tim-PKKI .text-wrapper {
     position: absolute;
-    width: 497px;
-    top: 162px;
+    width: 550px;
+    top: 60px;
     left: 500px;
     text-align: center;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     color: #daa520;
     font-size: 20px;
@@ -39,12 +40,12 @@
   }
   
   .tim-PKKI .div {
-    top: 204px;
+    top: 125px;
     left: 535px;
     text-align: center;
     position: absolute;
     width: 440px;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     color: #fbfbfb;
     font-size: 20px;
@@ -56,10 +57,10 @@
   .tim-PKKI .text-wrapper-2 {
     position: absolute;
     width: 562px;
-    top: 116px;
+    top: 85px;
     left: 475px;
     text-align: center;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     color: #ffffff;
     font-size: 32px;
@@ -77,22 +78,21 @@
     border-radius: 20px;
   }
   
-
-  
   .tim-PKKI .fotol {
     position: absolute;
-    width: 165px;
-    height: 220px;;
-    top: 38px;
-    right: 1042px;
+    width: 110px;
+    height: 150px;;
+    top: 15px;
+    right: 1100px;
     object-fit: cover;
 
   }
   
   .sosmedl {
     position: absolute;
-    top: 270px; /* Sesuaikan dengan jarak yang diinginkan dari atas */
-    left: 80px; /* Sesuaikan dengan jarak yang diinginkan dari kiri */
+    top: 170px; /* Sesuaikan dengan jarak yang diinginkan dari atas */
+    left: 65px; /* Sesuaikan dengan jarak yang diinginkan dari kiri */
     display: flex;
     gap: 5px; /* Sesuaikan dengan jarak antar ikon */
+    
   }

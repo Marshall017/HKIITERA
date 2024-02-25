@@ -12,13 +12,15 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <!-- Scripts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
-<body>
+<body style="font-family: Roboto, sans-serif;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #DAA520; height: 39px;">
             <div class="container">
@@ -60,10 +62,10 @@
                                 Home
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="homeDropdown" style="background-color: #B80000">
-                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="{{ route('home') }}">Beranda</a></li>
-                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="#">TIM PKKI</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href="/">Beranda</a></li>
+                                <li><a class="dropdown-item" style="color: white; border-bottom: 1px solid white;" href=/usertim>TIM PKKI</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('sejarah') }}">Sejarah Pendirian</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="{{ route('home') }}">FAQ</a></li>
+                                {{-- <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/">FAQ</a></li> --}}
                             </ul>
                         </li>                        
                         <li class="nav-item dropdown">
@@ -71,8 +73,8 @@
                                 Layanan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="layananDropdown" style="background-color: #B80000">
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/layanan">Layanan</a></li>
-                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="#">Alur Layanan</a></li>
+                                {{-- <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/layanan">Layanan</a></li> --}}
+                                <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/alur">Alur Layanan</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/pendaftaran">Pendaftaran</a></li>
                                 <li><a class="dropdown-item" style="color: white;border-bottom: 1px solid white;" href="/statuspendaftaran">Status Pendaftaran</a></li>
                             </ul>
@@ -144,11 +146,6 @@
 
 
 <!-- Setelah konten footer -->
-<div id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31779.175929921414!2d105.33892500000002!3d-5.356238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3562557fcbb%3A0x70e74e62c557e9!2sGedung%20C%20Institut%20Teknologi%20Sumatera!5e0!3m2!1sid!2sus!4v1694361525711!5m2!1sid!2sus" width="1345" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-
     <footer class="footer">
         <div class="container bottom_border">
             <div class="row">
@@ -156,8 +153,6 @@
                     <h5 class="headin5_amrc col_white_amrc pt2" ><img src="img/logo.png" alt="logo" style="max-height: 100px; max-width: 250px;"></h5>
                     <p class="mb10">
                         Pusat Kelola Karya Intelektual (PKKI) ITERA, sebelumnya dikenal sebagai Sentra Hak Kekayaan Intelektual (HKI), adalah sebuah lembaga yang berperan sentral dalam mengelola dan melindungi karya intelektual di lingkungan Institut Teknologi Sumatera (ITERA), Sumatera Indonesia. Mulai dari tahun 2019 hingga 2022, PKKI berada di bawah naungan Lembaga Penelitian dan Pengabdian Kepada Masyarakat (LPPM) ITERA sebelum kemudian dipindahkan ke Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran (LPMPP) pada Juni 2023.
-                        <br><br> PKKI ITERA bertujuan untuk mengidentifikasi, melindungi, dan mengembangkan potensi hak kekayaan intelektual (HKI) yang dimiliki oleh para akademisi dan staf ITERA. Tugas utamanya mencakup pengelolaan perlindungan HKI seperti hak cipta, merek, paten, dan lain-lain sesuai dengan peraturan yang berlaku. Selain itu, PKKI juga fokus pada potensi komersial dan pengembangan ilmu pengetahuan dan teknologi yang terkandung dalam karya-karya tersebut. PKKI ITERA juga bertanggung jawab untuk mendokumentasikan karya intelektual yang telah dilindungi dalam bentuk Katalog yang diterbitkan setiap tahunnya mulai tahun 2024. 
-                        <br><br>Katalog ini mencakup daftar lengkap karya-karya yang telah diberikan perlindungan hak kekayaan intelektual seperti hak cipta, merek, paten, dan lain-lain. Dokumentasi ini memberikan gambaran komprehensif tentang potensi intelektual yang dimiliki oleh komunitas akademik ITERA dan menjadi referensi penting untuk pengembangan ilmu pengetahuan dan teknologi di lembaga tersebut.
                         </p></div>
     
                 <div class="col-md-4 col-12">
@@ -228,7 +223,7 @@
   }
 </style>  
     <nav class="footers">
-        © COPYRIGHT 2023 - PUSAT KELOLA KEKAYAAN INTELEKTUAL
+        © COPYRIGHT 2024 - PUSAT KELOLA KEKAYAAN INTELEKTUAL
     </nav>
     <script>
 document.addEventListener("DOMContentLoaded", function() {

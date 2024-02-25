@@ -6,11 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider Bootstrap</title>
-    <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
 </head>
-<body>
+<body style="font-family: Roboto, sans-serif;">
     <!-- Carousel Bagian Pertama -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -21,17 +22,17 @@
         <div class="carousel-inner">
             <div class="carousel-item active" style="background-image: url('img/bg1.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
-                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
+                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:#000000;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>
             </div>
             <div class="carousel-item" style="background-image: url('img/bg3.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
-                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
+                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:#000000">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>
             </div>
             <div class="carousel-item" style="background-image: url('img/bg2.png');">
                 <div class="carousel-caption d-none d-md-block text-center" style="position: absolute; top: 0; left: 0; right: 0;">
-                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:black;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
+                    <h1 style="background-color: rgba(0, 0, 0, 0); padding: 10px;color:#000000;">Selamat Datang di Website <br> Pusat Kelola Karya Intelektual <br> Institut Teknologi Sumatera</h1>
                 </div>
             </div>
         </div>
@@ -44,13 +45,64 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <div class="your-div" style="background-color: #F0B41E;"><br>
+        <section id="why-us">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <header class="section-header text-center" style="font-weight: bold; color: black; font-size: 3rem;">
+                    <h3><strong>Rekap Intelektual</strong></h3>
+                </header>
+    <br>
+                <div class="row row-eq-height justify-content-center">
+    
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
+                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-hak-cipta-unimugo.png" alt="Hak Cipta" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Hak Cipta</strong></h5>
+                                <a href="/userrekap" class="readmore" style="color: rgb(0, 0, 0); text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
+                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-paten-unimugo.png" alt="Paten" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Paten</strong></h5>
+                                <a href="/userrekap" class="readmore" style="color: rgb(0, 0, 0); text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
+                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-merek-unimugo.png" alt="Merk" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Merk</strong></h5>
+                                <a href="/userrekap" class="readmore" style="color: rgb(0, 0, 0); text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+        </section>
+    </div>
+
 <div class="contain">
     <!-- Carousel Bagian Kedua -->
-    
     <section class="pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6" style="text-align: center;margin-left:280px">
                     <h3 class="mb-3">Berita Terkini</h3>
                 </div>
     
@@ -93,58 +145,8 @@
             </div>
         </div>
     </section>
+</div>
     
-    </div>
-    <div class="your-div" style="background-image: url('https://www.itera.ac.id/wp-content/uploads/2021/06/Gedung-Laboratorium-Teknik-2-1536x864.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto; padding-top: 20px;">
-        <section id="why-us">
-            <div class="container aos-init aos-animate" data-aos="fade-up">
-                <header class="section-header text-center" style="font-weight: bold; color: black; font-size: 3rem;">
-                    <h3><strong>Rekap Intelektual</strong></h3>
-                </header>
-    
-                <div class="row row-eq-height justify-content-center">
-    
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
-                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-hak-cipta-unimugo.png" alt="Hak Cipta" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Hak Cipta</strong></h5>
-                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
-                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-paten-unimugo.png" alt="Paten" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Paten</strong></h5>
-                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <div class="card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" style="background-color: #B80000; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
-                                <img src="https://hki.unimugo.ac.id/wp-content/uploads/2021/11/logo-merek-unimugo.png" alt="Merk" style="max-width: 80%; max-height: 80%; object-fit: contain;">
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="color: rgb(0, 0, 0); font-size: 1.5rem;"><strong>Merk</strong></h5>
-                                <a href="/userrekap" class="readmore" style="color: white; text-decoration: underline; position: relative; font-size: 1rem;">Lihat Detail ></a>
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
-
-            </div>
-        </section>
-    </div>
     
 
 
@@ -169,11 +171,11 @@
                                         <div class="row">
                                 @endif
                                             <div class="col-md-3 mb-3" >
-                                                <div class="card" style="background-color:#000000;">
-                                                    <img class="img-fluid" style="background-color: #00000000; width: 200px; height: 250px; display: block; margin-left: auto; margin-right: auto;" src="{{ asset('assets/tim/'.$tims->file_foto) }}">
-                                                    <div class="card-body" style="background-color:#000000;">
+                                                <div class="card" style="background-color:#B80000;">
+                                                    <img class="img-fluid" style="background-color: #ffffff00; width: 200px; height: 250px; display: block; margin-left: auto; margin-right: auto;" src="{{ asset('assets/tim/'.$tims->file_foto) }}">
+                                                    <div class="card-body" style="background-color:#B80000;">
                                                         <h4 class="card-title" style="font-size:18px;color:white;max-width:200px;">{{ $tims->nama }}</h4>
-                                                        <p class="card-text" style="color: #898B18; border-bottom: 1px solid white;">{{ $tims->jabatan }}</p>
+                                                        <p class="card-text" style="color: #ffffff; border-bottom: 1px solid white;">{{ $tims->jabatan }}</p>
                                                         <p class="card-text" style="color: white;">{{ $tims->prodi }}</p>
                                                         <div style="margin-top: 10px;">
                                                             <!-- Tambahkan ikon media sosial di sini -->

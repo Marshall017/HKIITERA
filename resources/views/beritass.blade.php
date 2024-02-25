@@ -6,9 +6,10 @@
         <h1 style="text-align: center">Berita</h1>
         <link rel="stylesheet" id="oe-widgets-style-css" href="https://hki.itera.ac.id/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=6.4.2" media="all">
         <link rel="stylesheet" href="css/beritas.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 
-<body >
+<body style="font-family: Roboto, sans-serif;">
 
 <div id="content-wrap" class="container clr" style="background-color: aliceblue;height:3250px">
             <div id="primary" class="content-area clr">
