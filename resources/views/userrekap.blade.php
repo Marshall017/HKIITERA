@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
+    <meta charset="utf-8">
     <link rel="stylesheet" href="css/rekap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css"> <!-- Include Ionicons CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
@@ -14,31 +13,31 @@
   <body>
     <div class="rekap-intelektual">
       <div class="overlap"><div class="text-wrapper">REKAP INTELEKTUAL ITERA</div></div><br><br><br><br><br><br><br>
-      <div class="container py-5 text-center" style="background-color: #F5F5F5; border-radius: 25px; margin-bottom: 10px;margin-left: 100px;">
+      <div class="container py-4 text-center" style="background-color: #ffffff; border-radius: 15px; margin-left: 70px;max-width: 1300px;margin-top:-10px;">
         <div class="row justify-content-center">
             @foreach(['Rahasia Dagang', 'Desain Industri', 'Merek Dagang', 'Paten', 'Paten Sederhana', 'Hak Cipta', 'Integrated Circuits', 'Indikasi Geografis'] as $jenis)
                 @php
                     $jenisCount = $jenisCounts->where('jenis', $jenis)->first();
                 @endphp
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-6" style="color:white">
                     <div class="small-box custom-box 
                         @if($jenis == 'Rahasia Dagang')
-                            bg-info
+                            bg-custom
                         @elseif($jenis == 'Desain Industri')
-                            bg-success
+                            bg-custom
                         @elseif($jenis == 'Merek Dagang')
-                            bg-warning
+                            bg-custom
                         @elseif($jenis == 'Paten')
-                            bg-danger
+                            bg-custom
                         @elseif($jenis == 'Paten Sederhana')
-                            bg-info
+                            bg-custom
                         @elseif($jenis == 'Hak Cipta')
-                            bg-success
+                            bg-custom
                         @elseif($jenis == 'Integrated Circuits')
-                            bg-warning
+                            bg-custom
                         @elseif($jenis == 'Indikasi Geografis')
-                            bg-danger
-                        @endif">
+                            bg-custom
+                        @endif" style="border-radius: 5px;height:90px;">
                         <div class="inner" style="margin: auto;">
                             <h3>{{ $jenisCount ? $jenisCount->total : 0 }}</h3>
                             <p>{{ $jenis }}</p>
@@ -71,16 +70,13 @@
         </div>
     </div>
     
-    
-
-
-      <div class="overlap-group-2">
-        <div class="card-body p-2 bg-white rounded">
+      <div class="overlap-group-2" >
+        <div class="card-body p-2 bg-white rounded" >
           <div class="table-responsive">
               <br>
-              <table id="example" style="width: 100%" class="table table-striped table-bordered">
-                <thead style="background-color:black">
-                  <tr>
+            <table id="example" style="width: 99%;height:80%" class="table table-striped table-bordered">
+                <thead style="background-color: black; color: white;">
+                  <tr style="text-align: center">
                       <th>Nomor Pendaftaran</th>
                       <th>Jenis</th>
                       <th>Judul</th>
@@ -99,7 +95,7 @@
                       </tr>
                   @endforeach
               </tbody>
-          </table>
+            </table>
           </div>
 
       </div>
