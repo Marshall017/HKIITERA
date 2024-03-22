@@ -6,13 +6,28 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/alur.css">
+        <style>
+            .alurs {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 95vh;
+            }
+        
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        </style>
     </head>
     <body>
 
-  
-
     <h1 style="text-align: center">Alur Layanan</h1>
-    <div class="contain"style="margin-left:150px;margin-right:150px;border-radius: 15px;background-color:#DAA520">
+    <div class="alurs">
+        <img src="assets/alur.png" alt="Alur">
+    </div>
+    {{-- <div class="contain"style="margin-left:150px;margin-right:150px;border-radius: 15px;background-color:#DAA520">
         <section class="iq-features">
             <div class="container">
             <div class="row align-items-center">
@@ -168,8 +183,8 @@
 
 
         </script>
-    </div>
-    <br><br><br>
+    </div> --}}
+    <br><br>
 </body>
 </html>
 @endsection
