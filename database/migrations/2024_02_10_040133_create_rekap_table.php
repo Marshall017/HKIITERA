@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('judul');
             $table->string('pemegang');
             $table->string('inventor');
+            $table->string('sertif');
             $table->timestamps();
         });
         

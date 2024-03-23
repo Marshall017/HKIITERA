@@ -16,5 +16,6 @@ class Rekap extends Model
         'judul',
         'pemegang',
         'inventor',
+        'sertif',
     ];
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Rekap;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\File;
 class RekapController extends Controller
 {
     public function index()
@@ -34,10 +34,23 @@ class RekapController extends Controller
         'judul' => 'required|string',
         'pemegang' => 'required|string',
         'inventor' => 'required|string',
+        'sertif' => 'required|mimes:jpeg,png,jpg,gif|max:20480',
     ]);
 
+    $file1 = $validatedData['sertif'];
+        $filename1 = $file1->getClientOriginalName();
+        $location1 = 'assets/rekap/';
+        $file1->move(public_path($location1), $filename1);
+
     // Buat paten baru berdasarkan data yang valid
-    Rekap::create($validatedData);
+    Rekap::create([
+        'nomor_pendaftaran' => $request->input('nomor_pendaftaran'),
+        'jenis' => $request->input('jenis'),
+        'judul' => $request->input('judul'),
+        'pemegang' => $request->input('pemegang'),
+        'inventor' => $request->input('inventor'),
+        'sertif' => $filename1,
+    ]);
 
     // Redirect ke halaman index dengan pesan sukses
     return redirect()->route('rekap.index')->with('success', 'Data berhasil disimpan.');
@@ -46,7 +59,7 @@ class RekapController extends Controller
 
     public function edit($id)
     {
-        $rekap = Rekap::findOrFail($id)->first();
+        $rekap = Rekap::where('id',$id)->first();
         return view('admin.rekap.update', compact('rekap'));
     }
 
@@ -59,13 +72,47 @@ class RekapController extends Controller
         'judul' => 'required|string',
         'pemegang' => 'required|string',
         'inventor' => 'required|string',
+        'sertif' => 'required|mimes:jpeg,png,jpg,gif|max:20480',
     ]);
 
     // Temukan paten berdasarkan ID
     $rekap = Rekap::findOrFail($id);
 
-    // Perbarui data paten dengan data yang valid
-    $rekap->update($validatedData);
+    // Jika ada file yang diupload
+    if ($request->hasFile('sertif')) {
+        $file1 = $validatedData['sertif'];
+        $filename1 = $file1->getClientOriginalName();
+        $location1 = 'assets/rekap/';
+
+        $file1->move(public_path($location1), $filename1);
+        // Hapus file lama jika sudah ada
+        if ($rekap->sertif) {
+            $oldFilePath = public_path($location1 . $rekap->sertif);
+            if (file_exists($oldFilePath)) {
+                unlink($oldFilePath);
+            }
+        }
+
+        // Update data dengan file baru
+        $rekap->update([
+            'nomor_pendaftaran' => $request->input('nomor_pendaftaran'),
+            'jenis' => $request->input('jenis'),
+            'judul' => $request->input('judul'),
+            'pemegang' => $request->input('pemegang'),
+            'inventor' => $request->input('inventor'),
+            'sertif' => $filename1,
+        ]);
+    } else {
+        // Jika tidak ada file yang diupload, update data tanpa mengubah file
+        $rekap->update([
+        'nomor_pendaftaran' => $request->input('nomor_pendaftaran'),
+        'jenis' => $request->input('jenis'),
+        'judul' => $request->input('judul'),
+        'pemegang' => $request->input('pemegang'),
+        'inventor' => $request->input('inventor'),
+        
+        ]);
+    }
 
     // Redirect ke halaman index dengan pesan sukses
     return redirect()->route('rekap.index')->with('success', 'Data berhasil diperbarui.');
@@ -75,6 +122,12 @@ class RekapController extends Controller
     public function destroy($id)
     {
         $rekap = Rekap::where('id',$id)->first();
+        // Menghapus file terkait dari folder assets/
+        $filePath = public_path('assets/rekap/' . $rekap->sertif);
+
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
         $rekap->delete();
         return redirect()->route('rekap.index')->with('success', 'Rekap berhasil dihapus.');
     }

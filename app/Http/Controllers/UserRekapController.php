@@ -26,4 +26,10 @@ class UserRekapController extends Controller
     return view('userrekap', compact('rekap', 'jenisCounts'));
 }
 
+public function show( $id)
+    {
+        $rekap=Rekap::where('id',$id)->first();
+        return view('isirekap',compact('rekap'));
+    }
+
 }

@@ -82,6 +82,7 @@
                       <th>Judul</th>
                       <th>Pemegang</th>
                       <th>Inventor</th>
+                      <th>Aksi</th>
                   </tr>
               </thead>
               <tbody>
@@ -92,6 +93,9 @@
                           <td>{{ $rekap->judul }}</td>
                           <td>{{ $rekap->pemegang }}</td>
                           <td>{{ $rekap->inventor }}</td>
+                          <td>
+                            <a href="{{ route('isirekap.show', $rekap->id) }}" class="btn btn-success"><i class="fas fa-eye"></i> Lihat</a>
+                        </td>
                       </tr>
                   @endforeach
               </tbody>

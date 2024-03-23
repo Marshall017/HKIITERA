@@ -59,6 +59,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="cover" class="col-md-4 col-form-label">Upload Sertifikat</label>
+                            <div class="col-md-8">
+                                <input type="file" class="form-control" id="sertif" name="sertif" style="background-color:#EBF1FA">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <div class="col-md-4"></div>
                             <div class="col-md-8">
                                 <button type="submit" class="btn btn-primary" style="background-color: #338BFD;color:white">Submit</button>

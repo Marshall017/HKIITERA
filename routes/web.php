@@ -123,4 +123,5 @@ Route::resource('isikatalog', UserKatalogController::class);
 Route::resource('userpanduan', UserPanduanController::class);
 
 Route::resource('userrekap', UserRekapController::class);
+Route::resource('isirekap', UserRekapController::class);
 
