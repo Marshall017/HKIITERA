@@ -16,8 +16,10 @@
         </style>
   </head>
   <body>
-    <br><br>
-        <div class="detail" style="margin-left: 20px">
+    
+    <div class="overlap-group-2" >
+        <div class="card-body p-2 bg-white rounded" >
+        <div class="detail" style="margin-left: 20px;">
             <h2>Detail Intelektual:</h2>
             <table style="width:80%">
             <tr>
@@ -52,9 +54,11 @@
             <br>
             <h2>Sertifikat:</h2><br>
             <img width="750px" height="750px" src="{{ asset('assets/rekap/'.$rekap->sertif) }}" > 
-            <br><br>  
+         
+         <div>
+            <div> 
+                <div> 
   </body>
-
 </html>
 
 <br><br>

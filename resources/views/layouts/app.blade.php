@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Pusat Kelola Kekayaan Intelektual ITERA</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Pusat Kelola Kekayaan Intelektual ITERA</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Google Fonts Roboto -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    </head>
     
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-</head>
 <body style="font-family: Roboto, sans-serif;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #DAA520; height: 39px;">
@@ -159,7 +160,9 @@
         <div class="container bottom_border">
             <div class="row">
                 <div class="col-md-4 col-12">
-                    <h5 class="headin5_amrc col_white_amrc pt2" ><img src="img/logo.png" alt="logo" style="max-height: 100px; max-width: 250px;"></h5>
+                    <h5 class="headin5_amrc col_white_amrc pt2">
+                        <img src="{{ asset('img/logo.png') }}" alt="logo" style="max-height: 100px; max-width: 250px;">
+                    </h5>                    
                     <p class="mb10">
                         Pusat Kelola Karya Intelektual (PKKI) ITERA, sebelumnya dikenal sebagai Sentra Hak Kekayaan Intelektual (HKI), adalah sebuah lembaga yang berperan sentral dalam mengelola dan melindungi karya intelektual di lingkungan Institut Teknologi Sumatera (ITERA), Sumatera Indonesia. Mulai dari tahun 2019 hingga 2022, PKKI berada di bawah naungan Lembaga Penelitian dan Pengabdian Kepada Masyarakat (LPPM) ITERA sebelum kemudian dipindahkan ke Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran (LPMPP) pada Juni 2023.
                         </p>
@@ -203,8 +206,8 @@
     </footer>
     <div id="whatsapp-button">
         <a href="https://wa.me/6289617843241" target="_blank">
-            <img src="assets/wa.png" alt="WhatsApp Icon">
-        </a>
+            <img src="{{ asset('assets/wa.png') }}" alt="WhatsApp Icon">
+        </a>        
     </div>
 <style>
     #whatsapp-button {
